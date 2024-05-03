@@ -107,11 +107,6 @@ public class PlayerController : MonoBehaviour
         else
         { linearDrag = midAirDrag; }
 
-        if (Mathf.Abs(rb.velocity.x) > maxMoveSpeed)
-        {
-            //rb.velocity = new Vector2(Mathf.Sign(rb.velocity.x) * maxMoveSpeed, rb.velocity.y);
-        }
-
         if (Mathf.Abs(moveAxis.x) < 0.4f || changingDirection)
         {
             appliedDrag = linearDrag;
