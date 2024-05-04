@@ -6,54 +6,53 @@ Shader"Custom/PlayerShader"
         _Color("Color", Color) = (1,1,1,1)
         _Multiplier("Multiplier", Range(0, 1)) = 1
     }
-        SubShader
+    SubShader
+    {
+        Tags { "Queue" = "Transparent" "IgnoreProjector" = "True" "RenderType" = "Transparent" }
+        LOD 100
+
+        Pass
         {
-            Tags { "Queue" = "Transparent" "IgnoreProjector" = "True" "RenderType" = "Transparent" }
-LOD100
+            Cull Off // Disable backface culling
 
-            Pass
+            Blend SrcAlpha OneMinusSrcAlpha // Corrected Blend command
+            CGPROGRAM
+            #pragma vertex vert
+            #pragma fragment frag
+            #include "UnityCG.cginc"
+
+            struct appdata
             {
-Cull Off // Disable backface culling
+                float4 vertex : POSITION;
+                float2 uv : TEXCOORD0;
+            };
 
-Blend SrcAlpha
-OneMinusSrcAlpha
-                CGPROGRAM
-                #pragma vertex vert
-                #pragma fragment frag
-#include "UnityCG.cginc"
+            struct v2f
+            {
+                float2 uv : TEXCOORD0;
+                float4 vertex : SV_POSITION;
+            };
 
-struct appdata
-{
-    float4 vertex : POSITION;
-    float2 uv : TEXCOORD0;
-};
+            sampler2D _MainTex;
+            float4 _MainTex_ST;
+            fixed4 _Color;
+            float _Multiplier;
 
-struct v2f
-{
-    float2 uv : TEXCOORD0;
-    float4 vertex : SV_POSITION;
-};
-
-sampler2D _MainTex;
-float4 _MainTex_ST;
-fixed4 _Color;
-float _Multiplier;
-
-v2f vert(appdata v)
-{
-    v2f o;
-    o.vertex = UnityObjectToClipPos(v.vertex);
-    o.uv = TRANSFORM_TEX(v.uv, _MainTex);
-    return o;
-}
-
-fixed4 frag(v2f i) : SV_Target
-{
-    fixed4 col = tex2D(_MainTex, i.uv);
-    col.rgb = lerp(col.rgb, _Color.rgb, _Multiplier);
-    return col;
-}
-                ENDCG
+            v2f vert(appdata v)
+            {
+                v2f o;
+                o.vertex = UnityObjectToClipPos(v.vertex);
+                o.uv = TRANSFORM_TEX(v.uv, _MainTex);
+                return o;
             }
+
+            fixed4 frag(v2f i) : SV_Target
+            {
+                fixed4 col = tex2D(_MainTex, i.uv);
+                col.rgb = lerp(col.rgb, _Color.rgb, _Multiplier);
+                return col;
+            }
+            ENDCG
         }
+    }
 }

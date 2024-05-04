@@ -877,7 +877,7 @@ BoxCollider2D:
   m_GameObject: {fileID: 784580385}
   m_Enabled: 1
   m_Density: 1
-  m_Material: {fileID: 0}
+  m_Material: {fileID: 6200000, guid: 97c29369a8a94614aa91cb12c7fcbac4, type: 2}
   m_IncludeLayers:
     serializedVersion: 2
     m_Bits: 0
@@ -929,7 +929,7 @@ Rigidbody2D:
   m_LinearDrag: 0
   m_AngularDrag: 0.05
   m_GravityScale: 1
-  m_Material: {fileID: 0}
+  m_Material: {fileID: 6200000, guid: 97c29369a8a94614aa91cb12c7fcbac4, type: 2}
   m_IncludeLayers:
     serializedVersion: 2
     m_Bits: 0
@@ -960,7 +960,7 @@ SpriteRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: a97c105638bdf8b4a8650670310a4cd3, type: 2}
+  - {fileID: 2100000, guid: 9f6e85934cc5e8b4d88ee22e2aa405f6, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -981,8 +981,8 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 1
-  m_Sprite: {fileID: 7482667652216324306, guid: 311925a002f4447b3a28927169b83ea6, type: 3}
-  m_Color: {r: 0.9056604, g: 0.7099805, b: 0.54254186, a: 1}
+  m_Sprite: {fileID: 21300000, guid: 2ebcbab647bb1a745a4a47434bc3d9be, type: 3}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
@@ -1044,7 +1044,7 @@ MonoBehaviour:
   dashStrength: 25
   dashesAvailable: 0
   maxDashes: 3
-  dashColor: {r: 0, g: 0, b: 0, a: 0}
+  dashColor: {r: 0.7578083, g: 1, b: 0.2688679, a: 0}
   dashColorAmount: 0.5
 --- !u!114 &784580391
 MonoBehaviour:
