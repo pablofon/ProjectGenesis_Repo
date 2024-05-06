@@ -1030,16 +1030,21 @@ MonoBehaviour:
   maxMoveSpeed: 7
   groundedDrag: 25
   midAirDrag: 1
-  groundedAreaLength: 0.5
+  groundedAreaLength: 0.9
   groundedAreaHeight: 0.1
-  isGrounded: 0
   groundCheck: {fileID: 133681260}
   groundLayer:
     serializedVersion: 2
     m_Bits: 8
   fallMultiplier: 4
   lowFallMultiplier: 4
-  jumpForce: 10
+  canGroundJump: 0
+  groundJumpForce: 10
+  wallJumpsMax: 3
+  wallJumpsLeft: 0
+  canWallJump: 0
+  wallJumpSide: 0
+  wallJumpForce: 10
   dashDuration: 0.08
   dashStrength: 25
   dashesAvailable: 0

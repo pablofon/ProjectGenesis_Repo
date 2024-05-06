@@ -28,14 +28,19 @@ public class PlayerController : MonoBehaviour
     [Header("Ground Check")]
     [SerializeField] float groundedAreaLength;
     [SerializeField] float groundedAreaHeight;
-    [SerializeField] bool isGrounded;
     [SerializeField] Transform groundCheck;
     [SerializeField] LayerMask groundLayer;
 
     [Header("Jump")]
     [SerializeField] private float fallMultiplier;
     [SerializeField] private float lowFallMultiplier;
-    [SerializeField] private float jumpForce;
+    [SerializeField] bool canGroundJump;
+    [SerializeField] private float groundJumpForce;
+    [SerializeField] private int wallJumpsMax;
+    [SerializeField] private int wallJumpsLeft;
+    [SerializeField] bool canWallJump;
+    [SerializeField] int wallJumpSide;
+    [SerializeField] private float wallJumpForce;
 
     [Header("Dash")]
     [SerializeField] private float dashDuration;
@@ -59,7 +64,7 @@ public class PlayerController : MonoBehaviour
         GetInput();
         FacingDirection();
 
-        if (isGrounded) { dashesAvailable = maxDashes; }
+        if (canGroundJump) { dashesAvailable = maxDashes; wallJumpsLeft = wallJumpsMax; }
     
     }
 
@@ -75,16 +80,42 @@ public class PlayerController : MonoBehaviour
         }
     }
 
+
+    void OnCollisionStay2D(Collision2D collision)
+    {
+        Debug.Log("enter");
+        if (collision.gameObject.layer == 3)
+        {
+            canWallJump = true;
+            foreach (ContactPoint2D point in collision.contacts)
+            {
+                Debug.DrawRay(point.point, point.normal, Color.red, 2.0f);
+                if (point.normal.x < 0)
+                {
+                    wallJumpSide = -1;
+                }
+                else if (point.normal.x > 0)
+                {
+                    wallJumpSide = 1;
+                }
+            }
+        }
+        else
+        {
+            canWallJump = false;
+        }
+    }
+
+
     void CheckCollisions()
     {
         //GROUNDCHECK
-        isGrounded = Physics2D.OverlapArea(
+        canGroundJump = Physics2D.OverlapArea(
                         new Vector2(groundCheck.position.x - (groundedAreaLength / 2),
                                     groundCheck.position.y - groundedAreaHeight),
                         new Vector2(groundCheck.position.x + (groundedAreaLength / 2),
                                     groundCheck.position.y + 0.01f),
                                     groundLayer);
-
     }
 
     private void Movement()
@@ -102,7 +133,7 @@ public class PlayerController : MonoBehaviour
     private void LinearDrag()
     {
         float linearDrag;
-        if (isGrounded)
+        if (canGroundJump)
         { linearDrag = groundedDrag; }
         else
         { linearDrag = midAirDrag; }
@@ -148,10 +179,19 @@ public class PlayerController : MonoBehaviour
 
     public void Jump(InputAction.CallbackContext context)
     {
-        if (context.performed && isGrounded)
+        if (context.performed)
         {
-            //anim.SetTrigger("jump");
-            rb.AddForce(Vector2.up * jumpForce, ForceMode2D.Impulse);
+            if (canGroundJump)
+            {
+                //anim.SetTrigger("jump");
+                rb.AddForce(Vector2.up * groundJumpForce, ForceMode2D.Impulse);
+            }
+            else if (wallJumpsLeft > 0 && canWallJump == true)
+            {
+                wallJumpsLeft--;
+                rb.velocity = Vector2.zero;
+                rb.AddForce(new Vector2(wallJumpSide / 2f, 1) * wallJumpForce, ForceMode2D.Impulse);
+            }
         }
     }
 
