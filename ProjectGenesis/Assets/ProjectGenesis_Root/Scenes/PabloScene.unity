@@ -137,7 +137,7 @@ GameObject:
   - component: {fileID: 106221273}
   m_Layer: 3
   m_Name: Square (4)
-  m_TagString: Untagged
+  m_TagString: ground
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -463,7 +463,7 @@ GameObject:
   - component: {fileID: 530315610}
   m_Layer: 3
   m_Name: Square (2)
-  m_TagString: Untagged
+  m_TagString: ground
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -703,7 +703,7 @@ GameObject:
   - component: {fileID: 624192220}
   m_Layer: 3
   m_Name: Square (1)
-  m_TagString: Untagged
+  m_TagString: ground
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -863,7 +863,7 @@ GameObject:
   - component: {fileID: 784580390}
   m_Layer: 0
   m_Name: Player
-  m_TagString: Untagged
+  m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1126,7 +1126,7 @@ GameObject:
   - component: {fileID: 1016594324}
   m_Layer: 3
   m_Name: Hexagon Flat-Top (1)
-  m_TagString: Untagged
+  m_TagString: ground
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1290,7 +1290,7 @@ GameObject:
   - component: {fileID: 1067039244}
   m_Layer: 3
   m_Name: Triangle
-  m_TagString: Untagged
+  m_TagString: ground
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1507,6 +1507,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1268835157}
+  - component: {fileID: 1268835158}
   m_Layer: 0
   m_Name: A*
   m_TagString: Untagged
@@ -1529,6 +1530,61 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1268835158
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1268835156}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 78396926cbbfc4ac3b48fc5fc34a87d1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  version: 1
+  data:
+    dataString: UEsDBBQAAAgIAAAIIewoU3l9WQIAABMFAAALACQAZ3JhcGgwLmpzb24KACAAAAAAAAEAGAAAgD7V3rGdAQCAPtXesZ0BAIA+1d6xnQF1VE2P2jAQ/SvI51JBgGa3tzawbA8saGm1l1xMMkksHDvyB5/iv3fsJCRL1RPWvDcz781MuBImdAWJkWqpWLqSKZDvA+Le5MugA1/hRHMptuwCLeeDpaZwJOo579QwifGxS9OyBKNY8kPk3JFHGLSCZVKVizSHSGqjMZxRrgEhJY3LFhi6DsgJf4bPLuWMryB0rwu+nkeDGz4TEAZUR22JLa1mWZFwWlaQOskdeTxq6dOaJ9BNQ3HKE8k5040UYs6VtxrRSls0goSUUbTm+zt+ASwvjJPZT15nmQbTaFL0PGcKJ1RXJT9lPbaS6n0t7EC5dX2evKK65OofdDj2cKZk+dp2re2YgiX7d3pOqDa9qfbD88+yrThSvqc7Dh8FiDe5VNKKFEGjrEu1GoJ5r9TdWVRAsu94tdY22LJt9f/tOBc37/4UcVbuHPR1Wge2XPp5+92Dws38Qsn+MnRTAqNOxh8Nv2neP6EGeGFKG4Qan8Lp20mrHJUs/NScHWsiqQT4cGOlAkG5OW+wjHlc4QPWa/uAvFD3sTTNG6z9Bh5SfLjjj0YP0EYe7+vShTyuQBdrazgT0Il2wBvOKZJC1BfWn0mbtrUqo0kvLbcs/XxcZDJ+omEyDmffst0s2E2GQRiGk+dpGGRjCINZRvz1MYE+Kd/UQpvx4NZEV1zgpbX/IYOlopW/9lTR45JdStkbOROZ3CYKQKzrCnfhoLAJfpXpImU4oC0Yw4TfN7nGhMtkD2l8LxR7p4uTUTTuqsSkYgdpXCQmkf/TiIkL3495o+DA4Oiat8Vu5PYXUEsDBBQAAAgIAAAIIewNWGlkbQAAAHgAAAAJACQAbWV0YS5qc29uCgAgAAAAAAABABgAAIA+1d6xnQEAgD7V3rGdAQCAPtXesZ0Bq1YqSy0qzszPU7JSMNEz0jM011FQSi9KLMgoBooYgjilmSkgdrSSsaFFonmyobmpWVqSqVGSsa6Rubm5saWJuVGaYaq5kWmaUixQfUllQapfYm4qRE9AYklGWmZeSmZeup57UWaKO8hopdhaAFBLAQItABQAAAgIAAAIIewoU3l9WQIAABMFAAALACQAAAAAAAAAAAAAAAAAAABncmFwaDAuanNvbgoAIAAAAAAAAQAYAACAPtXesZ0BAIA+1d6xnQEAgD7V3rGdAVBLAQItABQAAAgIAAAIIewNWGlkbQAAAHgAAAAJACQAAAAAAAAAAAAAAKYCAABtZXRhLmpzb24KACAAAAAAAAEAGAAAgD7V3rGdAQCAPtXesZ0BAIA+1d6xnQFQSwUGAAAAAAIAAgC4AAAAXgMAAAAA
+    upgradeData: 
+    file_cachedStartup: {fileID: 0}
+    data_cachedStartup: 
+    cacheStartup: 0
+  showNavGraphs: 1
+  showUnwalkableNodes: 1
+  debugMode: 0
+  debugFloor: 0
+  debugRoof: 1
+  manualDebugFloorRoof: 0
+  showSearchTree: 0
+  unwalkableNodeDebugSize: 0.3
+  logPathResults: 1
+  maxNearestNodeDistance: 100
+  scanOnStartup: 1
+  fullGetNearestSearch: 0
+  prioritizeGraphs: 0
+  prioritizeGraphsLimit: 1
+  colorSettings:
+    _SolidColor: {r: 0.11764706, g: 0.4, b: 0.7882353, a: 0.9}
+    _UnwalkableNode: {r: 1, g: 0, b: 0, a: 0.5}
+    _BoundsHandles: {r: 0.29, g: 0.454, b: 0.741, a: 0.9}
+    _ConnectionLowLerp: {r: 0, g: 1, b: 0, a: 0.5}
+    _ConnectionHighLerp: {r: 1, g: 0, b: 0, a: 0.5}
+    _MeshEdgeColor: {r: 0, g: 0, b: 0, a: 0.5}
+    _AreaColors:
+    - {r: 0, g: 0, b: 0, a: 0}
+  tagNames: []
+  heuristic: 2
+  heuristicScale: 1
+  threadCount: 1
+  maxFrameTime: 10
+  batchGraphUpdates: 0
+  graphUpdateBatchingInterval: 0.2
+  euclideanEmbedding:
+    mode: 0
+    seed: 0
+    pivotPointRoot: {fileID: 0}
+    spreadOutCount: 1
+  showGraphs: 1
 --- !u!1 &1547094515
 GameObject:
   m_ObjectHideFlags: 0
@@ -1584,7 +1640,7 @@ GameObject:
   - component: {fileID: 1559762784}
   m_Layer: 3
   m_Name: Square
-  m_TagString: Untagged
+  m_TagString: ground
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1742,7 +1798,7 @@ GameObject:
   - component: {fileID: 1817361648}
   m_Layer: 3
   m_Name: Hexagon Flat-Top
-  m_TagString: Untagged
+  m_TagString: ground
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1906,7 +1962,7 @@ GameObject:
   - component: {fileID: 1825041391}
   m_Layer: 3
   m_Name: Square (5)
-  m_TagString: Untagged
+  m_TagString: ground
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -2064,7 +2120,7 @@ GameObject:
   - component: {fileID: 1874507238}
   m_Layer: 3
   m_Name: Square (3)
-  m_TagString: Untagged
+  m_TagString: ground
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -2222,7 +2278,7 @@ GameObject:
   - component: {fileID: 1998832791}
   m_Layer: 3
   m_Name: Square (6)
-  m_TagString: Untagged
+  m_TagString: ground
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
