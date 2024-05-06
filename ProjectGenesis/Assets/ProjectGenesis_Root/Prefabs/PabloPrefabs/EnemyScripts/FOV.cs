@@ -44,6 +44,8 @@ public class FOV : MonoBehaviour
             EnemyDeath();
         }
 
+        Move();
+
         Vector2 dir = target.position - transform.position;
         float angle = Vector3.Angle(dir, fovPoint.localEulerAngles);
         RaycastHit2D hit = Physics2D.Raycast(fovPoint.position, dir, range);
@@ -72,6 +74,24 @@ public class FOV : MonoBehaviour
                 }
             }
         }
+        
+    }
+
+    private void OnTriggerEnter2D(Collider2D collision)
+    {
+        if (collision.gameObject.CompareTag("Attack"))
+        {
+            life -= 1;
+        }
+    }
+
+    public void EnemyDeath()
+    {
+        gameObject.SetActive(false);
+    }
+
+    void Move()
+    {
         if (life > 0)
         {
             if (Vector2.Distance(transform.position, points[i].position) < 0.02f)
@@ -90,19 +110,6 @@ public class FOV : MonoBehaviour
             //... que corresponda al espacio del array con valor igual a la variable "i"
             transform.position = Vector2.MoveTowards(transform.position, points[i].position, speed * Time.deltaTime);
         }
-    }
-
-    private void OnTriggerEnter2D(Collider2D collision)
-    {
-        if (collision.gameObject.CompareTag("Attack"))
-        {
-            life -= 1;
-        }
-    }
-
-    public void EnemyDeath()
-    {
-        gameObject.SetActive(false);
     }
 }
     
