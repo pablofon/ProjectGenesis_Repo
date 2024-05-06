@@ -27,13 +27,13 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 6094112116721891000}
+  serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 13
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!212 &6732329816471921972
 SpriteRenderer:
@@ -168,11 +168,11 @@ MonoBehaviour:
   m_GameObject: {fileID: 6094112116721891000}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 3bccadd333e31d8478b8af250f4642fd, type: 3}
+  m_Script: {fileID: 11500000, guid: 8f1a156fd6f057945af79474babce061, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 1
+  speed: 2
   playerPosition: {fileID: 0}
-  chaseDistance: 5
+  chaseDistance: 10
   playerDetected: 0
   enemyLife: 3

@@ -27,6 +27,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 4693953244142736619}
+  serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: -1.28, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
@@ -34,7 +35,6 @@ Transform:
   m_Children:
   - {fileID: 7097875628857404843}
   m_Father: {fileID: 0}
-  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!212 &102884227830699969
 SpriteRenderer:
@@ -169,21 +169,21 @@ MonoBehaviour:
   m_GameObject: {fileID: 4693953244142736619}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ab168be8232d66e42bf505ecf7934003, type: 3}
+  m_Script: {fileID: 11500000, guid: 423977f0cbcdc7e429076f732cb9b5ae, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 4
+  speed: 5
   playerPosition: {fileID: 0}
   chaseDistance: 5
   playerDetected: 0
-  jumpForce: 2
-  life: 1
+  jumpForce: 3
+  life: 2
   isGrounded: 0
   groundCheck: {fileID: 7097875628857404843}
-  groundCheckRadius: 0.1
+  groundCheckRadius: 0.5
   groundLayer:
     serializedVersion: 2
-    m_Bits: 64
+    m_Bits: 8
 --- !u!1 &5798262742120328747
 GameObject:
   m_ObjectHideFlags: 0
@@ -207,11 +207,11 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 5798262742120328747}
+  serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: -0.477, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 5037590187398830718}
-  m_RootOrder: -1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}

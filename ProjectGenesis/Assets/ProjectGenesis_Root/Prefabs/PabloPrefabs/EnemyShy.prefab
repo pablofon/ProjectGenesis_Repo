@@ -26,13 +26,13 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 3939196933872554130}
+  serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!212 &1232261955088703689
 SpriteRenderer:
@@ -95,15 +95,15 @@ MonoBehaviour:
   m_GameObject: {fileID: 3939196933872554130}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 5dff1fe696cfcc64dbf31c561b134c45, type: 3}
+  m_Script: {fileID: 11500000, guid: 23b5a6239780cc742b18a22f209e258c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  life: 3
-  maxlife: 3
+  life: 2
+  maxlife: 2
   playerTransform: {fileID: 0}
-  speed: 8
+  speed: 6
   isChasing: 0
-  chaseDistance: 20
+  chaseDistance: 8
 --- !u!61 &1335381911609642311
 BoxCollider2D:
   m_ObjectHideFlags: 0
