@@ -1,0 +1,47 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0be0684bc0644274383ab176323f4709, type: 3}
+  m_Name: FolderIcons
+  m_EditorClassIdentifier: 
+  showOverlay: 1
+  showCustomFolder: 1
+  icons:
+  - folder: {fileID: 102900000, guid: b24c24900d764e94ba33afbf1070b06f, type: 3}
+    folderIcon: {fileID: 2800000, guid: eab75b706f70aca43b8ff64634c515ee, type: 3}
+    overlayIcon: {fileID: 0}
+  - folder: {fileID: 102900000, guid: 19791f93cb150f643a19669745983e6c, type: 3}
+    folderIcon: {fileID: 2800000, guid: 30b6f094fe545f640b5f5da798a13fb8, type: 3}
+    overlayIcon: {fileID: 0}
+  - folder: {fileID: 102900000, guid: e440f0c22d1b5334b815613f9d1a9961, type: 3}
+    folderIcon: {fileID: 2800000, guid: bb321d21ec6df16479b3b7ca2912c9c7, type: 3}
+    overlayIcon: {fileID: 0}
+  - folder: {fileID: 102900000, guid: 109e9bdd0fcc649c5bc59085c35bdc83, type: 3}
+    folderIcon: {fileID: 2800000, guid: e883a49e0791ffb4da111b699600a550, type: 3}
+    overlayIcon: {fileID: 0}
+  - folder: {fileID: 102900000, guid: 8018465127992d04f97aaa900529a531, type: 3}
+    folderIcon: {fileID: 2800000, guid: 6e5375f7dc7dd98459edcd2fb9a3f8b5, type: 3}
+    overlayIcon: {fileID: 0}
+  - folder: {fileID: 102900000, guid: f71b9c1aadb51624bb3955c29a84849b, type: 3}
+    folderIcon: {fileID: 2800000, guid: 3eeb12e1542f9da42815f009b4d9f05d, type: 3}
+    overlayIcon: {fileID: 0}
+  - folder: {fileID: 102900000, guid: 7084fd630c754884aa4a031c8a85587f, type: 3}
+    folderIcon: {fileID: 2800000, guid: 2bc839d7e3db2bf478572af026c7b8b4, type: 3}
+    overlayIcon: {fileID: 0}
+  - folder: {fileID: 102900000, guid: 97c87b02862caba4c9d44195757189bf, type: 3}
+    folderIcon: {fileID: 2800000, guid: b37da4319a2a50d4ebe3cc38697d9acf, type: 3}
+    overlayIcon: {fileID: 0}
+  - folder: {fileID: 102900000, guid: f6d8c910b9c684148bd7e6234f8f1f1d, type: 3}
+    folderIcon: {fileID: 2800000, guid: 75edfcfa691bf9f4e897dc8ee2328a45, type: 3}
+    overlayIcon: {fileID: 0}
+  - folder: {fileID: 102900000, guid: 13aab14cad3d37146ace6e84ecc9f1dc, type: 3}
+    folderIcon: {fileID: 2800000, guid: 89dbba36a0719d24f9287029f9ee6587, type: 3}
+    overlayIcon: {fileID: 0}
