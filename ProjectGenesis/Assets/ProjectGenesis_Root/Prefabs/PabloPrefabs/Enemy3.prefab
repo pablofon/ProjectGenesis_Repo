@@ -176,7 +176,7 @@ MonoBehaviour:
   playerPosition: {fileID: 0}
   chaseDistance: 5
   playerDetected: 0
-  jumpForce: 3
+  jumpForce: 2
   life: 2
   isGrounded: 0
   groundCheck: {fileID: 7097875628857404843}
