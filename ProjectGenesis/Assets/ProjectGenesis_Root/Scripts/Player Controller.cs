@@ -12,6 +12,7 @@ public class PlayerController : MonoBehaviour
     private SpriteRenderer spriteRenderer;
     [SerializeField] float horizontalInput;
     PlayerInput playerInput;
+    Collider2D col;
 
     [Header("Player Direction")]
     [SerializeField] bool isFacingRight = true;
@@ -25,7 +26,13 @@ public class PlayerController : MonoBehaviour
     private float appliedDrag;
     private bool changingDirection => ((rb.velocity.x > 0f && moveAxis.x < 0f) || (rb.velocity.x < 0f && moveAxis.x > 0f));
 
-    [Header("Ground Check")]
+    [Header("Physics")]
+    [SerializeField] Vector2 gravityDirection;
+    [SerializeField] float gravityScale;
+    [SerializeField] Vector2 collisionNormal;
+    Vector2 applyCollisionNormal;
+    [SerializeField] float collisionAngle;
+    [SerializeField] bool trikitakatelas;
     [SerializeField] float groundedAreaLength;
     [SerializeField] float groundedAreaHeight;
     [SerializeField] Transform groundCheck;
@@ -57,6 +64,8 @@ public class PlayerController : MonoBehaviour
         //set current health
         rb = GetComponent<Rigidbody2D>();
         playerInput = GetComponent<PlayerInput>();
+
+        col = GetComponent<Collider2D>();
     }
 
     void Update()
@@ -65,7 +74,7 @@ public class PlayerController : MonoBehaviour
         FacingDirection();
 
         if (canGroundJump) { dashesAvailable = maxDashes; wallJumpsLeft = wallJumpsMax; }
-    
+
     }
 
     private void FixedUpdate()
@@ -78,17 +87,21 @@ public class PlayerController : MonoBehaviour
             FallMultiplier();
             LinearDrag();
         }
+        Gravity();
     }
 
+    void Gravity()
+    {
+        rb.AddForce(-gravityDirection * gravityScale);
+    }
 
     void CheckCollisions()
     {
-        Collider2D collider = GetComponent<Collider2D>();
-        if (collider.IsTouchingLayers(LayerMask.GetMask("Ground")))
+        if (col.IsTouchingLayers(LayerMask.GetMask("Ground")))
         {
             canWallJump = true;
             ContactPoint2D[] contacts = new ContactPoint2D[10];
-            int contactCount = collider.GetContacts(contacts);
+            int contactCount = col.GetContacts(contacts);
             for (int i = 0; i < contactCount; i++)
             {
                 ContactPoint2D point = contacts[i];
@@ -101,13 +114,28 @@ public class PlayerController : MonoBehaviour
                 {
                     wallJumpSide = 1;
                 }
+                applyCollisionNormal = point.normal;
+            }
+            collisionAngle = Mathf.Atan2(collisionNormal.y, collisionNormal.x) * 180 / Mathf.PI - 90;
+            if (collisionAngle >= -45 && collisionAngle <= 45)
+            {
+                collisionNormal = applyCollisionNormal;
+                rb.rotation = collisionAngle;
+            }
+            else
+            {
+                collisionNormal = new Vector2(0, 1);
             }
         }
         else
         {
+            collisionNormal = new Vector2(0, 1);
+
             canWallJump = false;
         }
+        
 
+        gravityDirection = Quaternion.Euler(0, 0, rb.rotation) * new Vector2(0, 9.8f);
 
         //GROUNDCHECK
         canGroundJump = Physics2D.OverlapArea(
@@ -120,13 +148,18 @@ public class PlayerController : MonoBehaviour
 
     private void Movement()
     {
+        Vector2 direction = new Vector2(moveAxis.x, 0f);
+
+        // Rotate the direction vector by the z-rotation of the Rigidbody
+        direction = Quaternion.Euler(0, 0, rb.rotation) * direction;
+
         if (moveAxis.x > 0 && rb.velocity.x < maxMoveSpeed)
         {
-            rb.AddForce(new Vector2(moveAxis.x, 0f) * movementAcceleration, ForceMode2D.Impulse);
+            rb.AddForce(direction * movementAcceleration, ForceMode2D.Impulse);
         }
         if (moveAxis.x < 0 && rb.velocity.x > -maxMoveSpeed)
         {
-            rb.AddForce(new Vector2(moveAxis.x, 0f) * movementAcceleration, ForceMode2D.Impulse);
+            rb.AddForce(direction * movementAcceleration, ForceMode2D.Impulse);
         }
     }
 
@@ -157,15 +190,15 @@ public class PlayerController : MonoBehaviour
     {
         if (rb.velocity.y < 0.6f)
         {
-            rb.gravityScale = fallMultiplier;
+            gravityScale = fallMultiplier;
         }
         else if (rb.velocity.y > 0f && playerInput.actions["Jump"].ReadValue<float>() == 0)
         {
-            rb.gravityScale = lowFallMultiplier;
+            gravityScale = lowFallMultiplier;
         }
         else
         {
-            rb.gravityScale = 2f;
+            gravityScale = 2f;
         }
     }
 
@@ -197,7 +230,7 @@ public class PlayerController : MonoBehaviour
 
     void ResetGravityScale()
     {
-        rb.gravityScale = 1f;
+        gravityScale = 1f;
         rb.velocity = new Vector2(maxMoveSpeed * lastDashAxis.x, rb.velocity.y * .5f);
         isDashing = false;
     }
@@ -211,7 +244,7 @@ public class PlayerController : MonoBehaviour
             dashesAvailable -= 1;
             isDashing = true;
             //sfx[0].Play();
-            rb.gravityScale = 0f;
+            gravityScale = 0f;
             rb.velocity = Vector2.zero;
             lastDashAxis = moveAxis;
             lastDashAxis.Normalize();
