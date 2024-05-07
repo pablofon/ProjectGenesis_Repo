@@ -1029,7 +1029,7 @@ MonoBehaviour:
   movementAcceleration: 2
   maxMoveSpeed: 7
   groundedDrag: 25
-  midAirDrag: 1
+  midAirDrag: 0.09
   groundedAreaLength: 0.9
   groundedAreaHeight: 0.1
   groundCheck: {fileID: 133681260}

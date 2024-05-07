@@ -81,14 +81,17 @@ public class PlayerController : MonoBehaviour
     }
 
 
-    void OnCollisionStay2D(Collision2D collision)
+    void CheckCollisions()
     {
-        Debug.Log("enter");
-        if (collision.gameObject.layer == 3)
+        Collider2D collider = GetComponent<Collider2D>();
+        if (collider.IsTouchingLayers(LayerMask.GetMask("Ground")))
         {
             canWallJump = true;
-            foreach (ContactPoint2D point in collision.contacts)
+            ContactPoint2D[] contacts = new ContactPoint2D[10];
+            int contactCount = collider.GetContacts(contacts);
+            for (int i = 0; i < contactCount; i++)
             {
+                ContactPoint2D point = contacts[i];
                 Debug.DrawRay(point.point, point.normal, Color.red, 2.0f);
                 if (point.normal.x < 0)
                 {
@@ -104,11 +107,8 @@ public class PlayerController : MonoBehaviour
         {
             canWallJump = false;
         }
-    }
 
 
-    void CheckCollisions()
-    {
         //GROUNDCHECK
         canGroundJump = Physics2D.OverlapArea(
                         new Vector2(groundCheck.position.x - (groundedAreaLength / 2),
