@@ -10,7 +10,6 @@ public class EnemyChaser : MonoBehaviour
     [SerializeField] float chaseDistance;
     [SerializeField] bool playerDetected;
     [SerializeField] float jumpForce;
-    [SerializeField] float life;
     Rigidbody2D enemyRb;
     //float horInput;
 
@@ -30,10 +29,7 @@ public class EnemyChaser : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (life <= 0)
-        {
-            EnemyDeath();
-        }
+        
 
         //Detección de la capa ground para no hacer saltos infinitos
         isGrounded = Physics2D.OverlapCircle(groundCheck.position, groundCheckRadius, groundLayer);
@@ -42,13 +38,7 @@ public class EnemyChaser : MonoBehaviour
         Chase();
     }
 
-    private void OnTriggerEnter2D(Collider2D collision)
-    {
-        if (collision.gameObject.CompareTag("Attack"))
-        {
-            life -= 1;
-        }
-    }
+    
 
     void Detect()
     {
@@ -81,8 +71,5 @@ public class EnemyChaser : MonoBehaviour
         }
     }
 
-    public void EnemyDeath()
-    {
-        gameObject.SetActive(false);
-    }
+    
 }
