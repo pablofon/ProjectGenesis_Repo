@@ -29,8 +29,7 @@ public class PlayerController : MonoBehaviour
     [Header("Physics")]
     [SerializeField] Vector2 gravityDirection;
     [SerializeField] float gravityScale;
-    [SerializeField] Vector2 collisionNormal;
-    Vector2 applyCollisionNormal;
+    Vector2 collisionNormal;
     [SerializeField] float collisionAngle;
     [SerializeField] bool trikitakatelas;
     [SerializeField] float groundedAreaLength;
@@ -59,6 +58,8 @@ public class PlayerController : MonoBehaviour
     private Vector2 lastDashAxis;
     private bool isDashing;
 
+    [SerializeField] bool deleteLayer6;
+
     private void Awake()
     {
         //set current health
@@ -74,7 +75,6 @@ public class PlayerController : MonoBehaviour
         FacingDirection();
 
         if (canGroundJump) { dashesAvailable = maxDashes; wallJumpsLeft = wallJumpsMax; }
-
     }
 
     private void FixedUpdate()
@@ -95,6 +95,7 @@ public class PlayerController : MonoBehaviour
         rb.AddForce(-gravityDirection * gravityScale);
     }
 
+    //Vector2 slopeDirc
     void CheckCollisions()
     {
         if (col.IsTouchingLayers(LayerMask.GetMask("Ground")))
@@ -114,22 +115,21 @@ public class PlayerController : MonoBehaviour
                 {
                     wallJumpSide = 1;
                 }
-                applyCollisionNormal = point.normal;
+                collisionNormal = point.normal;
             }
             collisionAngle = Mathf.Atan2(collisionNormal.y, collisionNormal.x) * 180 / Mathf.PI - 90;
             if (collisionAngle >= -45 && collisionAngle <= 45)
             {
-                collisionNormal = applyCollisionNormal;
                 rb.rotation = collisionAngle;
             }
             else
             {
-                collisionNormal = new Vector2(0, 1);
+                rb.rotation = 0;
             }
         }
         else
         {
-            collisionNormal = new Vector2(0, 1);
+            rb.rotation = 0;
 
             canWallJump = false;
         }
@@ -153,6 +153,7 @@ public class PlayerController : MonoBehaviour
         // Rotate the direction vector by the z-rotation of the Rigidbody
         direction = Quaternion.Euler(0, 0, rb.rotation) * direction;
 
+        Vector2.Dot(direction, moveAxis);
         if (moveAxis.x > 0 && rb.velocity.x < maxMoveSpeed)
         {
             rb.AddForce(direction * movementAcceleration, ForceMode2D.Impulse);
@@ -209,20 +210,32 @@ public class PlayerController : MonoBehaviour
         moveAxis = playerInput.actions["Movement"].ReadValue<Vector2>();
     }
 
-
+    [SerializeField] GameObject enemy;
     public void Jump(InputAction.CallbackContext context)
     {
         if (context.performed)
         {
+            /*
+            Collider2D[] tempCol;
+            tempCol = Physics2D.OverlapCircleAll(transform.position, 10f, 1 << 6);
+
+            for (int i = 0; i < tempCol.Length; i++)
+            {
+                EnemyTest script = tempCol[i].gameObject.GetComponent<EnemyTest>();
+
+                script.Flash(dashColor, .5f, 1);
+            }
+            */
             if (canGroundJump)
             {
                 //anim.SetTrigger("jump");
+                rb.velocity = new Vector2(rb.velocity.x, rb.velocity.y * 0.2f);
                 rb.AddForce(Vector2.up * groundJumpForce, ForceMode2D.Impulse);
             }
             else if (wallJumpsLeft > 0 && canWallJump == true)
             {
                 wallJumpsLeft--;
-                rb.velocity = Vector2.zero;
+                rb.velocity = new Vector2(rb.velocity.x, 0);
                 rb.AddForce(new Vector2(wallJumpSide / 2f, 1) * wallJumpForce, ForceMode2D.Impulse);
             }
         }

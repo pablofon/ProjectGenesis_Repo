@@ -981,13 +981,12 @@ MonoBehaviour:
   horizontalInput: 0
   isFacingRight: 1
   moveAxis: {x: 0, y: 0}
-  movementAcceleration: 2
+  movementAcceleration: 3
   maxMoveSpeed: 7
-  groundedDrag: 25
-  midAirDrag: 0.09
+  groundedDrag: 50
+  midAirDrag: 0.2
   gravityDirection: {x: 0, y: 0}
   gravityScale: 1
-  collisionNormal: {x: 0, y: 0}
   collisionAngle: 0
   trikitakatelas: 1
   groundedAreaLength: 0.9
@@ -1011,6 +1010,8 @@ MonoBehaviour:
   maxDashes: 3
   dashColor: {r: 0.7578083, g: 1, b: 0.2688679, a: 0}
   dashColorAmount: 0.5
+  deleteLayer6: 0
+  enemy: {fileID: 0}
 --- !u!114 &784580391
 MonoBehaviour:
   m_ObjectHideFlags: 0
