@@ -6,6 +6,7 @@ TagManager:
   tags:
   - ground
   - attack
+  - JumpZone
   layers:
   - Default
   - TransparentFX
