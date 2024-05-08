@@ -75,7 +75,7 @@ public class EnemyChaser : MonoBehaviour
             {
                 if (isGrounded)
                 {
-                    enemyRb.AddForce(Vector3.up * jumpForce, ForceMode2D.Impulse);
+                    enemyRb.AddForce(Vector2.up * jumpForce, ForceMode2D.Impulse);
                 }
             }
         }
