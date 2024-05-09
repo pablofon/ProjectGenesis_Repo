@@ -29,7 +29,7 @@ public class PlayerController : MonoBehaviour
     [Header("Physics")]
     [SerializeField] Vector2 gravityDirection;
     [SerializeField] float gravityScale;
-    Vector2 collisionNormal;
+    [SerializeField] Vector2 collisionNormal;
     [SerializeField] float collisionAngle;
     [SerializeField] bool trikitakatelas;
     [SerializeField] float groundedAreaLength;
@@ -115,14 +115,16 @@ public class PlayerController : MonoBehaviour
                 }
                 collisionNormal = point.normal;
             }
+
             collisionAngle = Mathf.Atan2(collisionNormal.y, collisionNormal.x) * 180 / Mathf.PI - 90;
-            collisionSurface = new Vector2(Mathf.Cos(collisionAngle * Mathf.Deg2Rad), Mathf.Sin(collisionAngle * Mathf.Deg2Rad));
+            
             if (collisionAngle >= -45 && collisionAngle <= 45)
             {
                 rb.rotation = collisionAngle;
             }
             else
             {
+
                 rb.rotation = 0;
             }
         }
@@ -145,14 +147,14 @@ public class PlayerController : MonoBehaviour
                                     groundLayer);
     }
 
-    [SerializeField] Vector2 collisionSurface;
     private void Movement()
     {
         // Rotate the movement axis vector by the z-rotation of the Rigidbody
         Vector2 direction = Quaternion.Euler(0, 0, rb.rotation) * new Vector2(moveAxis.x, 0f);
 
-        float rotatedVelocity = Vector2.Dot(rb.velocity, collisionSurface);
+        float rotatedVelocity = Vector2.Dot(rb.velocity, new Vector2(Mathf.Abs(direction.x), Mathf.Abs(direction.y)));
 
+        //Rotated x velocity
         Vector2.Dot(direction, moveAxis);
         if (moveAxis.x > 0 && rotatedVelocity < maxMoveSpeed)
         {
@@ -185,6 +187,17 @@ public class PlayerController : MonoBehaviour
     private void ApplyLinearDrag()
     {
         rb.velocity = new Vector2((rb.velocity.x / (1f + appliedDrag / 50)), rb.velocity.y);
+
+        Vector2 dragDirection = new Vector2(1, 0); // Horizontal drag
+        float speed = rb.velocity.magnitude;
+        Vector2 velocityDirection = rb.velocity / speed; // Normalized velocity
+
+        // Project velocity onto drag direction
+        float projectedSpeed = Vector2.Dot(velocityDirection, dragDirection);
+
+        // Apply drag
+        Vector2 dragForce = -dragDirection * projectedSpeed * appliedDrag / 50;
+        rb.velocity += dragForce;
     }
 
     private void FallMultiplier()
