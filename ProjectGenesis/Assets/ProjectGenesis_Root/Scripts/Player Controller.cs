@@ -58,8 +58,6 @@ public class PlayerController : MonoBehaviour
     private Vector2 lastDashAxis;
     private bool isDashing;
 
-    [SerializeField] bool deleteLayer6;
-
     private void Awake()
     {
         //set current health
@@ -118,6 +116,7 @@ public class PlayerController : MonoBehaviour
                 collisionNormal = point.normal;
             }
             collisionAngle = Mathf.Atan2(collisionNormal.y, collisionNormal.x) * 180 / Mathf.PI - 90;
+            collisionSurface = new Vector2(Mathf.Cos(collisionAngle * Mathf.Deg2Rad), Mathf.Sin(collisionAngle * Mathf.Deg2Rad));
             if (collisionAngle >= -45 && collisionAngle <= 45)
             {
                 rb.rotation = collisionAngle;
@@ -146,19 +145,20 @@ public class PlayerController : MonoBehaviour
                                     groundLayer);
     }
 
+    [SerializeField] Vector2 collisionSurface;
     private void Movement()
     {
-        Vector2 direction = new Vector2(moveAxis.x, 0f);
+        // Rotate the movement axis vector by the z-rotation of the Rigidbody
+        Vector2 direction = Quaternion.Euler(0, 0, rb.rotation) * new Vector2(moveAxis.x, 0f);
 
-        // Rotate the direction vector by the z-rotation of the Rigidbody
-        direction = Quaternion.Euler(0, 0, rb.rotation) * direction;
+        float rotatedVelocity = Vector2.Dot(rb.velocity, collisionSurface);
 
         Vector2.Dot(direction, moveAxis);
-        if (moveAxis.x > 0 && rb.velocity.x < maxMoveSpeed)
+        if (moveAxis.x > 0 && rotatedVelocity < maxMoveSpeed)
         {
             rb.AddForce(direction * movementAcceleration, ForceMode2D.Impulse);
         }
-        if (moveAxis.x < 0 && rb.velocity.x > -maxMoveSpeed)
+        if (moveAxis.x < 0 && rotatedVelocity > -maxMoveSpeed)
         {
             rb.AddForce(direction * movementAcceleration, ForceMode2D.Impulse);
         }
@@ -210,7 +210,6 @@ public class PlayerController : MonoBehaviour
         moveAxis = playerInput.actions["Movement"].ReadValue<Vector2>();
     }
 
-    [SerializeField] GameObject enemy;
     public void Jump(InputAction.CallbackContext context)
     {
         if (context.performed)
