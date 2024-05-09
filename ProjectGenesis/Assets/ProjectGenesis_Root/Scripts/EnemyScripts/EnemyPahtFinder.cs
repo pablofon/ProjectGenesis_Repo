@@ -25,7 +25,6 @@ public class EnemyPahtFinder : MonoBehaviour
     bool detected;
     float timer;
 
-
     private void Start()
     {
         agent = GetComponent<NavMeshAgent>();
@@ -34,6 +33,7 @@ public class EnemyPahtFinder : MonoBehaviour
 
         target = GameObject.FindGameObjectWithTag("Player").transform;
         startAttack = false;
+
 
     }
 
