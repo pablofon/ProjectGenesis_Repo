@@ -69,6 +69,7 @@ public class EnemyPahtFinder : MonoBehaviour
                         Debug.DrawRay(fovPoint.position, dir, Color.green);
                         detected = true;
                         timer += Time.deltaTime;
+                        rot = new Quaternion(0, 0, angle, angle);
                     }
                     else
                     {
