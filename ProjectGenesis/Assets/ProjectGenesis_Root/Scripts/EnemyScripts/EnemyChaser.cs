@@ -37,13 +37,7 @@ public class EnemyChaser : MonoBehaviour
         Detect();
         Chase();
 
-        if (playerPosition.position.y - transform.position.y > 1.5f)
-        {
-            if (isGrounded)
-            {
-                enemyRb.AddForce(Vector2.up * jumpForce, ForceMode2D.Impulse);
-            }
-        }
+        
     }
 
     /*private void OnTriggerEnter2D(Collider2D collision)
@@ -78,7 +72,14 @@ public class EnemyChaser : MonoBehaviour
             {
                 enemyRb.velocity = new Vector2( -1f * speed, enemyRb.velocity.y);
             }
-            
+            if (playerPosition.position.y - transform.position.y > 1.5f)
+            {
+                if (isGrounded)
+                {
+                    enemyRb.AddForce(Vector2.up * jumpForce, ForceMode2D.Impulse);
+                }
+            }
+
         }
     }
 
