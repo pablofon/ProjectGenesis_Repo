@@ -40,13 +40,13 @@ public class EnemyChaser : MonoBehaviour
         
     }
 
-    private void OnTriggerEnter2D(Collider2D collision)
+    /*private void OnTriggerEnter2D(Collider2D collision)
     {
         if (collision.gameObject.CompareTag("JumpZone"))
         {
             Jump();
         }
-    }
+    }*/
 
 
 
@@ -72,13 +72,13 @@ public class EnemyChaser : MonoBehaviour
             {
                 enemyRb.velocity = new Vector2( -1f * speed, enemyRb.velocity.y);
             }
-            /*if (playerPosition.position.y - transform.position.y > 1.5f)
+            if (playerPosition.position.y - transform.position.y > 1.5f)
             {
                 if (isGrounded)
                 {
                     enemyRb.AddForce(Vector2.up * jumpForce, ForceMode2D.Impulse);
                 }
-            }*/
+            }
 
         }
     }
