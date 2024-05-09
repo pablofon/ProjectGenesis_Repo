@@ -36,15 +36,23 @@ public class EnemyChaser : MonoBehaviour
 
         Detect();
         Chase();
+
+        if (playerPosition.position.y - transform.position.y > 1.5f)
+        {
+            if (isGrounded)
+            {
+                enemyRb.AddForce(Vector2.up * jumpForce, ForceMode2D.Impulse);
+            }
+        }
     }
 
-    private void OnTriggerEnter2D(Collider2D collision)
+    /*private void OnTriggerEnter2D(Collider2D collision)
     {
         if (collision.gameObject.CompareTag("JumpZone"))
         {
             Jump();
         }
-    }
+    }*/
 
 
 
@@ -61,6 +69,7 @@ public class EnemyChaser : MonoBehaviour
         //horInput = Input.GetAxis("Horizontal");
         if (playerDetected)
         {
+
             if (playerPosition.position.x - transform.position.x > 0.02f)
             {
                 enemyRb.velocity = new Vector2( speed, enemyRb.velocity.y);
