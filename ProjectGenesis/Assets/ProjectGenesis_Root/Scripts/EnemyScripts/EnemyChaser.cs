@@ -45,7 +45,7 @@ public class EnemyChaser : MonoBehaviour
 
         Attack();
 
-        if (attackRange)
+        if (attackRange && isGrounded)
         {
             enemyRb.AddForce(Vector2.up * attackJumpForce, ForceMode2D.Impulse);
         }
@@ -76,11 +76,11 @@ public class EnemyChaser : MonoBehaviour
         if (playerDetected)
         {
 
-            if (playerPosition.position.x - transform.position.x > 1.5f)
+            if (playerPosition.position.x - transform.position.x > 0.02f)
             {
                 enemyRb.velocity = new Vector2( speed, enemyRb.velocity.y);
             }
-            if (playerPosition.position.x - transform.position.x < 1.5f)
+            if (playerPosition.position.x - transform.position.x < -0.02f)
             {
                 enemyRb.velocity = new Vector2( -1f * speed, enemyRb.velocity.y);
             }
@@ -108,7 +108,7 @@ public class EnemyChaser : MonoBehaviour
     {
         if (playerDetected && isGrounded)
         {
-            if (playerPosition.position.x - transform.position.x < 0.02f || playerPosition.position.x - transform.position.x < -0.02f)
+            if (Vector2.Distance(playerPosition.position, transform.position) < 0.02f)
             {
                 attackRange = true;
             }
