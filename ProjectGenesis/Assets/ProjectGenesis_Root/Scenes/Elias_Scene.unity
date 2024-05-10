@@ -133,7 +133,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: -8653719598885068355, guid: 2cc75603b9dc191468db0a37e019677d, type: 3}
       propertyPath: m_Name
-      value: shylady_rigging_sinfondo2
+      value: shylady
       objectReference: {fileID: 0}
     - target: {fileID: -7999430362355344977, guid: 2cc75603b9dc191468db0a37e019677d, type: 3}
       propertyPath: m_LocalRotation.w
