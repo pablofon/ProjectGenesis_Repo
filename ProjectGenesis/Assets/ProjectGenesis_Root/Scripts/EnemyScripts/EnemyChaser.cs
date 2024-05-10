@@ -118,4 +118,9 @@ public class EnemyChaser : MonoBehaviour
             }
         }
     }*/
+
+    public void EnemyDeath()
+    {
+
+    }
 }

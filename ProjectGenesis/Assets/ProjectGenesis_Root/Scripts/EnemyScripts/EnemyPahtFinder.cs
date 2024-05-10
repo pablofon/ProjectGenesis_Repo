@@ -98,4 +98,9 @@ public class EnemyPahtFinder : MonoBehaviour
     {
         agent.SetDestination(transform.position);
     }
+
+    public void EnemyDeath()
+    {
+
+    }
 }
