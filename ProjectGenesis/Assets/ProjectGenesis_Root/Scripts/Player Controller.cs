@@ -29,9 +29,7 @@ public class PlayerController : MonoBehaviour
     [Header("Physics")]
     [SerializeField] Vector2 gravityDirection;
     [SerializeField] float gravityScale;
-    [SerializeField] Vector2 collisionNormal;
-    [SerializeField] float collisionAngle;
-    [SerializeField] bool trikitakatelas;
+    [SerializeField] Vector2 localVelocity;
     [SerializeField] float groundedAreaLength;
     [SerializeField] float groundedAreaHeight;
     [SerializeField] Transform groundCheck;
@@ -40,6 +38,7 @@ public class PlayerController : MonoBehaviour
     [Header("Jump")]
     [SerializeField] private float fallMultiplier;
     [SerializeField] private float lowFallMultiplier;
+    [SerializeField] private bool gravityOff;
     [SerializeField] bool canGroundJump;
     [SerializeField] private float groundJumpForce;
     [SerializeField] private int wallJumpsMax;
@@ -77,13 +76,15 @@ public class PlayerController : MonoBehaviour
 
     private void FixedUpdate()
     {
+        localVelocity = transform.InverseTransformDirection(rb.velocity);
+
         CheckCollisions();
-        Movement();
-        if (!isDashing)
+        Movement(localVelocity.x);
+        if (!isDashing && !gravityOff)
         {
-            ApplyLinearDrag();
+            ApplyLinearDrag(localVelocity);
             FallMultiplier();
-            LinearDrag();
+            LinearDrag(localVelocity.x);
         }
         Gravity();
     }
@@ -93,7 +94,8 @@ public class PlayerController : MonoBehaviour
         rb.AddForce(-gravityDirection * gravityScale);
     }
 
-    //Vector2 slopeDirc
+    private Vector2 collisionNormal;
+    private float collisionAngle;
     void CheckCollisions()
     {
         if (col.IsTouchingLayers(LayerMask.GetMask("Ground")))
@@ -147,29 +149,26 @@ public class PlayerController : MonoBehaviour
                                     groundLayer);
     }
 
-    private void Movement()
+    private void Movement(float localVelX)
     {
         // Rotate the movement axis vector by the z-rotation of the Rigidbody
         Vector2 direction = Quaternion.Euler(0, 0, rb.rotation) * new Vector2(moveAxis.x, 0f);
 
-        float rotatedVelocity = Vector2.Dot(rb.velocity, new Vector2(Mathf.Abs(direction.x), Mathf.Abs(direction.y)));
-
-        //Rotated x velocity
-        Vector2.Dot(direction, moveAxis);
-
-        // Calculate the velocity needed to reach the maxMoveSpeed
-        float velocityNeeded = maxMoveSpeed - Mathf.Abs(rotatedVelocity);
-
-        // Limit the velocity to not exceed the movementAcceleration
-        float velocityToApply = Mathf.Min(velocityNeeded, movementAcceleration);
-
-        if (moveAxis.x != 0 && Mathf.Abs(rotatedVelocity) < maxMoveSpeed)
+        if (moveAxis.x != 0 && Mathf.Sign(localVelX) == -Mathf.Sign(moveAxis.x) || Mathf.Abs(localVelX) < maxMoveSpeed)
         {
+            // Calculate the velocity needed to reach the maxMoveSpeed
+            float velocityNeeded = maxMoveSpeed - Mathf.Abs(localVelX);
+
+            // Limit the velocity to not exceed the movementAcceleration
+            float velocityToApply = Mathf.Min(velocityNeeded, movementAcceleration);
+
+            if (velocityToApply < 0) { velocityToApply = movementAcceleration; }
+
             rb.velocity += direction * velocityToApply;
         }
     }
 
-    private void LinearDrag()
+    private void LinearDrag(float localVelX)
     {
         float linearDrag;
         if (canGroundJump)
@@ -177,12 +176,18 @@ public class PlayerController : MonoBehaviour
         else
         { linearDrag = midAirDrag; }
 
-        float localVelocityX = transform.InverseTransformDirection(rb.velocity).x;
-
         // Apply drag if the character is changing direction, or if its speed exceeds the maximum speed
-        if (Mathf.Abs(moveAxis.x) < 0.4f || changingDirection || Mathf.Abs(localVelocityX) > maxMoveSpeed + .2f)
+        if (Mathf.Abs(moveAxis.x) < 0.4f)
         {
             appliedDrag = linearDrag;
+        }
+        else if (changingDirection)
+        {
+            appliedDrag = linearDrag * 2;
+        }
+        else if (Mathf.Abs(localVelX) > maxMoveSpeed + .1f)
+        {
+            appliedDrag = linearDrag * .1f;
         }
         else
         {
@@ -190,16 +195,13 @@ public class PlayerController : MonoBehaviour
         }
     }
 
-    private void ApplyLinearDrag()
+    private void ApplyLinearDrag(Vector2 localVel)
     {
-        // Convert the velocity to local space
-        Vector2 localVelocity = transform.InverseTransformDirection(rb.velocity);
-
         // Apply drag on the local x-axis
-        localVelocity.x /= (1f + appliedDrag / 50);
+        localVel.x /= (1f + appliedDrag / 50);
 
         // Convert the velocity back to world space
-        rb.velocity = transform.TransformDirection(localVelocity);
+        rb.velocity = transform.TransformDirection(localVel);
     }
 
     private void FallMultiplier()
@@ -244,13 +246,11 @@ public class PlayerController : MonoBehaviour
             {
                 //anim.SetTrigger("jump");
                 //sfx[0].Play();
-                isDashing = true;
+                gravityOff = true;
                 gravityScale = 0f;
-                rb.velocity = new Vector2(rb.velocity.x, 0);
-                rb.AddForce(Vector2.up * groundJumpForce, ForceMode2D.Impulse);
+                rb.velocity = new Vector2(0, groundJumpForce);
                 StartCoroutine(FlashColor(dashColor, dashDuration, dashColorAmount));
                 Invoke("ResetGravityScale", .1f);
-
             }
             else if (wallJumpsLeft > 0 && canWallJump == true)
             {
@@ -264,7 +264,7 @@ public class PlayerController : MonoBehaviour
     void ResetGravityScale()
     {
         gravityScale = 1f;
-        isDashing = false;
+        gravityOff = false;
     }
 
     void FinishDash()
@@ -278,7 +278,6 @@ public class PlayerController : MonoBehaviour
     {
         if (context.performed && !isDashing && dashesAvailable > 0)
         {
-            Debug.Log("dashed");
             dashesAvailable -= 1;
             isDashing = true;
             //sfx[0].Play();
@@ -310,7 +309,6 @@ public class PlayerController : MonoBehaviour
             yield return null; // Wait for the next frame
         }
         sr.material.SetFloat("_Multiplier", 0);
-        Debug.Log("coloreset");
     }
 
     //ANIMATIONS
