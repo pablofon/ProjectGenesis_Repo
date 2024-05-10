@@ -19,7 +19,7 @@ public class TurretReverse : MonoBehaviour
     void Start()
     {
         detected = false;
-        rot = new Quaternion(0, 0, 270, 270);
+        rot = new Quaternion(0, 0, 270, 90);
     }
 
     // Update is called once per frame
