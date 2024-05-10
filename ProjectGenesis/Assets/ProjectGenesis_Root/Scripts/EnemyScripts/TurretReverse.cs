@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class TurretController : MonoBehaviour
+public class TurretReverse : MonoBehaviour
 {
     bool detected;
     Quaternion rot;
@@ -19,24 +19,24 @@ public class TurretController : MonoBehaviour
     void Start()
     {
         detected = false;
-        rot = new Quaternion(0, 0, 90, 90);
+        rot = new Quaternion(0, 0, 270, 270);
     }
 
     // Update is called once per frame
     void Update()
     {
-        rchit = Physics2D.Raycast(gameObject.transform.position, Vector2.left, distance); //Raycast
-        
+        rchit = Physics2D.Raycast(gameObject.transform.position, Vector2.right, distance); //Raycast
+
         //Si el raycast detecta algo saca un rayo verde, si no uno rojo
         if (rchit.collider != null)
         {
-            Debug.DrawRay(gameObject.transform.position, Vector2.left * distance, Color.green);
+            Debug.DrawRay(gameObject.transform.position, Vector2.right * distance, Color.green);
             detected = true;
             timer += Time.deltaTime;
         }
         if (rchit.collider == null)
         {
-            Debug.DrawRay(gameObject.transform.position, Vector2.left * distance, Color.red);
+            Debug.DrawRay(gameObject.transform.position, Vector2.right * distance, Color.red);
             detected = false;
             timer = 1.5f;
         }
