@@ -107,29 +107,29 @@ ScriptedImporter:
       height: 568
     spriteID: 05a67b81ed6a8dd4d840986888fa003e
     spriteBone:
-    - name: bone_15
+    - name: ArmR3
       guid: 71e9fe0a8a7cbd34ab5028433ed91695
-      position: {x: 228.87727, y: -0.00024367843, z: 0}
-      rotation: {x: 0, y: 0, z: 0.083288245, w: 0.9965256}
-      length: 93.37177
+      position: {x: 228.87729, y: 0.0003083892, z: 0}
+      rotation: {x: 0, y: 0, z: 0.08328839, w: 0.99652547}
+      length: 93.371765
       parentId: 1
       color:
         serializedVersion: 2
         rgba: 4294967040
-    - name: bone_14
+    - name: ArmR2
       guid: 639072b1413104943aea21032193d864
-      position: {x: 283.21606, y: 0.0001342168, z: 0}
-      rotation: {x: 0, y: 0, z: 0.17901109, w: 0.98384714}
+      position: {x: 283.21573, y: -0.00020128433, z: 0}
+      rotation: {x: 0, y: 0, z: 0.1790112, w: 0.9838471}
       length: 228.87752
       parentId: 2
       color:
         serializedVersion: 2
         rgba: 4278255360
-    - name: bone_13
+    - name: arm R1
       guid: 2fb40fddde17bf640a8331102c8975cb
-      position: {x: 18.87146, y: 510.36353, z: 0}
-      rotation: {x: 0, y: 0, z: -0.38468197, w: 0.9230492}
-      length: 283.21567
+      position: {x: 18.87146, y: 510.36377, z: 0}
+      rotation: {x: 0, y: 0, z: -0.38468203, w: 0.92304915}
+      length: 283.2157
       parentId: -1
       color:
         serializedVersion: 2
@@ -1205,29 +1205,29 @@ ScriptedImporter:
       height: 667
     spriteID: e25ff8b70bfd0ed41b5e01a51fbb66ae
     spriteBone:
-    - name: bone_18
+    - name: ArmL3
       guid: 3c06b584f52f6c74cb3645b289fa3d89
-      position: {x: 203.21167, y: -0.0000438105, z: 0}
-      rotation: {x: 0, y: 0, z: -0.045102883, w: 0.99898237}
-      length: 126.08417
+      position: {x: 203.21117, y: -0.00018379805, z: 0}
+      rotation: {x: 0, y: 0, z: -0.04510293, w: 0.9989824}
+      length: 126.08422
       parentId: 1
       color:
         serializedVersion: 2
         rgba: 4278190335
-    - name: bone_17
+    - name: ArmL2
       guid: 72429e6db8666ba4ebfb441551108f6f
-      position: {x: 302.63312, y: 0.00005556566, z: 0}
-      rotation: {x: 0, y: 0, z: -0.21267262, w: 0.9771235}
-      length: 203.21106
+      position: {x: 302.63318, y: -0.000063587184, z: 0}
+      rotation: {x: 0, y: 0, z: -0.21267276, w: 0.9771235}
+      length: 203.21138
       parentId: 2
       color:
         serializedVersion: 2
         rgba: 4294902015
-    - name: bone_16
+    - name: ArmL1
       guid: 004ab408e975ded42a21686bbab6733e
-      position: {x: 539.15466, y: 627.2185, z: 0}
-      rotation: {x: 0, y: 0, z: 0.8605981, w: -0.5092848}
-      length: 302.63333
+      position: {x: 539.15454, y: 627.2185, z: 0}
+      rotation: {x: 0, y: 0, z: 0.86059797, w: -0.509285}
+      length: 302.63327
       parentId: -1
       color:
         serializedVersion: 2
@@ -1877,43 +1877,43 @@ ScriptedImporter:
       height: 2544
     spriteID: 9263cc0c739ffc14b82d619f67952633
     spriteBone:
-    - name: bone_19
+    - name: tetacle medil4
       guid: 736b58864939c1c4cb46357f6f56c1f2
-      position: {x: 359.83337, y: -0.0019730253, z: 0}
-      rotation: {x: 0, y: 0, z: -0.0000025293155, w: 1}
-      length: 363.94357
+      position: {x: 359.83325, y: 0.001779351, z: 0}
+      rotation: {x: 0, y: 0, z: 0.0000024871656, w: 1}
+      length: 363.9436
       parentId: 1
       color:
         serializedVersion: 2
         rgba: 4278255488
-    - name: bone_6
+    - name: tetacle medil3
       guid: 78b821cd1fd02b7479d638855e947148
-      position: {x: 443.0592, y: 0.00013833838, z: 0}
-      rotation: {x: 0, y: 0, z: 0.00593018, w: 0.9999824}
-      length: 359.8331
+      position: {x: 443.05933, y: 0.0000837809, z: 0}
+      rotation: {x: 0, y: 0, z: 0.0059251655, w: 0.9999825}
+      length: 359.83313
       parentId: 2
       color:
         serializedVersion: 2
         rgba: 4294902015
-    - name: bone_5
+    - name: tetacle medil2
       guid: dba9de5f211e41c419d9cf80add96790
-      position: {x: 346.34113, y: 0.000017684497, z: 0}
+      position: {x: 346.34137, y: 0.00001970219, z: 0}
       rotation: {x: 0, y: 0, z: -0.0046993336, w: 0.999989}
-      length: 443.05927
+      length: 443.0594
       parentId: 3
       color:
         serializedVersion: 2
         rgba: 4294901760
-    - name: bone_4
+    - name: tetacle medil1
       guid: 9598f89b7d9d1274cab1dbee27154450
       position: {x: -33.990944, y: 1.1106925, z: 0}
       rotation: {x: 0, y: 0, z: 0.9997475, w: 0.022470921}
-      length: 346.34073
+      length: 346.34097
       parentId: 4
       color:
         serializedVersion: 2
         rgba: 4294967040
-    - name: bone_1
+    - name: Tantacles body
       guid: a18237d7124d33747930d8460183cb90
       position: {x: 823.4912, y: 1571.9827, z: 0}
       rotation: {x: 0, y: 0, z: 0.71995586, w: 0.69401985}
@@ -1922,19 +1922,19 @@ ScriptedImporter:
       color:
         serializedVersion: 2
         rgba: 4278190335
-    - name: bone_2
+    - name: Body Arms
       guid: 0b50394f4217aef4180c835e4a1f5333
       position: {x: 307.49982, y: -0.000034580742, z: 0}
-      rotation: {x: 0, y: 0, z: 0.100613065, w: 0.9949256}
-      length: 379.0783
+      rotation: {x: 0, y: 0, z: 0.10061319, w: 0.9949256}
+      length: 379.07828
       parentId: 4
       color:
         serializedVersion: 2
         rgba: 4278255615
-    - name: bone_3
+    - name: head
       guid: 17fd48c27344dd54f80c5d6af3f61498
-      position: {x: 379.07834, y: 0.00017139729, z: 0}
-      rotation: {x: 0, y: 0, z: -0.081657834, w: 0.9966604}
+      position: {x: 379.07837, y: -0.000062882165, z: 0}
+      rotation: {x: 0, y: 0, z: -0.08165796, w: 0.9966604}
       length: 295.47992
       parentId: 5
       color:
@@ -2839,28 +2839,28 @@ ScriptedImporter:
       height: 1467
     spriteID: 5fa71601dc78e284ea818aee6a65facd
     spriteBone:
-    - name: bone_9
+    - name: tetacleR3
       guid: 4f94cf2e1d636df45880b5852bd52230
-      position: {x: 480.8565, y: 0.000069425456, z: 0}
-      rotation: {x: 0, y: 0, z: -0.021241521, w: 0.9997744}
-      length: 359.5814
+      position: {x: 480.8566, y: 0.00012176558, z: 0}
+      rotation: {x: 0, y: 0, z: -0.021241656, w: 0.99977446}
+      length: 359.58142
       parentId: 1
       color:
         serializedVersion: 2
         rgba: 4286643968
-    - name: bone_8
+    - name: tetacleR2
       guid: 6c5aed89a6f87ea48993442ace82fbb2
-      position: {x: 718.8705, y: -0.0001247398, z: 0}
-      rotation: {x: 0, y: 0, z: 0.004885872, w: 0.9999881}
-      length: 480.85663
+      position: {x: 718.8707, y: 0.00012043113, z: 0}
+      rotation: {x: 0, y: 0, z: 0.0048858724, w: 0.99998814}
+      length: 480.8566
       parentId: 2
       color:
         serializedVersion: 2
         rgba: 4278255488
-    - name: bone_7
+    - name: tetacleR1
       guid: d8fe88e9b2371324685c4bfb7bf663fb
       position: {x: 58.80237, y: 1413.8923, z: 0}
-      rotation: {x: 0, y: 0, z: -0.52406025, w: 0.85168123}
+      rotation: {x: 0, y: 0, z: -0.52406013, w: 0.8516813}
       length: 718.87054
       parentId: -1
       color:
@@ -3819,38 +3819,38 @@ ScriptedImporter:
       height: 1457
     spriteID: 258795759dc1c594484bbe9272a80251
     spriteBone:
-    - name: bone_6
+    - name: tetacle medil3
       guid: 78b821cd1fd02b7479d638855e947148
-      position: {x: 689.93994, y: 1662.6544, z: 0}
-      rotation: {x: 0, y: 0, z: 0.70915544, w: -0.70505226}
-      length: 359.8331
+      position: {x: 689.93994, y: 1662.654, z: 0}
+      rotation: {x: 0, y: 0, z: 0.70915896, w: -0.7050487}
+      length: 359.83313
       parentId: -1
       color:
         serializedVersion: 2
         rgba: 4294902015
-    - name: bone_12
+    - name: tetacleL3
       guid: ae8d6f01ede9c894ca4737467f4af2da
-      position: {x: 457.4336, y: 0.000045205117, z: 0}
+      position: {x: 457.43353, y: -0.000025793255, z: 0}
       rotation: {x: 0, y: 0, z: 0.040011067, w: 0.9991993}
       length: 251.0377
       parentId: 2
       color:
         serializedVersion: 2
         rgba: 4286578943
-    - name: bone_11
+    - name: tetacleL2
       guid: 5a44b9adf4c5ef24ebcbfc1eaeb7dc6c
-      position: {x: 748.00073, y: 0.00012269054, z: 0}
+      position: {x: 748.0006, y: 0.00007523549, z: 0}
       rotation: {x: 0, y: 0, z: 0.000545883, w: 0.9999999}
       length: 457.4334
       parentId: 3
       color:
         serializedVersion: 2
         rgba: 4294901888
-    - name: bone_10
+    - name: tetacleL1
       guid: 839b26e692831d948a16fbac3bc24cfc
       position: {x: 569.50146, y: 1381.5243, z: 0}
       rotation: {x: 0, y: 0, z: 0.83329225, w: -0.55283284}
-      length: 748.00116
+      length: 748.00104
       parentId: -1
       color:
         serializedVersion: 2
@@ -4824,7 +4824,7 @@ ScriptedImporter:
     spritePosition: {x: 473, y: 50}
   characterData:
     bones:
-    - name: bone_1
+    - name: Tantacles body
       guid: a18237d7124d33747930d8460183cb90
       position: {x: 1173.4912, y: 2535.9827, z: 0}
       rotation: {x: 0, y: 0, z: 0.71995586, w: 0.69401985}
@@ -4833,163 +4833,163 @@ ScriptedImporter:
       color:
         serializedVersion: 2
         rgba: 4278190335
-    - name: bone_2
+    - name: Body Arms
       guid: 0b50394f4217aef4180c835e4a1f5333
       position: {x: 307.49976, y: -0.000037680184, z: 0}
-      rotation: {x: 0, y: 0, z: 0.10061305, w: 0.9949256}
+      rotation: {x: 0, y: 0, z: 0.10061319, w: 0.9949256}
       length: 379.07828
       parentId: 0
       color:
         serializedVersion: 2
         rgba: 4278255615
-    - name: bone_3
+    - name: head
       guid: 17fd48c27344dd54f80c5d6af3f61498
-      position: {x: 379.07837, y: 0.00008697762, z: 0}
-      rotation: {x: 0, y: 0, z: -0.08165782, w: 0.9966604}
+      position: {x: 379.0782, y: -0.000019123421, z: 0}
+      rotation: {x: 0, y: 0, z: -0.08165796, w: 0.9966604}
       length: 295.47992
       parentId: 1
       color:
         serializedVersion: 2
         rgba: 4278255360
-    - name: bone_4
+    - name: tetacle medil1
       guid: 9598f89b7d9d1274cab1dbee27154450
       position: {x: -33.991005, y: 1.1106894, z: 0}
-      rotation: {x: 0, y: -0, z: 0.9997475, w: 0.022470925}
-      length: 346.3407
+      rotation: {x: 0, y: -0, z: 0.9997475, w: 0.022470923}
+      length: 346.34094
       parentId: 0
       color:
         serializedVersion: 2
         rgba: 4294967040
-    - name: bone_5
+    - name: tetacle medil2
       guid: dba9de5f211e41c419d9cf80add96790
-      position: {x: 346.34085, y: 0.000007716661, z: 0}
+      position: {x: 346.3411, y: 0.000017764758, z: 0}
       rotation: {x: 0, y: 0, z: -0.004699311, w: 0.999989}
-      length: 443.0593
+      length: 443.05942
       parentId: 3
       color:
         serializedVersion: 2
         rgba: 4294901760
-    - name: bone_6
+    - name: tetacle medil3
       guid: 78b821cd1fd02b7479d638855e947148
-      position: {x: 443.05942, y: -0.0000030150686, z: 0}
-      rotation: {x: 0, y: 0, z: 0.005930155, w: 0.9999824}
-      length: 359.83307
+      position: {x: 443.05954, y: 0.0000098331975, z: 0}
+      rotation: {x: 0, y: 0, z: 0.0059251282, w: 0.9999825}
+      length: 359.83316
       parentId: 4
       color:
         serializedVersion: 2
         rgba: 4294902015
-    - name: bone_7
+    - name: tetacleR1
       guid: d8fe88e9b2371324685c4bfb7bf663fb
       position: {x: -1126.0411, y: -87.07463, z: 0}
-      rotation: {x: 0, y: -0, z: -0.9768811, w: 0.21378344}
+      rotation: {x: 0, y: -0, z: -0.9768811, w: 0.21378358}
       length: 718.87054
       parentId: 0
       color:
         serializedVersion: 2
         rgba: 4278223103
-    - name: bone_8
+    - name: tetacleR2
       guid: 6c5aed89a6f87ea48993442ace82fbb2
-      position: {x: 718.87067, y: 0.00030559965, z: 0}
-      rotation: {x: 0, y: 0, z: 0.004885863, w: 0.9999881}
-      length: 480.85663
+      position: {x: 718.87067, y: 0.000112346184, z: 0}
+      rotation: {x: 0, y: 0, z: 0.0048858635, w: 0.9999881}
+      length: 480.85657
       parentId: 6
       color:
         serializedVersion: 2
         rgba: 4278255488
-    - name: bone_9
+    - name: tetacleR3
       guid: 4f94cf2e1d636df45880b5852bd52230
-      position: {x: 480.85654, y: 0.000054400436, z: 0}
-      rotation: {x: 0, y: 0, z: -0.021241529, w: 0.9997744}
+      position: {x: 480.85657, y: -0.00001203686, z: 0}
+      rotation: {x: 0, y: 0, z: -0.021241661, w: 0.9997744}
       length: 359.58142
       parentId: 7
       color:
         serializedVersion: 2
         rgba: 4286643968
-    - name: bone_10
+    - name: tetacleL1
       guid: 839b26e692831d948a16fbac3bc24cfc
       position: {x: -1098.9117, y: 171.40514, z: 0}
       rotation: {x: 0, y: -0, z: 0.97633654, w: 0.2162567}
-      length: 748.0013
+      length: 748.0011
       parentId: 0
       color:
         serializedVersion: 2
         rgba: 4294934528
-    - name: bone_11
+    - name: tetacleL2
       guid: 5a44b9adf4c5ef24ebcbfc1eaeb7dc6c
-      position: {x: 748.00116, y: -0.00005236185, z: 0}
+      position: {x: 748.00104, y: -0.00004358263, z: 0}
       rotation: {x: 0, y: 0, z: 0.0005459151, w: 0.9999999}
       length: 457.43347
       parentId: 9
       color:
         serializedVersion: 2
         rgba: 4294901888
-    - name: bone_12
+    - name: tetacleL3
       guid: ae8d6f01ede9c894ca4737467f4af2da
-      position: {x: 457.43344, y: -0.00005458293, z: 0}
+      position: {x: 457.43347, y: -0.00008323065, z: 0}
       rotation: {x: 0, y: 0, z: 0.040011045, w: 0.9991993}
       length: 251.03773
       parentId: 10
       color:
         serializedVersion: 2
         rgba: 4286578943
-    - name: bone_13
+    - name: arm R1
       guid: 2fb40fddde17bf640a8331102c8975cb
       position: {x: 307.14233, y: -311.95477, z: 0}
-      rotation: {x: 0, y: -0, z: -0.9633936, w: 0.26809084}
-      length: 283.21567
+      rotation: {x: 0, y: -0, z: -0.9633937, w: 0.2680906}
+      length: 283.2157
       parentId: 1
       color:
         serializedVersion: 2
         rgba: 4278255615
-    - name: bone_14
+    - name: ArmR2
       guid: 639072b1413104943aea21032193d864
-      position: {x: 283.2156, y: -0.000089346584, z: 0}
-      rotation: {x: 0, y: 0, z: 0.1790111, w: 0.9838471}
-      length: 228.87752
+      position: {x: 283.21558, y: 0.000007932671, z: 0}
+      rotation: {x: 0, y: 0, z: 0.17901121, w: 0.983847}
+      length: 228.87753
       parentId: 12
       color:
         serializedVersion: 2
         rgba: 4278255360
-    - name: bone_15
+    - name: ArmR3
       guid: 71e9fe0a8a7cbd34ab5028433ed91695
-      position: {x: 228.87752, y: -0.00007015056, z: 0}
-      rotation: {x: 0, y: 0, z: 0.08328823, w: 0.9965255}
+      position: {x: 228.87741, y: 0.00020544295, z: 0}
+      rotation: {x: 0, y: 0, z: 0.083288416, w: 0.9965255}
       length: 93.37177
       parentId: 13
       color:
         serializedVersion: 2
         rgba: 4294967040
-    - name: bone_16
+    - name: ArmL1
       guid: 004ab408e975ded42a21686bbab6733e
       position: {x: 410.42838, y: 274.9653, z: 0}
-      rotation: {x: 0, y: -0, z: 0.9322663, w: 0.3617728}
-      length: 302.63336
+      rotation: {x: 0, y: -0, z: 0.93226635, w: 0.36177278}
+      length: 302.6332
       parentId: 1
       color:
         serializedVersion: 2
         rgba: 4294901760
-    - name: bone_17
+    - name: ArmL2
       guid: 72429e6db8666ba4ebfb441551108f6f
-      position: {x: 302.63333, y: 0.00003073267, z: 0}
-      rotation: {x: 0, y: 0, z: -0.21267262, w: 0.97712356}
-      length: 203.21109
+      position: {x: 302.63318, y: -0.0000030941446, z: 0}
+      rotation: {x: 0, y: 0, z: -0.21267276, w: 0.9771235}
+      length: 203.21138
       parentId: 15
       color:
         serializedVersion: 2
         rgba: 4294902015
-    - name: bone_18
+    - name: ArmL3
       guid: 3c06b584f52f6c74cb3645b289fa3d89
-      position: {x: 203.21143, y: 0.00005944149, z: 0}
-      rotation: {x: 0, y: 0, z: -0.045102928, w: 0.99898237}
+      position: {x: 203.21153, y: 0.00008659689, z: 0}
+      rotation: {x: 0, y: 0, z: -0.045102887, w: 0.9989824}
       length: 126.08419
       parentId: 16
       color:
         serializedVersion: 2
         rgba: 4278190335
-    - name: bone_19
+    - name: tetacle medil4
       guid: 736b58864939c1c4cb46357f6f56c1f2
-      position: {x: 359.83313, y: -0.0018217353, z: 0}
-      rotation: {x: 0, y: 0, z: -0.0000025227962, w: 1}
+      position: {x: 359.83322, y: 0.0017972345, z: 0}
+      rotation: {x: 0, y: 0, z: 0.0000025024196, w: 1}
       length: 363.94357
       parentId: 5
       color:
