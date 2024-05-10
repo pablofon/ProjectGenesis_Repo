@@ -45,7 +45,7 @@ public class EnemyChaser : MonoBehaviour
 
         Attack();
 
-        if (attackRange)
+        if (attackRange && isGrounded)
         {
             enemyRb.AddForce(Vector2.up * attackJumpForce, ForceMode2D.Impulse);
         }
