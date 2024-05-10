@@ -63,5 +63,8 @@ public class ShyLadyController : MonoBehaviour
         agent.SetDestination(transform.position);
     }
 
+    public void EnemyDeath()
+    {
 
+    }
 }
