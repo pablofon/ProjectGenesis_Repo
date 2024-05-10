@@ -156,13 +156,16 @@ public class PlayerController : MonoBehaviour
 
         //Rotated x velocity
         Vector2.Dot(direction, moveAxis);
-        if (moveAxis.x > 0 && rotatedVelocity < maxMoveSpeed)
+
+        // Calculate the velocity needed to reach the maxMoveSpeed
+        float velocityNeeded = maxMoveSpeed - Mathf.Abs(rotatedVelocity);
+
+        // Limit the velocity to not exceed the movementAcceleration
+        float velocityToApply = Mathf.Min(velocityNeeded, movementAcceleration);
+
+        if (moveAxis.x != 0 && Mathf.Abs(rotatedVelocity) < maxMoveSpeed)
         {
-            rb.AddForce(direction * movementAcceleration, ForceMode2D.Impulse);
-        }
-        if (moveAxis.x < 0 && rotatedVelocity > -maxMoveSpeed)
-        {
-            rb.AddForce(direction * movementAcceleration, ForceMode2D.Impulse);
+            rb.velocity += direction * velocityToApply;
         }
     }
 
@@ -174,7 +177,10 @@ public class PlayerController : MonoBehaviour
         else
         { linearDrag = midAirDrag; }
 
-        if (Mathf.Abs(moveAxis.x) < 0.4f || changingDirection)
+        float localVelocityX = transform.InverseTransformDirection(rb.velocity).x;
+
+        // Apply drag if the character is changing direction, or if its speed exceeds the maximum speed
+        if (Mathf.Abs(moveAxis.x) < 0.4f || changingDirection || Mathf.Abs(localVelocityX) > maxMoveSpeed + .2f)
         {
             appliedDrag = linearDrag;
         }
@@ -186,23 +192,19 @@ public class PlayerController : MonoBehaviour
 
     private void ApplyLinearDrag()
     {
-        rb.velocity = new Vector2((rb.velocity.x / (1f + appliedDrag / 50)), rb.velocity.y);
+        // Convert the velocity to local space
+        Vector2 localVelocity = transform.InverseTransformDirection(rb.velocity);
 
-        Vector2 dragDirection = new Vector2(1, 0); // Horizontal drag
-        float speed = rb.velocity.magnitude;
-        Vector2 velocityDirection = rb.velocity / speed; // Normalized velocity
+        // Apply drag on the local x-axis
+        localVelocity.x /= (1f + appliedDrag / 50);
 
-        // Project velocity onto drag direction
-        float projectedSpeed = Vector2.Dot(velocityDirection, dragDirection);
-
-        // Apply drag
-        Vector2 dragForce = -dragDirection * projectedSpeed * appliedDrag / 50;
-        rb.velocity += dragForce;
+        // Convert the velocity back to world space
+        rb.velocity = transform.TransformDirection(localVelocity);
     }
 
     private void FallMultiplier()
     {
-        if (rb.velocity.y < 0.6f)
+        if (rb.velocity.y < 1f)
         {
             gravityScale = fallMultiplier;
         }
@@ -241,8 +243,14 @@ public class PlayerController : MonoBehaviour
             if (canGroundJump)
             {
                 //anim.SetTrigger("jump");
-                rb.velocity = new Vector2(rb.velocity.x, rb.velocity.y * 0.2f);
+                //sfx[0].Play();
+                isDashing = true;
+                gravityScale = 0f;
+                rb.velocity = new Vector2(rb.velocity.x, 0);
                 rb.AddForce(Vector2.up * groundJumpForce, ForceMode2D.Impulse);
+                StartCoroutine(FlashColor(dashColor, dashDuration, dashColorAmount));
+                Invoke("ResetGravityScale", .1f);
+
             }
             else if (wallJumpsLeft > 0 && canWallJump == true)
             {
@@ -256,10 +264,15 @@ public class PlayerController : MonoBehaviour
     void ResetGravityScale()
     {
         gravityScale = 1f;
-        rb.velocity = new Vector2(maxMoveSpeed * lastDashAxis.x, rb.velocity.y * .5f);
         isDashing = false;
     }
 
+    void FinishDash()
+    {
+        gravityScale = 1f;
+        rb.velocity = new Vector2(maxMoveSpeed * lastDashAxis.x, rb.velocity.y * .2f);
+        isDashing = false;
+    }
 
     public void Dash(InputAction.CallbackContext context)
     {
@@ -275,8 +288,7 @@ public class PlayerController : MonoBehaviour
             lastDashAxis.Normalize();
             rb.AddForce(lastDashAxis * dashStrength, ForceMode2D.Impulse);
             StartCoroutine(FlashColor(dashColor, dashDuration, dashColorAmount));
-            Invoke("ResetGravityScale", dashDuration);
-
+            Invoke("FinishDash", dashDuration);
         }
     }
 
