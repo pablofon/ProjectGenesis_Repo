@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using Unity.VisualScripting;
 using UnityEngine;
 
 public class EnemyChaser : MonoBehaviour
@@ -10,6 +11,7 @@ public class EnemyChaser : MonoBehaviour
     [SerializeField] float chaseDistance;
     [SerializeField] bool playerDetected;
     [SerializeField] float jumpForce;
+    [SerializeField] float attackJumpForce;
     Rigidbody2D enemyRb;
     //float horInput;
 
@@ -19,11 +21,15 @@ public class EnemyChaser : MonoBehaviour
     [SerializeField] float groundCheckRadius;
     [SerializeField] LayerMask groundLayer;
 
+    bool attackRange;
+
     // Start is called before the first frame update
     void Start()
     {
         playerPosition = GameObject.FindGameObjectWithTag("Player").transform;
         enemyRb = GetComponent<Rigidbody2D>();
+
+        attackRange = false;
     }
 
     // Update is called once per frame
@@ -37,6 +43,12 @@ public class EnemyChaser : MonoBehaviour
         Detect();
         Chase();
 
+        Attack();
+
+        if (attackRange)
+        {
+            enemyRb.AddForce(Vector2.up * attackJumpForce, ForceMode2D.Impulse);
+        }
         
     }
 
@@ -64,11 +76,11 @@ public class EnemyChaser : MonoBehaviour
         if (playerDetected)
         {
 
-            if (playerPosition.position.x - transform.position.x > 0.02f)
+            if (playerPosition.position.x - transform.position.x > 1.5f)
             {
                 enemyRb.velocity = new Vector2( speed, enemyRb.velocity.y);
             }
-            if (playerPosition.position.x - transform.position.x < 0.02f)
+            if (playerPosition.position.x - transform.position.x < 1.5f)
             {
                 enemyRb.velocity = new Vector2( -1f * speed, enemyRb.velocity.y);
             }
@@ -89,6 +101,21 @@ public class EnemyChaser : MonoBehaviour
         {
             enemyRb.AddForce(Vector2.up * jumpForce, ForceMode2D.Impulse);
             Debug.Log("JumpZone");
+        }
+    }
+
+    void Attack()
+    {
+        if (playerDetected && isGrounded)
+        {
+            if (playerPosition.position.x - transform.position.x < 0.02f || playerPosition.position.x - transform.position.x < -0.02f)
+            {
+                attackRange = true;
+            }
+            else
+            {
+                attackRange = false;
+            }
         }
     }
 }
