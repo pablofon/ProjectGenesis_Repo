@@ -174,15 +174,15 @@ AnimationClip:
       - serializedVersion: 3
         time: 0.5
         value: {x: 0, y: 0, z: -129.949}
-        inSlope: {x: 0, y: 0, z: 35.688026}
-        outSlope: {x: 0, y: 0, z: 35.688026}
+        inSlope: {x: 0, y: 0, z: 64.178}
+        outSlope: {x: 0, y: 0, z: 64.178}
         tangentMode: 0
         weightedMode: 0
         inWeight: {x: 0.33333334, y: 0.33333334, z: 0.33333334}
         outWeight: {x: 0.33333334, y: 0.33333334, z: 0.33333334}
       - serializedVersion: 3
         time: 1
-        value: {x: 0, y: 0, z: -121.027}
+        value: {x: 0, y: 0, z: -107.133}
         inSlope: {x: 0, y: 0, z: 0}
         outSlope: {x: 0, y: 0, z: 0}
         tangentMode: 0
@@ -294,15 +294,15 @@ AnimationClip:
       - serializedVersion: 3
         time: 0.5
         value: {x: 0, y: 0, z: -49.045}
-        inSlope: {x: 0, y: 0, z: -58.592007}
-        outSlope: {x: 0, y: 0, z: -58.592007}
+        inSlope: {x: 0, y: 0, z: 0}
+        outSlope: {x: 0, y: 0, z: 0}
         tangentMode: 0
         weightedMode: 0
         inWeight: {x: 0.33333334, y: 0.33333334, z: 0.33333334}
         outWeight: {x: 0.33333334, y: 0.33333334, z: 0.33333334}
       - serializedVersion: 3
         time: 1
-        value: {x: 0, y: 0, z: -63.693}
+        value: {x: 0, y: 0, z: -17.942}
         inSlope: {x: 0, y: 0, z: 0}
         outSlope: {x: 0, y: 0, z: 0}
         tangentMode: 0
@@ -336,7 +336,7 @@ AnimationClip:
         outWeight: {x: 0.33333334, y: 0.33333334, z: 0.33333334}
       - serializedVersion: 3
         time: 1
-        value: {x: 0, y: 0, z: -211.121}
+        value: {x: 0, y: 0, z: -186.133}
         inSlope: {x: 0, y: 0, z: 0}
         outSlope: {x: 0, y: 0, z: 0}
         tangentMode: 0
@@ -429,7 +429,7 @@ AnimationClip:
         outWeight: {x: 0.33333334, y: 0.33333334, z: 0.33333334}
       - serializedVersion: 3
         time: 0.5
-        value: {x: 0, y: 0, z: 195.691}
+        value: {x: 0, y: 0, z: 179.266}
         inSlope: {x: 0, y: 0, z: 0}
         outSlope: {x: 0, y: 0, z: 0}
         tangentMode: 0
@@ -660,15 +660,15 @@ AnimationClip:
       - serializedVersion: 3
         time: 0.5
         value: {x: 3.2, y: -1.98, z: 0}
-        inSlope: {x: 0, y: -0.15999985, z: 0}
-        outSlope: {x: 0, y: -0.15999985, z: 0}
+        inSlope: {x: 0, y: -0.03999996, z: 0}
+        outSlope: {x: 0, y: -0.03999996, z: 0}
         tangentMode: 0
         weightedMode: 0
         inWeight: {x: 0.33333334, y: 0.33333334, z: 0.33333334}
         outWeight: {x: 0.33333334, y: 0.33333334, z: 0.33333334}
       - serializedVersion: 3
         time: 1
-        value: {x: 3.504, y: -2.179, z: 0}
+        value: {x: 3.78, y: -1.99, z: 0}
         inSlope: {x: 0, y: 0, z: 0}
         outSlope: {x: 0, y: 0, z: 0}
         tangentMode: 0
@@ -713,6 +713,31 @@ AnimationClip:
       m_PostInfinity: 2
       m_RotationOrder: 4
     path: Tentacles body/Body Arms/ArmL1
+  - curve:
+      serializedVersion: 2
+      m_Curve:
+      - serializedVersion: 3
+        time: 0
+        value: {x: -0.06, y: -1.28, z: 0}
+        inSlope: {x: 0, y: 0, z: 0}
+        outSlope: {x: 0, y: 0, z: 0}
+        tangentMode: 0
+        weightedMode: 0
+        inWeight: {x: 0.33333334, y: 0.33333334, z: 0.33333334}
+        outWeight: {x: 0.33333334, y: 0.33333334, z: 0.33333334}
+      - serializedVersion: 3
+        time: 1
+        value: {x: 0.34, y: -1.29, z: 0}
+        inSlope: {x: 0, y: 0, z: 0}
+        outSlope: {x: 0, y: 0, z: 0}
+        tangentMode: 0
+        weightedMode: 0
+        inWeight: {x: 0.33333334, y: 0.33333334, z: 0.33333334}
+        outWeight: {x: 0.33333334, y: 0.33333334, z: 0.33333334}
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+      m_RotationOrder: 4
+    path: Tentacles body/tetacleR1
   m_ScaleCurves: []
   m_FloatCurves: []
   m_PPtrCurves: []
@@ -743,6 +768,15 @@ AnimationClip:
       isSerializeReferenceCurve: 0
     - serializedVersion: 2
       path: 2235105272
+      attribute: 1
+      script: {fileID: 0}
+      typeID: 4
+      customType: 0
+      isPPtrCurve: 0
+      isIntCurve: 0
+      isSerializeReferenceCurve: 0
+    - serializedVersion: 2
+      path: 3191314674
       attribute: 1
       script: {fileID: 0}
       typeID: 4
@@ -1514,15 +1548,15 @@ AnimationClip:
       - serializedVersion: 3
         time: 0.5
         value: -129.949
-        inSlope: 35.688026
-        outSlope: 35.688026
+        inSlope: 64.178
+        outSlope: 64.178
         tangentMode: 136
         weightedMode: 0
         inWeight: 0.33333334
         outWeight: 0.33333334
       - serializedVersion: 3
         time: 1
-        value: -121.027
+        value: -107.133
         inSlope: 0
         outSlope: 0
         tangentMode: 136
@@ -2009,15 +2043,15 @@ AnimationClip:
       - serializedVersion: 3
         time: 0.5
         value: -49.045
-        inSlope: -58.592007
-        outSlope: -58.592007
+        inSlope: 0
+        outSlope: 0
         tangentMode: 136
         weightedMode: 0
         inWeight: 0.33333334
         outWeight: 0.33333334
       - serializedVersion: 3
         time: 1
-        value: -63.693
+        value: -17.942
         inSlope: 0
         outSlope: 0
         tangentMode: 136
@@ -2134,7 +2168,7 @@ AnimationClip:
         outWeight: 0.33333334
       - serializedVersion: 3
         time: 1
-        value: -211.121
+        value: -186.133
         inSlope: 0
         outSlope: 0
         tangentMode: 136
@@ -2476,7 +2510,7 @@ AnimationClip:
         outWeight: 0.33333334
       - serializedVersion: 3
         time: 0.5
-        value: 195.691
+        value: 179.266
         inSlope: 0
         outSlope: 0
         tangentMode: 136
@@ -3109,7 +3143,7 @@ AnimationClip:
         outWeight: 0.33333334
       - serializedVersion: 3
         time: 1
-        value: 3.504
+        value: 3.78
         inSlope: 0
         outSlope: 0
         tangentMode: 136
@@ -3140,15 +3174,15 @@ AnimationClip:
       - serializedVersion: 3
         time: 0.5
         value: -1.98
-        inSlope: -0.15999985
-        outSlope: -0.15999985
+        inSlope: -0.03999996
+        outSlope: -0.03999996
         tangentMode: 136
         weightedMode: 0
         inWeight: 0.33333334
         outWeight: 0.33333334
       - serializedVersion: 3
         time: 1
-        value: -2.179
+        value: -1.99
         inSlope: 0
         outSlope: 0
         tangentMode: 136
@@ -3316,6 +3350,96 @@ AnimationClip:
       m_RotationOrder: 4
     attribute: m_LocalPosition.z
     path: Tentacles body/Body Arms/ArmL1
+    classID: 4
+    script: {fileID: 0}
+    flags: 0
+  - serializedVersion: 2
+    curve:
+      serializedVersion: 2
+      m_Curve:
+      - serializedVersion: 3
+        time: 0
+        value: -0.06
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 136
+        weightedMode: 0
+        inWeight: 0.33333334
+        outWeight: 0.33333334
+      - serializedVersion: 3
+        time: 1
+        value: 0.34
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 136
+        weightedMode: 0
+        inWeight: 0.33333334
+        outWeight: 0.33333334
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+      m_RotationOrder: 4
+    attribute: m_LocalPosition.x
+    path: Tentacles body/tetacleR1
+    classID: 4
+    script: {fileID: 0}
+    flags: 0
+  - serializedVersion: 2
+    curve:
+      serializedVersion: 2
+      m_Curve:
+      - serializedVersion: 3
+        time: 0
+        value: -1.28
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 136
+        weightedMode: 0
+        inWeight: 0.33333334
+        outWeight: 0.33333334
+      - serializedVersion: 3
+        time: 1
+        value: -1.29
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 136
+        weightedMode: 0
+        inWeight: 0.33333334
+        outWeight: 0.33333334
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+      m_RotationOrder: 4
+    attribute: m_LocalPosition.y
+    path: Tentacles body/tetacleR1
+    classID: 4
+    script: {fileID: 0}
+    flags: 0
+  - serializedVersion: 2
+    curve:
+      serializedVersion: 2
+      m_Curve:
+      - serializedVersion: 3
+        time: 0
+        value: 0
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 136
+        weightedMode: 0
+        inWeight: 0.33333334
+        outWeight: 0.33333334
+      - serializedVersion: 3
+        time: 1
+        value: 0
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 136
+        weightedMode: 0
+        inWeight: 0.33333334
+        outWeight: 0.33333334
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+      m_RotationOrder: 4
+    attribute: m_LocalPosition.z
+    path: Tentacles body/tetacleR1
     classID: 4
     script: {fileID: 0}
     flags: 0
@@ -3544,7 +3668,7 @@ AnimationClip:
       m_PostInfinity: 2
       m_RotationOrder: 4
     attribute: m_LocalEulerAngles.z
-    path: Tentacles body/Body Arms/arm R1/ArmR2
+    path: Tentacles body/tetacleL1
     classID: 4
     script: {fileID: 0}
     flags: 0
@@ -3556,7 +3680,7 @@ AnimationClip:
       m_PostInfinity: 2
       m_RotationOrder: 4
     attribute: m_LocalEulerAngles.y
-    path: Tentacles body/Body Arms/arm R1/ArmR2
+    path: Tentacles body/tetacleL1
     classID: 4
     script: {fileID: 0}
     flags: 0
@@ -3568,7 +3692,7 @@ AnimationClip:
       m_PostInfinity: 2
       m_RotationOrder: 4
     attribute: m_LocalEulerAngles.x
-    path: Tentacles body/Body Arms/arm R1/ArmR2
+    path: Tentacles body/tetacleL1
     classID: 4
     script: {fileID: 0}
     flags: 0
@@ -3580,7 +3704,7 @@ AnimationClip:
       m_PostInfinity: 2
       m_RotationOrder: 4
     attribute: m_LocalEulerAngles.z
-    path: Tentacles body/Body Arms/arm R1
+    path: Tentacles body/Body Arms/arm R1/ArmR2
     classID: 4
     script: {fileID: 0}
     flags: 0
@@ -3592,7 +3716,7 @@ AnimationClip:
       m_PostInfinity: 2
       m_RotationOrder: 4
     attribute: m_LocalEulerAngles.y
-    path: Tentacles body/Body Arms/arm R1
+    path: Tentacles body/Body Arms/arm R1/ArmR2
     classID: 4
     script: {fileID: 0}
     flags: 0
@@ -3604,7 +3728,7 @@ AnimationClip:
       m_PostInfinity: 2
       m_RotationOrder: 4
     attribute: m_LocalEulerAngles.x
-    path: Tentacles body/Body Arms/arm R1
+    path: Tentacles body/Body Arms/arm R1/ArmR2
     classID: 4
     script: {fileID: 0}
     flags: 0
@@ -3652,7 +3776,7 @@ AnimationClip:
       m_PostInfinity: 2
       m_RotationOrder: 4
     attribute: m_LocalEulerAngles.z
-    path: Tentacles body/tetacleL1
+    path: Tentacles body/Body Arms/ArmL1
     classID: 4
     script: {fileID: 0}
     flags: 0
@@ -3664,7 +3788,7 @@ AnimationClip:
       m_PostInfinity: 2
       m_RotationOrder: 4
     attribute: m_LocalEulerAngles.y
-    path: Tentacles body/tetacleL1
+    path: Tentacles body/Body Arms/ArmL1
     classID: 4
     script: {fileID: 0}
     flags: 0
@@ -3676,7 +3800,7 @@ AnimationClip:
       m_PostInfinity: 2
       m_RotationOrder: 4
     attribute: m_LocalEulerAngles.x
-    path: Tentacles body/tetacleL1
+    path: Tentacles body/Body Arms/ArmL1
     classID: 4
     script: {fileID: 0}
     flags: 0
@@ -3724,7 +3848,7 @@ AnimationClip:
       m_PostInfinity: 2
       m_RotationOrder: 4
     attribute: m_LocalEulerAngles.z
-    path: Tentacles body/tetacleR1
+    path: Tentacles body/Body Arms/arm R1
     classID: 4
     script: {fileID: 0}
     flags: 0
@@ -3736,7 +3860,7 @@ AnimationClip:
       m_PostInfinity: 2
       m_RotationOrder: 4
     attribute: m_LocalEulerAngles.y
-    path: Tentacles body/tetacleR1
+    path: Tentacles body/Body Arms/arm R1
     classID: 4
     script: {fileID: 0}
     flags: 0
@@ -3748,7 +3872,7 @@ AnimationClip:
       m_PostInfinity: 2
       m_RotationOrder: 4
     attribute: m_LocalEulerAngles.x
-    path: Tentacles body/tetacleR1
+    path: Tentacles body/Body Arms/arm R1
     classID: 4
     script: {fileID: 0}
     flags: 0
@@ -3904,7 +4028,7 @@ AnimationClip:
       m_PostInfinity: 2
       m_RotationOrder: 4
     attribute: m_LocalEulerAngles.x
-    path: Tentacles body/Body Arms/ArmL1
+    path: Tentacles body/tetacleR1
     classID: 4
     script: {fileID: 0}
     flags: 0
@@ -3916,7 +4040,7 @@ AnimationClip:
       m_PostInfinity: 2
       m_RotationOrder: 4
     attribute: m_LocalEulerAngles.y
-    path: Tentacles body/Body Arms/ArmL1
+    path: Tentacles body/tetacleR1
     classID: 4
     script: {fileID: 0}
     flags: 0
@@ -3928,7 +4052,7 @@ AnimationClip:
       m_PostInfinity: 2
       m_RotationOrder: 4
     attribute: m_LocalEulerAngles.z
-    path: Tentacles body/Body Arms/ArmL1
+    path: Tentacles body/tetacleR1
     classID: 4
     script: {fileID: 0}
     flags: 0
