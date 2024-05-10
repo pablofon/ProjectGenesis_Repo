@@ -9,6 +9,7 @@ public class ShyLadyController : MonoBehaviour
     [SerializeField] Transform target;
 
     NavMeshAgent agent;
+    Animator anim;
 
     [SerializeField] float detectDistance;
     [SerializeField] float inRange;
@@ -22,8 +23,10 @@ public class ShyLadyController : MonoBehaviour
         agent = GetComponent<NavMeshAgent>();
         agent.updateRotation = false;
         agent.updateUpAxis = false;
+        anim = GetComponentInChildren<Animator>();
 
         target = GameObject.FindGameObjectWithTag("Player").transform;
+        anim.SetBool("Walk", false);
 
     }
 
@@ -37,6 +40,8 @@ public class ShyLadyController : MonoBehaviour
 
         if (startAttack)
         {
+            anim.SetBool("Walk", true);
+
             if (Vector2.Distance(transform.position, target.position) > inRange)
             {
                 Follow();
@@ -48,7 +53,7 @@ public class ShyLadyController : MonoBehaviour
 
             if (Vector2.Distance(transform.position, target.position) < inRange)
             {
-                //Ataque
+                anim.SetTrigger("Attack");
             }
         }
     }
@@ -65,6 +70,6 @@ public class ShyLadyController : MonoBehaviour
 
     public void EnemyDeath()
     {
-
+        anim.SetTrigger("Death");
     }
 }
