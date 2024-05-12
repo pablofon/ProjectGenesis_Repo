@@ -1139,8 +1139,8 @@ MonoBehaviour:
   horizontalInput: 0
   isFacingRight: 1
   moveAxis: {x: 0, y: 0}
-  movementAcceleration: 2.5
-  maxMoveSpeed: 7
+  movementAcceleration: 6
+  maxMoveSpeed: 14
   groundedDrag: 90
   midAirDrag: 0.2
   gravityDirection: {x: 0, y: 0}
@@ -1163,11 +1163,12 @@ MonoBehaviour:
   wallJumpSide: 0
   wallJumpForce: 10
   dashDuration: 0.08
-  dashStrength: 25
+  dashStrength: 40.3
   dashesAvailable: 0
   maxDashes: 3
   dashColor: {r: 0.7578083, g: 1, b: 0.2688679, a: 0}
   dashColorAmount: 0.5
+  jumped: 0
 --- !u!114 &784580391
 MonoBehaviour:
   m_ObjectHideFlags: 0
