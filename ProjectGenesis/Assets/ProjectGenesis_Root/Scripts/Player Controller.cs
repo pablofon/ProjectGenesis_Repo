@@ -79,12 +79,12 @@ public class PlayerController : MonoBehaviour
         localVelocity = transform.InverseTransformDirection(rb.velocity);
 
         CheckCollisions();
-        Movement(localVelocity.x);
+        Movement();
         if (!isDashing && !gravityOff)
         {
-            ApplyLinearDrag(localVelocity);
+            ApplyLinearDrag();
             FallMultiplier();
-            LinearDrag(localVelocity.x);
+            LinearDrag();
         }
         Gravity();
     }
@@ -149,15 +149,17 @@ public class PlayerController : MonoBehaviour
                                     groundLayer);
     }
 
-    private void Movement(float localVelX)
+    private void Movement()
     {
         // Rotate the movement axis vector by the z-rotation of the Rigidbody
         Vector2 direction = Quaternion.Euler(0, 0, rb.rotation) * new Vector2(moveAxis.x, 0f);
 
-        if (moveAxis.x != 0 && Mathf.Sign(localVelX) == -Mathf.Sign(moveAxis.x) || Mathf.Abs(localVelX) < maxMoveSpeed)
+        Vector2 localVel = transform.InverseTransformDirection(rb.velocity);
+
+        if (moveAxis.x != 0 && Mathf.Sign(localVel.x) == -Mathf.Sign(moveAxis.x) || Mathf.Abs(localVel.x) < maxMoveSpeed)
         {
             // Calculate the velocity needed to reach the maxMoveSpeed
-            float velocityNeeded = maxMoveSpeed - Mathf.Abs(localVelX);
+            float velocityNeeded = maxMoveSpeed - Mathf.Abs(localVel.x);
 
             // Limit the velocity to not exceed the movementAcceleration
             float velocityToApply = Mathf.Min(velocityNeeded, movementAcceleration);
@@ -168,8 +170,10 @@ public class PlayerController : MonoBehaviour
         }
     }
 
-    private void LinearDrag(float localVelX)
+    private void LinearDrag()
     {
+        Vector2 localVel = transform.InverseTransformDirection(rb.velocity);
+
         float linearDrag;
         if (canGroundJump)
         { linearDrag = groundedDrag; }
@@ -185,7 +189,7 @@ public class PlayerController : MonoBehaviour
         {
             appliedDrag = linearDrag * 2;
         }
-        else if (Mathf.Abs(localVelX) > maxMoveSpeed + .1f)
+        else if (Mathf.Abs(localVel.x) > maxMoveSpeed + .1f)
         {
             appliedDrag = linearDrag * .1f;
         }
@@ -195,8 +199,10 @@ public class PlayerController : MonoBehaviour
         }
     }
 
-    private void ApplyLinearDrag(Vector2 localVel)
+    private void ApplyLinearDrag()
     {
+        Vector2 localVel = transform.InverseTransformDirection(rb.velocity);
+
         // Apply drag on the local x-axis
         localVel.x /= (1f + appliedDrag / 50);
 
@@ -204,15 +210,17 @@ public class PlayerController : MonoBehaviour
         rb.velocity = transform.TransformDirection(localVel);
     }
 
+    [SerializeField] bool jumped;
     private void FallMultiplier()
     {
         if (rb.velocity.y < 1f)
         {
+            jumped = false;
             gravityScale = fallMultiplier;
         }
-        else if (rb.velocity.y > 0f && playerInput.actions["Jump"].ReadValue<float>() == 0)
+        else if (!jumped)
         {
-            gravityScale = lowFallMultiplier;
+            gravityScale = fallMultiplier;
         }
         else
         {
@@ -231,33 +239,32 @@ public class PlayerController : MonoBehaviour
     {
         if (context.performed)
         {
-            /*
-            Collider2D[] tempCol;
-            tempCol = Physics2D.OverlapCircleAll(transform.position, 10f, 1 << 6);
-
-            for (int i = 0; i < tempCol.Length; i++)
-            {
-                EnemyTest script = tempCol[i].gameObject.GetComponent<EnemyTest>();
-
-                script.Flash(dashColor, .5f, 1);
-            }
-            */
             if (canGroundJump)
             {
                 //anim.SetTrigger("jump");
                 //sfx[0].Play();
+                jumped = true;
                 gravityOff = true;
                 gravityScale = 0f;
-                rb.velocity = new Vector2(0, groundJumpForce);
+                rb.velocity = new Vector2(rb.velocity.x, groundJumpForce);
                 StartCoroutine(FlashColor(dashColor, dashDuration, dashColorAmount));
-                Invoke("ResetGravityScale", .1f);
+                Invoke("ResetGravityScale", .2f);
             }
             else if (wallJumpsLeft > 0 && canWallJump == true)
             {
+                jumped = true;
                 wallJumpsLeft--;
-                rb.velocity = new Vector2(rb.velocity.x, 0);
-                rb.AddForce(new Vector2(wallJumpSide / 2f, 1) * wallJumpForce, ForceMode2D.Impulse);
+                gravityOff = true;
+                gravityScale = 0f;
+                rb.velocity = new Vector2(rb.velocity.x + wallJumpSide * 10f, wallJumpForce);
+                StartCoroutine(FlashColor(dashColor, dashDuration, dashColorAmount));
+                Invoke("ResetGravityScale", .1f);
             }
+        }
+        if (context.canceled && jumped)
+        {
+            jumped = false;
+            rb.velocity *= new Vector2(1, .5f);
         }
     }
 
