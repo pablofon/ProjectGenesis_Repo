@@ -26,6 +26,8 @@ public class EnemyPahtFinder : MonoBehaviour
     float timer;
     bool isFacingRight;
 
+    Animator anim;
+
     private void Start()
     {
         agent = GetComponent<NavMeshAgent>();
@@ -36,6 +38,9 @@ public class EnemyPahtFinder : MonoBehaviour
         startAttack = false;
 
         isFacingRight = false;
+
+        anim = GetComponentInChildren<Animator>();
+        anim.SetBool("Walk", false);
     }
 
     private void Update()
@@ -47,6 +52,8 @@ public class EnemyPahtFinder : MonoBehaviour
 
         if (startAttack)
         {
+            
+
             if (Vector2.Distance(transform.position, target.position) > inRange)
             {
                 Follow();
@@ -83,6 +90,7 @@ public class EnemyPahtFinder : MonoBehaviour
                         {
                             Instantiate(bullet, gameObject.transform.position, rot);
                             timer = 0f; //Para que no salgan balas infinitamente y parezca un rayo
+                            anim.SetTrigger("Attack");
                         }
                     }
                 }
@@ -95,16 +103,18 @@ public class EnemyPahtFinder : MonoBehaviour
     void Follow()
     {
         agent.SetDestination(target.position);
+        anim.SetBool("Walk", true);
     }
 
     void StopFollow()
     {
         agent.SetDestination(transform.position);
+        anim.SetBool("Walk", false);
     }
 
     public void EnemyDeath()
     {
-
+        anim.SetTrigger("Death");
     }
 
     void Flip()

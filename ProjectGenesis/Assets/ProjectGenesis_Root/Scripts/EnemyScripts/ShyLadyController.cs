@@ -15,7 +15,7 @@ public class ShyLadyController : MonoBehaviour
     [SerializeField] float inRange;
     bool startAttack;
     bool isFacingRight;
-    [SerializeField] bool stoped;
+    //[SerializeField] bool stoped;
 
 
     private void Start()
@@ -68,13 +68,13 @@ public class ShyLadyController : MonoBehaviour
     void Follow()
     {
         agent.SetDestination(target.position);
-        stoped = false;
+        //stoped = false;
     }
 
     void StopFollow()
     {
         agent.SetDestination(transform.position);
-        stoped = true;
+        //stoped = true;
     }
 
     public void EnemyDeath()
