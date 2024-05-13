@@ -24,6 +24,7 @@ public class EnemyPahtFinder : MonoBehaviour
     Quaternion rot;
     bool detected;
     float timer;
+    bool isFacingRight;
 
     private void Start()
     {
@@ -34,7 +35,7 @@ public class EnemyPahtFinder : MonoBehaviour
         target = GameObject.FindGameObjectWithTag("Player").transform;
         startAttack = false;
 
-
+        isFacingRight = false;
     }
 
     private void Update()
@@ -87,6 +88,8 @@ public class EnemyPahtFinder : MonoBehaviour
                 }
             }
         }
+
+        FlipUpdater();
     }
 
     void Follow()
@@ -102,5 +105,31 @@ public class EnemyPahtFinder : MonoBehaviour
     public void EnemyDeath()
     {
 
+    }
+
+    void Flip()
+    {
+        Vector3 currentScale = transform.localScale;
+        currentScale.x *= -1;
+        transform.localScale = currentScale;
+        isFacingRight = !isFacingRight;
+    }
+
+    void FlipUpdater()
+    {
+        if (target.position.x - transform.position.x > 0.02f)
+        {
+            if (!isFacingRight)
+            {
+                Flip();
+            }
+        }
+        if (target.position.x - transform.position.x < -0.02f)
+        {
+            if (isFacingRight)
+            {
+                Flip();
+            }
+        }
     }
 }

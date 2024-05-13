@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using Unity.VisualScripting;
 using UnityEngine;
+using static UnityEngine.GraphicsBuffer;
 
 public class EnemyChaser : MonoBehaviour
 {
@@ -20,6 +21,8 @@ public class EnemyChaser : MonoBehaviour
     [SerializeField] Transform groundCheck;
     [SerializeField] float groundCheckRadius;
     [SerializeField] LayerMask groundLayer;
+
+    bool isFacingRight;
 
     //bool attackRange;
 
@@ -49,7 +52,8 @@ public class EnemyChaser : MonoBehaviour
         {
             enemyRb.AddForce(Vector2.up * attackJumpForce, ForceMode2D.Impulse);
         }*/
-        
+
+        FlipUpdater();
     }
 
     /*private void OnTriggerEnter2D(Collider2D collision)
@@ -122,5 +126,31 @@ public class EnemyChaser : MonoBehaviour
     public void EnemyDeath()
     {
 
+    }
+
+    void Flip()
+    {
+        Vector3 currentScale = transform.localScale;
+        currentScale.x *= -1;
+        transform.localScale = currentScale;
+        isFacingRight = !isFacingRight;
+    }
+
+    void FlipUpdater()
+    {
+        if (playerPosition.position.x - transform.position.x > 0.02f)
+        {
+            if (!isFacingRight)
+            {
+                Flip();
+            }
+        }
+        if (playerPosition.position.x - transform.position.x < -0.02f)
+        {
+            if (isFacingRight)
+            {
+                Flip();
+            }
+        }
     }
 }
