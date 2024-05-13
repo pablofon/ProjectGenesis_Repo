@@ -20,6 +20,8 @@ public class PlayerController : MonoBehaviour
 
     [Header("Movement")]
     [SerializeField] private float movementAcceleration;
+    [SerializeField] private float groundAccel;
+    [SerializeField] private float airAccel;
     [SerializeField] private float maxMoveSpeed;
     [SerializeField] private float groundedDrag;
     [SerializeField] private float midAirDrag;
@@ -29,7 +31,6 @@ public class PlayerController : MonoBehaviour
     [Header("Physics")]
     [SerializeField] Vector2 gravityDirection;
     [SerializeField] float gravityScale;
-    [SerializeField] Vector2 localVelocity;
     [SerializeField] float groundedAreaLength;
     [SerializeField] float groundedAreaHeight;
     [SerializeField] Transform groundCheck;
@@ -54,7 +55,7 @@ public class PlayerController : MonoBehaviour
     [SerializeField] private float maxDashes;
     [SerializeField] private Color dashColor;
     [SerializeField] private float dashColorAmount;
-    private Vector2 lastDashAxis;
+    private Vector2 lastMoveAxis;
     private bool isDashing;
 
     private void Awake()
@@ -76,22 +77,20 @@ public class PlayerController : MonoBehaviour
 
     private void FixedUpdate()
     {
-        localVelocity = transform.InverseTransformDirection(rb.velocity);
-
         CheckCollisions();
-        Movement();
-        if (!isDashing && !gravityOff)
-        {
-            ApplyLinearDrag();
-            FallMultiplier();
-            LinearDrag();
-        }
         Gravity();
+        Movement();
+        HorizontalDrag();
+        VerticalDrag();
+        FallMultiplier();
     }
 
     void Gravity()
     {
-        rb.AddForce(-gravityDirection * gravityScale);
+        if (!gravityOff && !isDashing)
+        {
+            rb.AddForce(-gravityDirection * gravityScale);
+        }
     }
 
     private Vector2 collisionNormal;
@@ -100,7 +99,6 @@ public class PlayerController : MonoBehaviour
     {
         if (col.IsTouchingLayers(LayerMask.GetMask("Ground")))
         {
-            canWallJump = true;
             ContactPoint2D[] contacts = new ContactPoint2D[10];
             int contactCount = col.GetContacts(contacts);
             for (int i = 0; i < contactCount; i++)
@@ -122,11 +120,12 @@ public class PlayerController : MonoBehaviour
             
             if (collisionAngle >= -45 && collisionAngle <= 45)
             {
+                canWallJump = false;
                 rb.rotation = collisionAngle;
             }
             else
             {
-
+                canWallJump = true;
                 rb.rotation = 0;
             }
         }
@@ -156,36 +155,45 @@ public class PlayerController : MonoBehaviour
 
         Vector2 localVel = transform.InverseTransformDirection(rb.velocity);
 
-        if (moveAxis.x != 0 && Mathf.Sign(localVel.x) == -Mathf.Sign(moveAxis.x) || Mathf.Abs(localVel.x) < maxMoveSpeed)
+        if (!gravityOff && !isDashing)
         {
-            // Calculate the velocity needed to reach the maxMoveSpeed
-            float velocityNeeded = maxMoveSpeed - Mathf.Abs(localVel.x);
+            if (moveAxis.x != 0 && Mathf.Sign(localVel.x) == -Mathf.Sign(moveAxis.x) || Mathf.Abs(localVel.x) < maxMoveSpeed)
+            {
+                // Calculate the velocity needed to reach the maxMoveSpeed
+                float velocityNeeded = maxMoveSpeed - Mathf.Abs(localVel.x);
 
-            // Limit the velocity to not exceed the movementAcceleration
-            float velocityToApply = Mathf.Min(velocityNeeded, movementAcceleration);
+                // Limit the velocity to not exceed the movementAcceleration
+                float velocityToApply = Mathf.Min(velocityNeeded, movementAcceleration);
 
-            if (velocityToApply < 0) { velocityToApply = movementAcceleration; }
+                if (velocityToApply <= 0) { velocityToApply = movementAcceleration; }
 
-            rb.velocity += direction * velocityToApply;
+                rb.velocity += direction * velocityToApply;
+            }
         }
     }
 
-    private void LinearDrag()
+    private void HorizontalDrag()
     {
         Vector2 localVel = transform.InverseTransformDirection(rb.velocity);
 
         float linearDrag;
         if (canGroundJump)
-        { linearDrag = groundedDrag; }
+        {
+            linearDrag = groundedDrag;
+            movementAcceleration = groundAccel;
+        }
         else
-        { linearDrag = midAirDrag; }
+        {
+            linearDrag = midAirDrag;
+            movementAcceleration = airAccel;
+        }
 
         // Apply drag if the character is changing direction, or if its speed exceeds the maximum speed
         if (Mathf.Abs(moveAxis.x) < 0.4f)
         {
             appliedDrag = linearDrag;
         }
-        else if (changingDirection)
+        else if (changingDirection && canGroundJump)
         {
             appliedDrag = linearDrag * 2;
         }
@@ -197,17 +205,26 @@ public class PlayerController : MonoBehaviour
         {
             appliedDrag = 0f;
         }
+
+        if (!isDashing && !gravityOff)
+        {
+            // Apply drag on the local x-axis
+            localVel.x /= (1f + appliedDrag / 50);
+
+            // Convert the velocity back to world space
+            rb.velocity = transform.TransformDirection(localVel);
+        }
     }
 
-    private void ApplyLinearDrag()
+    private void VerticalDrag()
     {
         Vector2 localVel = transform.InverseTransformDirection(rb.velocity);
 
-        // Apply drag on the local x-axis
-        localVel.x /= (1f + appliedDrag / 50);
-
-        // Convert the velocity back to world space
-        rb.velocity = transform.TransformDirection(localVel);
+        if (canWallJump && !gravityOff)
+        {
+            localVel.y *= .9f;
+            rb.velocity = transform.TransformDirection(localVel);
+        }
     }
 
     [SerializeField] bool jumped;
@@ -233,6 +250,7 @@ public class PlayerController : MonoBehaviour
     private void GetInput()
     {
         moveAxis = playerInput.actions["Movement"].ReadValue<Vector2>();
+        if (moveAxis.x != 0) lastMoveAxis.x = moveAxis.x;
     }
 
     public void Jump(InputAction.CallbackContext context)
@@ -243,19 +261,17 @@ public class PlayerController : MonoBehaviour
             {
                 //anim.SetTrigger("jump");
                 //sfx[0].Play();
-                jumped = true;
                 gravityOff = true;
-                gravityScale = 0f;
+                jumped = true;
                 rb.velocity = new Vector2(rb.velocity.x, groundJumpForce);
                 StartCoroutine(FlashColor(dashColor, dashDuration, dashColorAmount));
-                Invoke("ResetGravityScale", .2f);
+                Invoke("ResetGravityScale", .1f);
             }
             else if (wallJumpsLeft > 0 && canWallJump == true)
             {
+                gravityOff = true;
                 jumped = true;
                 wallJumpsLeft--;
-                gravityOff = true;
-                gravityScale = 0f;
                 rb.velocity = new Vector2(rb.velocity.x + wallJumpSide * 10f, wallJumpForce);
                 StartCoroutine(FlashColor(dashColor, dashDuration, dashColorAmount));
                 Invoke("ResetGravityScale", .1f);
@@ -277,7 +293,7 @@ public class PlayerController : MonoBehaviour
     void FinishDash()
     {
         gravityScale = 1f;
-        rb.velocity = new Vector2(maxMoveSpeed * lastDashAxis.x, rb.velocity.y * .2f);
+        rb.velocity = new Vector2(maxMoveSpeed * lastMoveAxis.x, rb.velocity.y * .2f);
         isDashing = false;
     }
 
@@ -288,11 +304,7 @@ public class PlayerController : MonoBehaviour
             dashesAvailable -= 1;
             isDashing = true;
             //sfx[0].Play();
-            gravityScale = 0f;
-            rb.velocity = Vector2.zero;
-            lastDashAxis = moveAxis;
-            lastDashAxis.Normalize();
-            rb.AddForce(lastDashAxis * dashStrength, ForceMode2D.Impulse);
+            rb.velocity = new Vector2(lastMoveAxis.x * dashStrength, 0);
             StartCoroutine(FlashColor(dashColor, dashDuration, dashColorAmount));
             Invoke("FinishDash", dashDuration);
         }
