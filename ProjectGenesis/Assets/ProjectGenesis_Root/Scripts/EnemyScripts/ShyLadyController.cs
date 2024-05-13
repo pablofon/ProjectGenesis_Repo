@@ -53,11 +53,12 @@ public class ShyLadyController : MonoBehaviour
             else
             {
                 StopFollow();
+                Attack();
             }
 
             if (Vector2.Distance(transform.position, target.position) < inRange)
             {
-                Attack();
+               // Attack();
             }
         }
 
