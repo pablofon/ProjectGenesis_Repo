@@ -15,9 +15,7 @@ public class ShyLadyController : MonoBehaviour
     [SerializeField] float inRange;
     bool startAttack;
     bool isFacingRight;
-
-    [SerializeField] float castTime;
-    [SerializeField] float repeatTime;
+    [SerializeField] bool stoped;
 
 
     private void Start()
@@ -31,6 +29,7 @@ public class ShyLadyController : MonoBehaviour
         anim.SetBool("Walk", false);
 
         isFacingRight = false;
+        
 
     }
 
@@ -69,11 +68,13 @@ public class ShyLadyController : MonoBehaviour
     void Follow()
     {
         agent.SetDestination(target.position);
+        stoped = false;
     }
 
     void StopFollow()
     {
         agent.SetDestination(transform.position);
+        stoped = true;
     }
 
     public void EnemyDeath()
