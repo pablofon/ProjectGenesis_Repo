@@ -124,6 +124,8 @@ MonoBehaviour:
   target: {fileID: 0}
   detectDistance: 6
   inRange: 1
+  castTime: 10
+  repeatTime: 10
 --- !u!1001 &1864478560184843839
 PrefabInstance:
   m_ObjectHideFlags: 0
