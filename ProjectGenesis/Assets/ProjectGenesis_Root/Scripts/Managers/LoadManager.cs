@@ -3,11 +3,11 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
-public class SceneManager : MonoBehaviour
+public class LoadManager : MonoBehaviour
 {
     public void SceneLoader(int sceneToLoad)
     {
-        //SceneManager.LoadScene(sceneToLoad); //Preguntar a Jorge
+        SceneManager.LoadScene(sceneToLoad);
     }
 
     public void ExitGame()
@@ -15,6 +15,4 @@ public class SceneManager : MonoBehaviour
         Debug.Log("saliendo de Juego");
         Application.Quit();
     }
-
-
 }
