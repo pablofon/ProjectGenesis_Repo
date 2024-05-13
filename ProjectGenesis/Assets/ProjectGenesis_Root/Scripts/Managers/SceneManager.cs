@@ -7,7 +7,7 @@ public class SceneManager : MonoBehaviour
 {
     public void SceneLoader(int sceneToLoad)
     {
-        //SceneManager.LoadScene(sceneToLoad); Preguntar a Jorge
+        //SceneManager.LoadScene(sceneToLoad); //Preguntar a Jorge
     }
 
     public void ExitGame()
