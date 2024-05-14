@@ -5,6 +5,8 @@ using UnityEngine.InputSystem;
 
 public class PlayerController : MonoBehaviour
 {
+    [SerializeField] Transform shoulder;
+    [SerializeField] Transform weaponContainer;
     [SerializeField] GameObject[] weapons;
     [SerializeField] private SpriteRenderer sr;
     private Rigidbody2D rb;
@@ -17,6 +19,9 @@ public class PlayerController : MonoBehaviour
     [Header("Player Direction")]
     [SerializeField] bool isFacingRight = true;
     [SerializeField] Vector2 moveAxis;
+    [SerializeField] Vector2 mousePos;
+
+    [SerializeField] Vector2 aimDir;
 
     [Header("Movement")]
     [SerializeField] private float movementAcceleration;
@@ -83,6 +88,8 @@ public class PlayerController : MonoBehaviour
         HorizontalDrag();
         VerticalDrag();
         FallMultiplier();
+
+        if (facingCursorTimer > 0) facingCursorTimer -= Time.deltaTime;
     }
 
     void Gravity()
@@ -251,6 +258,15 @@ public class PlayerController : MonoBehaviour
     {
         moveAxis = playerInput.actions["Movement"].ReadValue<Vector2>();
         if (moveAxis.x != 0) lastMoveAxis.x = moveAxis.x;
+
+        Vector2 screenPosition = Input.mousePosition;
+        mousePos = Camera.main.ScreenToWorldPoint(screenPosition);
+
+        //Calculate cursor angle relative to the player
+
+        aimDir = (mousePos - new Vector2(shoulder.position.x, shoulder.position.y)).normalized;
+
+        shoulder.rotation = Quaternion.Euler(shoulder.eulerAngles.x, shoulder.eulerAngles.y, Mathf.Atan2(aimDir.y, aimDir.x) * Mathf.Rad2Deg);
     }
 
     public void Jump(InputAction.CallbackContext context)
@@ -310,7 +326,13 @@ public class PlayerController : MonoBehaviour
         }
     }
 
-
+    [SerializeField] private float facingCursorTimer;
+    [SerializeField] private float facingCursorDuration;
+    public void Attack(InputAction.CallbackContext context)
+    {
+        //Execute attack code
+        facingCursorTimer = facingCursorDuration;
+    }
 
     private IEnumerator FlashColor(Color color, float duration, float amount)
     {
@@ -337,10 +359,16 @@ public class PlayerController : MonoBehaviour
 
     private void FacingDirection()
     {
-        if (!isFacingRight & rb.velocity.x > 0)
-        { Flip(); }
-        else if (isFacingRight & rb.velocity.x < 0)
-        { Flip(); }
+        if (facingCursorTimer > 0)
+        {
+            if (mousePos.x > transform.position.x && !isFacingRight) Flip();
+            if (mousePos.x < transform.position.x && isFacingRight) Flip();
+        }
+        else
+        {
+            if (!isFacingRight & rb.velocity.x > 0) Flip();
+            else if (isFacingRight & rb.velocity.x < 0) Flip();
+        }
     }
 
     void Flip()
@@ -348,6 +376,11 @@ public class PlayerController : MonoBehaviour
         Vector2 currentScale = transform.localScale;
         currentScale.x *= -1;
         transform.localScale = currentScale;
+        foreach (GameObject weapon in weapons)
+        {
+            weapon.transform.localScale = new Vector3(-1 * weapon.transform.localScale.x, -1 * weapon.transform.localScale.y, weapon.transform.localScale.z);
+        }
+
         isFacingRight = !isFacingRight;
     }
 
