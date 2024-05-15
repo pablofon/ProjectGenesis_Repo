@@ -195,7 +195,7 @@ public class EnemyChaser : MonoBehaviour
         }
     }
 
-    IEnumerator Attack()
+    /*IEnumerator Attack()
     {
         Vector2 dir = playerPosition.position - transform.position;
         //playerDetected = false;
@@ -206,5 +206,5 @@ public class EnemyChaser : MonoBehaviour
         //yield return new WaitForSeconds(2f);
         attackRange = false;
         yield return null;
-    }
+    }*/
 }
