@@ -15,6 +15,7 @@ public class EnemyChaser : MonoBehaviour
     [SerializeField] float attackJumpForce;
     Rigidbody2D enemyRb;
     //float horInput;
+    Animator anim;
 
     [Header("GroundCheck")]
     [SerializeField] bool isGrounded;
@@ -24,7 +25,7 @@ public class EnemyChaser : MonoBehaviour
 
     bool isFacingRight;
 
-    //bool attackRange;
+    bool attackRange;
 
     // Start is called before the first frame update
     void Start()
@@ -32,7 +33,9 @@ public class EnemyChaser : MonoBehaviour
         playerPosition = GameObject.FindGameObjectWithTag("Player").transform;
         enemyRb = GetComponent<Rigidbody2D>();
 
-        //attackRange = false;
+        attackRange = false;
+        anim = GetComponentInChildren<Animator>();
+        anim.SetBool("Walk", false);
     }
 
     // Update is called once per frame
@@ -45,15 +48,39 @@ public class EnemyChaser : MonoBehaviour
 
         Detect();
         Chase();
+        
+        
 
-        /*Attack();
+        //Attack();
 
-        if (attackRange )
-        {
-            enemyRb.AddForce(Vector2.up * attackJumpForce, ForceMode2D.Impulse);
-        }*/
+        
 
         FlipUpdater();
+
+        if (playerDetected)
+        {
+            anim.SetBool("Walk", true);
+        }
+        else
+        {
+            anim.SetBool("Walk", false);
+        }
+
+        /*if (Vector2.Distance(playerPosition.position, transform.position) < 2f)
+        {
+            attackRange = true;
+            
+        }
+        if (attackRange)
+        {
+            anim.SetTrigger("Attack");
+            StartCoroutine(Attack());
+        }
+        else
+        {
+            StopCoroutine(Attack());
+            Chase();
+        }*/
     }
 
     /*private void OnTriggerEnter2D(Collider2D collision)
@@ -93,20 +120,34 @@ public class EnemyChaser : MonoBehaviour
                 if (isGrounded)
                 {
                     enemyRb.AddForce(Vector2.up * jumpForce, ForceMode2D.Impulse);
+                    anim.SetBool("Jump", true);
                 }
+            }
+            else
+            {
+                anim.SetBool("Jump", false);
+            }
+            if (Vector2.Distance(playerPosition.position, transform.position) < 2f)
+            {
+                anim.SetTrigger("Attack");
+
+                //Vector2 dir = playerPosition.position - transform.position;
+                //enemyRb.AddForce(dir * jumpForce, ForceMode2D.Impulse);
+                //attackRange = false;
+
             }
 
         }
     }
 
-    void Jump()
+    /*void Jump()
     {
         if (isGrounded)
         {
             enemyRb.AddForce(Vector2.up * jumpForce, ForceMode2D.Impulse);
             Debug.Log("JumpZone");
         }
-    }
+    }*/
 
     /*void Attack()
     {
@@ -125,7 +166,7 @@ public class EnemyChaser : MonoBehaviour
 
     public void EnemyDeath()
     {
-
+        anim.SetTrigger("Death");
     }
 
     void Flip()
@@ -152,5 +193,18 @@ public class EnemyChaser : MonoBehaviour
                 Flip();
             }
         }
+    }
+
+    IEnumerator Attack()
+    {
+        Vector2 dir = playerPosition.position - transform.position;
+        //playerDetected = false;
+        yield return new WaitForSeconds(0.5f);
+        //speed = 0;
+        anim.SetTrigger("Attack");
+        enemyRb.AddForce(dir * jumpForce, ForceMode2D.Impulse);
+        //yield return new WaitForSeconds(2f);
+        attackRange = false;
+        yield return null;
     }
 }
