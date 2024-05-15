@@ -196,6 +196,7 @@ public class EnemyChaser : MonoBehaviour
         Vector2 dir = playerPosition.position - transform.position;
         //playerDetected = false;
         yield return new WaitForSeconds(0.5f);
+        speed = 0;
         anim.SetTrigger("Attack");
         enemyRb.AddForce(dir * jumpForce, ForceMode2D.Impulse);
         //yield return new WaitForSeconds(2f);
