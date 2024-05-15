@@ -15,6 +15,7 @@ public class EnemyChaser : MonoBehaviour
     [SerializeField] float attackJumpForce;
     Rigidbody2D enemyRb;
     //float horInput;
+    Animator anim;
 
     [Header("GroundCheck")]
     [SerializeField] bool isGrounded;
@@ -33,6 +34,8 @@ public class EnemyChaser : MonoBehaviour
         enemyRb = GetComponent<Rigidbody2D>();
 
         //attackRange = false;
+        anim = GetComponentInChildren<Animator>();
+        anim.SetBool("Walk", false);
     }
 
     // Update is called once per frame
@@ -54,6 +57,15 @@ public class EnemyChaser : MonoBehaviour
         }*/
 
         FlipUpdater();
+
+        if (playerDetected)
+        {
+            anim.SetBool("Walk", true);
+        }
+        else
+        {
+            anim.SetBool("Walk", false);
+        }
     }
 
     /*private void OnTriggerEnter2D(Collider2D collision)
@@ -93,20 +105,29 @@ public class EnemyChaser : MonoBehaviour
                 if (isGrounded)
                 {
                     enemyRb.AddForce(Vector2.up * jumpForce, ForceMode2D.Impulse);
+                    anim.SetBool("Jump", true);
                 }
             }
-
+            else
+            {
+                anim.SetBool("Jump", false);
+            }
+            if (Vector2.Distance(playerPosition.position, transform.position) < 2f)
+            {
+                anim.SetTrigger("Attack");
+                enemyRb.AddForce(Vector2.up * attackJumpForce, ForceMode2D.Impulse);
+            }
         }
     }
 
-    void Jump()
+    /*void Jump()
     {
         if (isGrounded)
         {
             enemyRb.AddForce(Vector2.up * jumpForce, ForceMode2D.Impulse);
             Debug.Log("JumpZone");
         }
-    }
+    }*/
 
     /*void Attack()
     {
@@ -125,7 +146,7 @@ public class EnemyChaser : MonoBehaviour
 
     public void EnemyDeath()
     {
-
+        anim.SetTrigger("Death");
     }
 
     void Flip()
