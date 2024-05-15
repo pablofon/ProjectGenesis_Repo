@@ -131,6 +131,10 @@ public class EnemyChaser : MonoBehaviour
             {
                 anim.SetTrigger("Attack");
 
+                Vector2 dir = playerPosition.position - transform.position;
+                enemyRb.AddForce(dir * jumpForce, ForceMode2D.Impulse);
+                attackRange = false;
+
             }
 
         }
