@@ -1,12 +1,11 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Animations.Rigging;
 using UnityEngine.InputSystem;
 
 public class PlayerController : MonoBehaviour
 {
-    [SerializeField] Transform shoulder;
-    [SerializeField] Transform weaponContainer;
     [SerializeField] GameObject[] weapons;
     [SerializeField] private SpriteRenderer sr;
     private Rigidbody2D rb;
@@ -69,6 +68,11 @@ public class PlayerController : MonoBehaviour
         rb = GetComponent<Rigidbody2D>();
         playerInput = GetComponent<PlayerInput>();
 
+        foreach (var rigLayer in rigBuilder.layers)
+        {
+            armLayer = rigLayer;
+        }
+
         col = GetComponent<Collider2D>();
     }
 
@@ -76,6 +80,8 @@ public class PlayerController : MonoBehaviour
     {
         GetInput();
         FacingDirection();
+        CursorAim();
+        ArmTransform();
 
         if (canGroundJump) { dashesAvailable = maxDashes; wallJumpsLeft = wallJumpsMax; }
     }
@@ -265,8 +271,6 @@ public class PlayerController : MonoBehaviour
         //Calculate cursor angle relative to the player
 
         aimDir = (mousePos - new Vector2(shoulder.position.x, shoulder.position.y)).normalized;
-
-        shoulder.rotation = Quaternion.Euler(shoulder.eulerAngles.x, shoulder.eulerAngles.y, Mathf.Atan2(aimDir.y, aimDir.x) * Mathf.Rad2Deg);
     }
 
     public void Jump(InputAction.CallbackContext context)
@@ -354,6 +358,84 @@ public class PlayerController : MonoBehaviour
 
     //ANIMATIONS
 
+    //ARM DIRECTION
+
+    //Apply cursor direction or controller joystick direction
+    private void CursorAim()
+    {
+        //MOUSE: Screen to world pos
+        Vector2 screenPosition = Input.mousePosition;
+        mousePos = Camera.main.ScreenToWorldPoint(screenPosition);
+
+        //Calculate cursor angle relative to the player
+        aimDir = (mousePos - new Vector2(shoulder.position.x, shoulder.position.y)).normalized;
+    }
+
+    [Header("Arm Transform")]
+    [SerializeField] Transform shoulder;
+    [SerializeField] float aimAngle;
+    [SerializeField] Transform handController;
+    [SerializeField] private float hcDist;
+    public float hcKbDuration;
+    public float hcKbDist;
+    [SerializeField] float hcKbDistOutput = 1f;
+    public float hcKbRotation;
+    [SerializeField] float hcKbRotationtOutput;
+    [SerializeField] RigBuilder rigBuilder;
+    [SerializeField] RigLayer armLayer;
+    [SerializeField] GameObject weaponsContainer;
+
+    //Orient the arm
+    private void ArmTransform()
+    {
+
+        aimAngle = Mathf.Atan2(aimDir.y, aimDir.x) / Mathf.PI * 180;
+
+        //Hand controller ROTATION
+        handController.eulerAngles = new Vector3(handController.eulerAngles.x, handController.eulerAngles.y, aimAngle + hcKbRotationtOutput);
+
+        //Hand controller POSITION
+        Vector2 hcPos = hcDist * hcKbDistOutput * aimDir;
+        handController.position = new Vector3(shoulder.position.x + hcPos.x, shoulder.position.y + hcPos.y);
+
+        if (facingCursorTimer > 0)
+        {
+            if (!armLayer.active)
+            {
+                armLayer.active = true;
+                weaponsContainer.SetActive(true);
+            }
+        }
+        else if (armLayer.active)
+        {
+            armLayer.active = false;
+            weaponsContainer.SetActive(false);
+        }
+    }
+
+
+
+    //Hand recoil
+    public IEnumerator HcDistKb()
+    {
+        float elapsedTime = 0;
+        try
+        {
+            while (elapsedTime < hcKbDuration)
+            {
+                elapsedTime += Time.deltaTime;
+                float mult = Mathf.Lerp(0, 1, elapsedTime / hcKbDuration);
+                hcKbDistOutput = Mathf.Lerp(hcKbDist, 1, mult);
+                hcKbRotationtOutput = hcKbRotation * (1 - mult);
+                yield return null; // Yield execution to the next frame
+            }
+        }
+        finally
+        {
+            hcKbDistOutput = 1;
+            hcKbRotationtOutput = 0;
+        }
+    }
 
     // -- Animations method --
 
