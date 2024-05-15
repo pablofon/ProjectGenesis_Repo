@@ -378,7 +378,7 @@ public class PlayerController : MonoBehaviour
         transform.localScale = currentScale;
         foreach (GameObject weapon in weapons)
         {
-            weapon.transform.localScale = new Vector3(-1 * weapon.transform.localScale.x, -1 * weapon.transform.localScale.y, weapon.transform.localScale.z);
+            weapon.transform.localScale = new Vector3(weapon.transform.localScale.x, -1 * weapon.transform.localScale.y, weapon.transform.localScale.z);
         }
 
         isFacingRight = !isFacingRight;
