@@ -24,9 +24,8 @@ public class EnemyChaser : MonoBehaviour
     [SerializeField] LayerMask groundLayer;
 
     bool isFacingRight;
-    bool attacking;
 
-    //bool attackRange;
+    bool attackRange;
 
     // Start is called before the first frame update
     void Start()
@@ -34,7 +33,7 @@ public class EnemyChaser : MonoBehaviour
         playerPosition = GameObject.FindGameObjectWithTag("Player").transform;
         enemyRb = GetComponent<Rigidbody2D>();
 
-        //attackRange = false;
+        attackRange = false;
         anim = GetComponentInChildren<Animator>();
         anim.SetBool("Walk", false);
     }
@@ -49,6 +48,8 @@ public class EnemyChaser : MonoBehaviour
 
         Detect();
         Chase();
+        
+        
 
         //Attack();
 
@@ -65,6 +66,21 @@ public class EnemyChaser : MonoBehaviour
             anim.SetBool("Walk", false);
         }
 
+        /*if (Vector2.Distance(playerPosition.position, transform.position) < 2f)
+        {
+            attackRange = true;
+            
+        }
+        if (attackRange)
+        {
+            anim.SetTrigger("Attack");
+            StartCoroutine(Attack());
+        }
+        else
+        {
+            StopCoroutine(Attack());
+            Chase();
+        }*/
     }
 
     /*private void OnTriggerEnter2D(Collider2D collision)
@@ -113,13 +129,8 @@ public class EnemyChaser : MonoBehaviour
             }
             if (Vector2.Distance(playerPosition.position, transform.position) < 2f)
             {
-                attacking = true;
                 anim.SetTrigger("Attack");
-                //StartCoroutine(Attack());
-            }
-            if(!attacking)
-            {
-               // StopCoroutine(Attack());
+
             }
 
         }
@@ -180,15 +191,15 @@ public class EnemyChaser : MonoBehaviour
         }
     }
 
-    /*IEnumerator Attack()
+    IEnumerator Attack()
     {
         Vector2 dir = playerPosition.position - transform.position;
-        yield return new WaitForSeconds(1f);
         //playerDetected = false;
-        yield return new WaitForSeconds(1f);
+        yield return new WaitForSeconds(0.5f);
         anim.SetTrigger("Attack");
         enemyRb.AddForce(dir * jumpForce, ForceMode2D.Impulse);
-        attacking = false;
+        //yield return new WaitForSeconds(2f);
+        attackRange = false;
         yield return null;
-    }*/
+    }
 }
