@@ -24,6 +24,7 @@ public class EnemyChaser : MonoBehaviour
     [SerializeField] LayerMask groundLayer;
 
     bool isFacingRight;
+    bool attacking;
 
     //bool attackRange;
 
@@ -49,12 +50,9 @@ public class EnemyChaser : MonoBehaviour
         Detect();
         Chase();
 
-        /*Attack();
+        //Attack();
 
-        if (attackRange )
-        {
-            enemyRb.AddForce(Vector2.up * attackJumpForce, ForceMode2D.Impulse);
-        }*/
+        
 
         FlipUpdater();
 
@@ -66,6 +64,7 @@ public class EnemyChaser : MonoBehaviour
         {
             anim.SetBool("Walk", false);
         }
+
     }
 
     /*private void OnTriggerEnter2D(Collider2D collision)
@@ -114,9 +113,15 @@ public class EnemyChaser : MonoBehaviour
             }
             if (Vector2.Distance(playerPosition.position, transform.position) < 2f)
             {
+                attacking = true;
                 anim.SetTrigger("Attack");
-                enemyRb.AddForce(Vector2.up * attackJumpForce, ForceMode2D.Impulse);
+                //StartCoroutine(Attack());
             }
+            if(!attacking)
+            {
+               // StopCoroutine(Attack());
+            }
+
         }
     }
 
@@ -174,4 +179,16 @@ public class EnemyChaser : MonoBehaviour
             }
         }
     }
+
+    /*IEnumerator Attack()
+    {
+        Vector2 dir = playerPosition.position - transform.position;
+        yield return new WaitForSeconds(1f);
+        //playerDetected = false;
+        yield return new WaitForSeconds(1f);
+        anim.SetTrigger("Attack");
+        enemyRb.AddForce(dir * jumpForce, ForceMode2D.Impulse);
+        attacking = false;
+        yield return null;
+    }*/
 }
