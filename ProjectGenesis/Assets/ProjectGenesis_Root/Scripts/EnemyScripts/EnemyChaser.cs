@@ -25,7 +25,7 @@ public class EnemyChaser : MonoBehaviour
 
     bool isFacingRight;
 
-    bool attackRange;
+    //bool attackRange;
 
     // Start is called before the first frame update
     void Start()
@@ -33,7 +33,7 @@ public class EnemyChaser : MonoBehaviour
         playerPosition = GameObject.FindGameObjectWithTag("Player").transform;
         enemyRb = GetComponent<Rigidbody2D>();
 
-        attackRange = false;
+        //attackRange = false;
         anim = GetComponentInChildren<Animator>();
         anim.SetBool("Walk", false);
     }

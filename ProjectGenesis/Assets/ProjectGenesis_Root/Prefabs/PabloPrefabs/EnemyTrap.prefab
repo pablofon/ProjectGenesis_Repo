@@ -141,7 +141,7 @@ GameObject:
   - component: {fileID: 8729133760135134760}
   - component: {fileID: 3271055709963362}
   - component: {fileID: 291883653849952485}
-  - component: {fileID: 5734654691166155851}
+  - component: {fileID: 3209082787849556893}
   m_Layer: 0
   m_Name: EnemyTrap
   m_TagString: Untagged
@@ -249,7 +249,7 @@ BoxCollider2D:
   m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0.0076191425, y: 0.64284116}
+  m_Offset: {x: 0.12626886, y: 5.3640413}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
@@ -260,9 +260,9 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 1.1676219, y: 0.86851585}
+  m_Size: {x: 10.327416, y: 13.063599}
   m_EdgeRadius: 0
---- !u!114 &5734654691166155851
+--- !u!114 &3209082787849556893
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -271,7 +271,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 9107113225861116866}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: bf35253ad5fcca74ba5a3d3f733fd116, type: 3}
+  m_Script: {fileID: 11500000, guid: 9efa3b8d480143b4d860817e16373314, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
 --- !u!1001 &63156432207470373
