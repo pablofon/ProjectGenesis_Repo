@@ -408,7 +408,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 133681260}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: GroundCheck
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -448,11 +448,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5037590187398830718, guid: c42203e1f1f49bd4caf6f8ae757cde99, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 16.5
+      value: 24.21
       objectReference: {fileID: 0}
     - target: {fileID: 5037590187398830718, guid: c42203e1f1f49bd4caf6f8ae757cde99, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0.32
+      value: 6.39
       objectReference: {fileID: 0}
     - target: {fileID: 5037590187398830718, guid: c42203e1f1f49bd4caf6f8ae757cde99, type: 3}
       propertyPath: m_LocalPosition.z
@@ -1422,7 +1422,7 @@ GameObject:
   - component: {fileID: 784580386}
   - component: {fileID: 784580391}
   - component: {fileID: 784580390}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Player
   m_TagString: Player
   m_Icon: {fileID: 0}
@@ -3418,7 +3418,7 @@ Transform:
   m_GameObject: {fileID: 1825041389}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -19.53, y: 0, z: 0}
+  m_LocalPosition: {x: -19.53, y: 3.39, z: 0}
   m_LocalScale: {x: 2.4324763, y: 12.549505, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
