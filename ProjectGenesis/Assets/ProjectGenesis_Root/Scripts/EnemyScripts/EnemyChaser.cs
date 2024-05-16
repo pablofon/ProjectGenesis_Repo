@@ -34,7 +34,7 @@ public class EnemyChaser : MonoBehaviour
         enemyRb = GetComponent<Rigidbody2D>();
 
         attackRange = false;
-        anim = GetComponent<Animator>();
+        anim = GetComponentInChildren<Animator>();
         anim.SetBool("Walk", false);
     }
 

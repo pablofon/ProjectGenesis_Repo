@@ -155,7 +155,7 @@ Transform:
   m_GameObject: {fileID: 4785733433534408005}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 10.23, z: 0}
+  m_LocalPosition: {x: 0, y: -0.52, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -299,7 +299,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: -3342380791378629016, guid: 449cd1cde43a4234e944566198739edf, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -0.05625343
+      value: 0.05317688
+      objectReference: {fileID: 0}
+    - target: {fileID: -3342380791378629016, guid: 449cd1cde43a4234e944566198739edf, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 7.877713
       objectReference: {fileID: 0}
     - target: {fileID: -2664132649081593222, guid: 449cd1cde43a4234e944566198739edf, type: 3}
       propertyPath: m_LocalPosition.x
@@ -449,8 +453,8 @@ CapsuleCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0.14990997, y: 19.60162}
-  m_Size: {x: 9.074966, y: 18.421806}
+  m_Offset: {x: 0.3733406, y: 8.488031}
+  m_Size: {x: 9.521828, y: 18.984539}
   m_Direction: 0
 --- !u!114 &4920704335861818302
 MonoBehaviour:
@@ -468,7 +472,7 @@ MonoBehaviour:
   playerPosition: {fileID: 0}
   chaseDistance: 5
   playerDetected: 0
-  jumpForce: 0.15
+  jumpForce: 0.5
   attackJumpForce: 0.1
   isGrounded: 0
   groundCheck: {fileID: 905986176528105432}
