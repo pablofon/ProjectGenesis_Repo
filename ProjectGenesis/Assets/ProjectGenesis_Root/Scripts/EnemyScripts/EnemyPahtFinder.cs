@@ -72,25 +72,28 @@ public class EnemyPahtFinder : MonoBehaviour
 
                 if (angle < fovAngle / 2)
                 {
-                    if (hit.collider.CompareTag("Player"))
+                    if (hit.collider != null)
                     {
-                        Debug.DrawRay(fovPoint.position, dir, Color.green);
-                        detected = true;
-                        timer += Time.deltaTime;
-                    }
-                    else
-                    {
-                        detected = false;
-                        timer = 1.5f;
-                    }
-
-                    if (detected)
-                    {
-                        if (timer >= 1.5f)
+                        if (hit.collider.CompareTag("Player"))
                         {
-                            Instantiate(bullet, gameObject.transform.position, rot);
-                            timer = 0f; //Para que no salgan balas infinitamente y parezca un rayo
-                            anim.SetTrigger("Attack");
+                            Debug.DrawRay(fovPoint.position, dir, Color.green);
+                            detected = true;
+                            timer += Time.deltaTime;
+                        }
+                        else
+                        {
+                            detected = false;
+                            timer = 1.5f;
+                        }
+
+                        if (detected)
+                        {
+                            if (timer >= 1.5f)
+                            {
+                                Instantiate(bullet, gameObject.transform.position, rot);
+                                timer = 0f; //Para que no salgan balas infinitamente y parezca un rayo
+                                anim.SetTrigger("Attack");
+                            }
                         }
                     }
                 }
