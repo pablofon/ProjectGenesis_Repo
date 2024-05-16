@@ -9,7 +9,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 3433421361583641195}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: FovPoint
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -25,7 +25,7 @@ Transform:
   m_GameObject: {fileID: 5675675524075258044}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: 0, y: -1.31, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -43,7 +43,7 @@ GameObject:
   - component: {fileID: 227925527511046133}
   - component: {fileID: 5825732368004438635}
   - component: {fileID: 4097245772293414783}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: EnemyShooter 1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -137,12 +137,12 @@ CircleCollider2D:
   m_CallbackLayers:
     serializedVersion: 2
     m_Bits: 4294967295
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: -0.048429728, y: -0.104931116}
+  m_Offset: {x: -0.12107444, y: 0.5973003}
   serializedVersion: 2
-  m_Radius: 1.6380992
+  m_Radius: 1.3152342
 --- !u!1001 &1550100624386746250
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -151,9 +151,17 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 4659231615625943103}
     m_Modifications:
+    - target: {fileID: -8789721052271414322, guid: fc28c37fd6b188340a808ded1095c189, type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
     - target: {fileID: -8653719598885068355, guid: fc28c37fd6b188340a808ded1095c189, type: 3}
       propertyPath: m_Name
       value: spectator_rigging
+      objectReference: {fileID: 0}
+    - target: {fileID: -8653719598885068355, guid: fc28c37fd6b188340a808ded1095c189, type: 3}
+      propertyPath: m_Layer
+      value: 7
       objectReference: {fileID: 0}
     - target: {fileID: -7552582706839291426, guid: fc28c37fd6b188340a808ded1095c189, type: 3}
       propertyPath: m_LocalScale.x
@@ -207,6 +215,22 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: -6917076944625302859, guid: fc28c37fd6b188340a808ded1095c189, type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
+    - target: {fileID: -3642982419643311205, guid: fc28c37fd6b188340a808ded1095c189, type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
+    - target: {fileID: -2812359558590887636, guid: fc28c37fd6b188340a808ded1095c189, type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
+    - target: {fileID: -443402170869621506, guid: fc28c37fd6b188340a808ded1095c189, type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
     - target: {fileID: -205704888175181671, guid: fc28c37fd6b188340a808ded1095c189, type: 3}
       propertyPath: m_LocalPosition.x
       value: 4.181318
@@ -215,6 +239,14 @@ PrefabInstance:
       propertyPath: m_LocalPosition.y
       value: 2.8661199
       objectReference: {fileID: 0}
+    - target: {fileID: 2308335230997180423, guid: fc28c37fd6b188340a808ded1095c189, type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
+    - target: {fileID: 3551940272406826641, guid: fc28c37fd6b188340a808ded1095c189, type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
     - target: {fileID: 4854737623886290171, guid: fc28c37fd6b188340a808ded1095c189, type: 3}
       propertyPath: m_LocalPosition.x
       value: 2.4010873
@@ -222,6 +254,18 @@ PrefabInstance:
     - target: {fileID: 4854737623886290171, guid: fc28c37fd6b188340a808ded1095c189, type: 3}
       propertyPath: m_LocalPosition.y
       value: -6.400346
+      objectReference: {fileID: 0}
+    - target: {fileID: 6481109270247473964, guid: fc28c37fd6b188340a808ded1095c189, type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
+    - target: {fileID: 6764455793927160790, guid: fc28c37fd6b188340a808ded1095c189, type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
+    - target: {fileID: 7707641141026675207, guid: fc28c37fd6b188340a808ded1095c189, type: 3}
+      propertyPath: m_Layer
+      value: 7
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
