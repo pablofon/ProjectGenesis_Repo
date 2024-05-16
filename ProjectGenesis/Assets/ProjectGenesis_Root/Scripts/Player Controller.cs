@@ -6,7 +6,7 @@ using UnityEngine.InputSystem;
 
 public class PlayerController : MonoBehaviour
 {
-    [SerializeField] GameObject[] weapons;
+    [SerializeField] WeaponController weaponController;
     [SerializeField] private SpriteRenderer sr;
     private Rigidbody2D rb;
     [SerializeField] private Animator anim;
@@ -332,11 +332,7 @@ public class PlayerController : MonoBehaviour
 
     [SerializeField] private float facingCursorTimer;
     [SerializeField] private float facingCursorDuration;
-    public void Attack(InputAction.CallbackContext context)
-    {
-        //Execute attack code
-        facingCursorTimer = facingCursorDuration;
-    }
+
 
     private IEnumerator FlashColor(Color color, float duration, float amount)
     {
@@ -458,12 +454,20 @@ public class PlayerController : MonoBehaviour
         Vector2 currentScale = transform.localScale;
         currentScale.x *= -1;
         transform.localScale = currentScale;
-        foreach (GameObject weapon in weapons)
-        {
-            weapon.transform.localScale = new Vector3(weapon.transform.localScale.x, -1 * weapon.transform.localScale.y, weapon.transform.localScale.z);
-        }
-
         isFacingRight = !isFacingRight;
     }
 
+    public void ScrollPerformed(InputAction.CallbackContext context)
+    {
+        if (context.performed)
+        {
+            weaponController.ScrollThroughWeapons((int)context.ReadValue<Vector2>().normalized.y);
+        }
+    }
+
+    public void Attack(InputAction.CallbackContext context)
+    {
+        facingCursorTimer = facingCursorDuration;
+        weaponController.Atk(context);
+    }
 }
