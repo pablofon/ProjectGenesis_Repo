@@ -95,7 +95,301 @@ TextureImporter:
     forceMaximumCompressionQuality_BC6H_BC7: 0
   spriteSheet:
     serializedVersion: 2
-    sprites: []
+    sprites:
+    - serializedVersion: 2
+      name: TutoRIAL_0
+      rect:
+        serializedVersion: 2
+        x: 51
+        y: 543
+        width: 128
+        height: 58
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 07789e7694fff404b86148aa1f745913
+      internalID: -94885081
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TutoRIAL_1
+      rect:
+        serializedVersion: 2
+        x: 221
+        y: 543
+        width: 128
+        height: 58
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 71eb44492546a1643beff8ef5cda036a
+      internalID: 643675227
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TutoRIAL_2
+      rect:
+        serializedVersion: 2
+        x: 421
+        y: 543
+        width: 128
+        height: 58
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cd90593e358d40e4e9fdfee14e8de2b9
+      internalID: -1933525267
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TutoRIAL_3
+      rect:
+        serializedVersion: 2
+        x: 61
+        y: 432
+        width: 128
+        height: 59
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d6e45ec38cfc51547b5ff7491961986c
+      internalID: 544927523
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TutoRIAL_4
+      rect:
+        serializedVersion: 2
+        x: 232
+        y: 433
+        width: 129
+        height: 59
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 68732c9a039c84e4f8d8b59508bc2ede
+      internalID: -65683371
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TutoRIAL_5
+      rect:
+        serializedVersion: 2
+        x: 426
+        y: 430
+        width: 128
+        height: 59
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c56a3dc273034f943bf022a82311e407
+      internalID: -1373223474
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TutoRIAL_6
+      rect:
+        serializedVersion: 2
+        x: 61
+        y: 322
+        width: 128
+        height: 59
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: be33c5c329630284e9071cef79e74e84
+      internalID: -14084340
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TutoRIAL_7
+      rect:
+        serializedVersion: 2
+        x: 231
+        y: 323
+        width: 127
+        height: 59
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6d86279bd48ca8d49a5f3fbd9d409dad
+      internalID: -816080865
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TutoRIAL_8
+      rect:
+        serializedVersion: 2
+        x: 425
+        y: 323
+        width: 128
+        height: 59
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1fcd43c3e03ecf245b50c8f88754d0bf
+      internalID: -1425747006
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TutoRIAL_9
+      rect:
+        serializedVersion: 2
+        x: 51
+        y: 223
+        width: 128
+        height: 58
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 634e0223f9861164da4887be97233526
+      internalID: -2142133511
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TutoRIAL_10
+      rect:
+        serializedVersion: 2
+        x: 441
+        y: 232
+        width: 128
+        height: 59
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 854a6f09438ce7147b57a0c7aad11067
+      internalID: -1221895099
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TutoRIAL_11
+      rect:
+        serializedVersion: 2
+        x: 51
+        y: 93
+        width: 128
+        height: 59
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fed3b84cae8595344b72684b20dc33a5
+      internalID: -867252721
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TutoRIAL_12
+      rect:
+        serializedVersion: 2
+        x: 232
+        y: 54
+        width: 127
+        height: 55
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 841574456b1679c41970d2e78dfcccb5
+      internalID: 282614899
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TutoRIAL_13
+      rect:
+        serializedVersion: 2
+        x: 441
+        y: 103
+        width: 128
+        height: 59
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d09fa1447bc8d5e459f2a038d7e44716
+      internalID: -235071862
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     outline: []
     physicsShape: []
     bones: []
@@ -106,7 +400,21 @@ TextureImporter:
     edges: []
     weights: []
     secondaryTextures: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      TutoRIAL_0: -94885081
+      TutoRIAL_1: 643675227
+      TutoRIAL_10: -1221895099
+      TutoRIAL_11: -867252721
+      TutoRIAL_12: 282614899
+      TutoRIAL_13: -235071862
+      TutoRIAL_2: -1933525267
+      TutoRIAL_3: 544927523
+      TutoRIAL_4: -65683371
+      TutoRIAL_5: -1373223474
+      TutoRIAL_6: -14084340
+      TutoRIAL_7: -816080865
+      TutoRIAL_8: -1425747006
+      TutoRIAL_9: -2142133511
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
