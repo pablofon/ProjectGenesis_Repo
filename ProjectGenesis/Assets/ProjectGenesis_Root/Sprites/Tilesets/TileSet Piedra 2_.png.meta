@@ -1,0 +1,1104 @@
+fileFormatVersion: 2
+guid: e930e4cc182947c4ea7b30a58f1ea330
+TextureImporter:
+  internalIDToNameTable: []
+  externalObjects: {}
+  serializedVersion: 12
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 306
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 3
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: TileSet Piedra 2__0
+      rect:
+        serializedVersion: 2
+        x: 1224
+        y: 5508
+        width: 612
+        height: 612
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 249374a27698d6d4987e6a433ff12fec
+      internalID: 1688695843
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TileSet Piedra 2__1
+      rect:
+        serializedVersion: 2
+        x: 1836
+        y: 5508
+        width: 612
+        height: 612
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5fb381bf824523b49a47735cf98fb7e3
+      internalID: 758814371
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TileSet Piedra 2__2
+      rect:
+        serializedVersion: 2
+        x: 3672
+        y: 5508
+        width: 612
+        height: 612
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7174486cd6a9ff54690755780edaffe4
+      internalID: -839427240
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TileSet Piedra 2__3
+      rect:
+        serializedVersion: 2
+        x: 4284
+        y: 5508
+        width: 612
+        height: 612
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f6e5679930c34b045b5d82b98aee893a
+      internalID: 1384154169
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TileSet Piedra 2__4
+      rect:
+        serializedVersion: 2
+        x: 1224
+        y: 4896
+        width: 612
+        height: 612
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 96263c12d9eb19841b203b7cb176b160
+      internalID: 1849799390
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TileSet Piedra 2__5
+      rect:
+        serializedVersion: 2
+        x: 1836
+        y: 4896
+        width: 612
+        height: 612
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 87861142cb758df4f8fe095e4987d587
+      internalID: 805866251
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TileSet Piedra 2__6
+      rect:
+        serializedVersion: 2
+        x: 2448
+        y: 4896
+        width: 612
+        height: 612
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 17e21992102f1e349bd36fda93fa464b
+      internalID: 1705068168
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TileSet Piedra 2__7
+      rect:
+        serializedVersion: 2
+        x: 3060
+        y: 4896
+        width: 612
+        height: 612
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2923b8c72a975c14198fd9e3568d8da7
+      internalID: 663619968
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TileSet Piedra 2__8
+      rect:
+        serializedVersion: 2
+        x: 3672
+        y: 4896
+        width: 612
+        height: 612
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4cf94ada4f133bd42be26c57e5c9bb5d
+      internalID: -556096172
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TileSet Piedra 2__9
+      rect:
+        serializedVersion: 2
+        x: 4284
+        y: 4896
+        width: 612
+        height: 612
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fb1692cb72997954cbf4e4a0cb3fbbba
+      internalID: -1502252316
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TileSet Piedra 2__10
+      rect:
+        serializedVersion: 2
+        x: 612
+        y: 4284
+        width: 612
+        height: 612
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ee5645f733bab744ca66a98c77ecf8d9
+      internalID: 1278122910
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TileSet Piedra 2__11
+      rect:
+        serializedVersion: 2
+        x: 1224
+        y: 4284
+        width: 612
+        height: 612
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cd4368e36a5880942a6daa39efbf11be
+      internalID: -1013405730
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TileSet Piedra 2__12
+      rect:
+        serializedVersion: 2
+        x: 1836
+        y: 4284
+        width: 612
+        height: 612
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 129d420ed4223454285070a1cd09d04d
+      internalID: 1055821350
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TileSet Piedra 2__13
+      rect:
+        serializedVersion: 2
+        x: 2448
+        y: 4284
+        width: 612
+        height: 612
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4f746b8c66d23d145bf6d6361d224e6e
+      internalID: 1065587122
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TileSet Piedra 2__14
+      rect:
+        serializedVersion: 2
+        x: 3060
+        y: 4284
+        width: 612
+        height: 612
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 580827033707c4e40ad72445b61e9637
+      internalID: -1872947639
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TileSet Piedra 2__15
+      rect:
+        serializedVersion: 2
+        x: 3672
+        y: 4284
+        width: 612
+        height: 612
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 90d9eb45bccf01a449310a2b8c88c96c
+      internalID: 363833794
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TileSet Piedra 2__16
+      rect:
+        serializedVersion: 2
+        x: 4284
+        y: 4284
+        width: 612
+        height: 612
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 23fd6901386a06a45a80ef694906ce87
+      internalID: -184495228
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TileSet Piedra 2__17
+      rect:
+        serializedVersion: 2
+        x: 612
+        y: 3672
+        width: 612
+        height: 612
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0d21483bcf26276418c6dd2eca4dc0f1
+      internalID: -1610837515
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TileSet Piedra 2__18
+      rect:
+        serializedVersion: 2
+        x: 1224
+        y: 3672
+        width: 612
+        height: 612
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2350f0928483e0141b14f50c41600de2
+      internalID: -1705258245
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TileSet Piedra 2__19
+      rect:
+        serializedVersion: 2
+        x: 1836
+        y: 3672
+        width: 612
+        height: 612
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3301944088d174a41b78524e799abfe7
+      internalID: -454166995
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TileSet Piedra 2__20
+      rect:
+        serializedVersion: 2
+        x: 2448
+        y: 3672
+        width: 612
+        height: 612
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5975ffe74c4a7ee418f31dd5f86825f0
+      internalID: 566971167
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TileSet Piedra 2__21
+      rect:
+        serializedVersion: 2
+        x: 3060
+        y: 3672
+        width: 612
+        height: 612
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 66bf9d276ee8d464a8a3f094b459c561
+      internalID: 203027313
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TileSet Piedra 2__22
+      rect:
+        serializedVersion: 2
+        x: 3672
+        y: 3672
+        width: 612
+        height: 612
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7a617851ebbbc164090b9daeaa4ca2f6
+      internalID: 1929369207
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TileSet Piedra 2__23
+      rect:
+        serializedVersion: 2
+        x: 4284
+        y: 3672
+        width: 612
+        height: 612
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f195b0fdab63da24892e9c865107f03f
+      internalID: -2141966916
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TileSet Piedra 2__24
+      rect:
+        serializedVersion: 2
+        x: 612
+        y: 3060
+        width: 612
+        height: 612
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f152babbe19409f4b9e374680bd28ea4
+      internalID: 8827834
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TileSet Piedra 2__25
+      rect:
+        serializedVersion: 2
+        x: 1224
+        y: 3060
+        width: 612
+        height: 612
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7aef56bcfeb15ca4c86400c44a62fe41
+      internalID: -1633098676
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TileSet Piedra 2__26
+      rect:
+        serializedVersion: 2
+        x: 1836
+        y: 3060
+        width: 612
+        height: 612
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 68f6eb4dde9bb0d4aa5b9b0d2b497d62
+      internalID: 349981499
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TileSet Piedra 2__27
+      rect:
+        serializedVersion: 2
+        x: 2448
+        y: 3060
+        width: 612
+        height: 612
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8f744fd03556e1f449a29f5375e3c301
+      internalID: -2138754744
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TileSet Piedra 2__28
+      rect:
+        serializedVersion: 2
+        x: 3060
+        y: 3060
+        width: 612
+        height: 612
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8d91deaae95de1648a926d0fbe8c18d1
+      internalID: 1854855205
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TileSet Piedra 2__29
+      rect:
+        serializedVersion: 2
+        x: 3672
+        y: 3060
+        width: 612
+        height: 612
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b75eb9ab705e9c345bde537881516eb4
+      internalID: 425000081
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TileSet Piedra 2__30
+      rect:
+        serializedVersion: 2
+        x: 4284
+        y: 3060
+        width: 612
+        height: 612
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: becb3e006b70c074fb9f57d1d8cbb9d4
+      internalID: -473958529
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TileSet Piedra 2__31
+      rect:
+        serializedVersion: 2
+        x: 612
+        y: 2448
+        width: 612
+        height: 612
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: be5e37345c246374687b57ed3e0760b2
+      internalID: -1825759177
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TileSet Piedra 2__32
+      rect:
+        serializedVersion: 2
+        x: 1224
+        y: 2448
+        width: 612
+        height: 612
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9a43ded731a84534cb52a9688d991de3
+      internalID: -1394472302
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TileSet Piedra 2__33
+      rect:
+        serializedVersion: 2
+        x: 1836
+        y: 2448
+        width: 612
+        height: 612
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bb4047e87b553d543bd0b154f13c610b
+      internalID: -1444290368
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TileSet Piedra 2__34
+      rect:
+        serializedVersion: 2
+        x: 2448
+        y: 2448
+        width: 612
+        height: 612
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2883f8280cc116d4f9fc06f108d749c5
+      internalID: 751730345
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TileSet Piedra 2__35
+      rect:
+        serializedVersion: 2
+        x: 3060
+        y: 2448
+        width: 612
+        height: 612
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 47fbc8003c6ed0c489cd3b97159ac584
+      internalID: -2022282922
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TileSet Piedra 2__36
+      rect:
+        serializedVersion: 2
+        x: 3672
+        y: 2448
+        width: 612
+        height: 612
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ab6a06257f2c5b24f9ed6954bc7b47b4
+      internalID: 733252493
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TileSet Piedra 2__37
+      rect:
+        serializedVersion: 2
+        x: 4284
+        y: 2448
+        width: 612
+        height: 612
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cdb62e1375181f743ab7ed4a0c93d83c
+      internalID: 978888364
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TileSet Piedra 2__38
+      rect:
+        serializedVersion: 2
+        x: 612
+        y: 1836
+        width: 612
+        height: 612
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0286658806207f74eb1282e9d6ef521e
+      internalID: 1952351755
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TileSet Piedra 2__39
+      rect:
+        serializedVersion: 2
+        x: 1224
+        y: 1836
+        width: 612
+        height: 612
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b80cefae1c4024d4689588ed309ad8f8
+      internalID: 967819955
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TileSet Piedra 2__40
+      rect:
+        serializedVersion: 2
+        x: 1836
+        y: 1836
+        width: 612
+        height: 612
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8613390c430c84a4b824641db50eccc4
+      internalID: -1449080640
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TileSet Piedra 2__41
+      rect:
+        serializedVersion: 2
+        x: 2448
+        y: 1836
+        width: 612
+        height: 612
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 17f2e59ab4b3e8c468a596f03dee6be3
+      internalID: 933591499
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TileSet Piedra 2__42
+      rect:
+        serializedVersion: 2
+        x: 3060
+        y: 1836
+        width: 612
+        height: 612
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 66c2b5043b2a416478c773bf31573a0a
+      internalID: -430677515
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TileSet Piedra 2__43
+      rect:
+        serializedVersion: 2
+        x: 3672
+        y: 1836
+        width: 612
+        height: 612
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f2cfbcbd4d63afa408054d9c5384e021
+      internalID: -1644444166
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TileSet Piedra 2__44
+      rect:
+        serializedVersion: 2
+        x: 4284
+        y: 1836
+        width: 612
+        height: 612
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6b95f430aa72f0a47a56c88bf90ea415
+      internalID: 249417432
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: 5e97eb03825dee720800000000000000
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    nameFileIdTable:
+      TileSet Piedra 2__0: 1688695843
+      TileSet Piedra 2__1: 758814371
+      TileSet Piedra 2__10: 1278122910
+      TileSet Piedra 2__11: -1013405730
+      TileSet Piedra 2__12: 1055821350
+      TileSet Piedra 2__13: 1065587122
+      TileSet Piedra 2__14: -1872947639
+      TileSet Piedra 2__15: 363833794
+      TileSet Piedra 2__16: -184495228
+      TileSet Piedra 2__17: -1610837515
+      TileSet Piedra 2__18: -1705258245
+      TileSet Piedra 2__19: -454166995
+      TileSet Piedra 2__2: -839427240
+      TileSet Piedra 2__20: 566971167
+      TileSet Piedra 2__21: 203027313
+      TileSet Piedra 2__22: 1929369207
+      TileSet Piedra 2__23: -2141966916
+      TileSet Piedra 2__24: 8827834
+      TileSet Piedra 2__25: -1633098676
+      TileSet Piedra 2__26: 349981499
+      TileSet Piedra 2__27: -2138754744
+      TileSet Piedra 2__28: 1854855205
+      TileSet Piedra 2__29: 425000081
+      TileSet Piedra 2__3: 1384154169
+      TileSet Piedra 2__30: -473958529
+      TileSet Piedra 2__31: -1825759177
+      TileSet Piedra 2__32: -1394472302
+      TileSet Piedra 2__33: -1444290368
+      TileSet Piedra 2__34: 751730345
+      TileSet Piedra 2__35: -2022282922
+      TileSet Piedra 2__36: 733252493
+      TileSet Piedra 2__37: 978888364
+      TileSet Piedra 2__38: 1952351755
+      TileSet Piedra 2__39: 967819955
+      TileSet Piedra 2__4: 1849799390
+      TileSet Piedra 2__40: -1449080640
+      TileSet Piedra 2__41: 933591499
+      TileSet Piedra 2__42: -430677515
+      TileSet Piedra 2__43: -1644444166
+      TileSet Piedra 2__44: 249417432
+      TileSet Piedra 2__5: 805866251
+      TileSet Piedra 2__6: 1705068168
+      TileSet Piedra 2__7: 663619968
+      TileSet Piedra 2__8: -556096172
+      TileSet Piedra 2__9: -1502252316
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
