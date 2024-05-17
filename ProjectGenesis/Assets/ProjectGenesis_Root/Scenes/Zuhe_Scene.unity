@@ -123,6 +123,145 @@ NavMeshSettings:
     debug:
       m_Flags: 0
   m_NavMeshData: {fileID: 0}
+--- !u!1 &13395966
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 13395968}
+  - component: {fileID: 13395967}
+  m_Layer: 0
+  m_Name: WeaponController
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &13395967
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 13395966}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5fb790688b91d1c4795aa4d38c5aa109, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  weapons:
+    weapons:
+    - rid: 5280547895947558923
+    - rid: 5280547895947558924
+    - rid: 5280547895947558925
+    - rid: 5280547895947558926
+  currentWeaponIndex: 0
+  spriteRenderer: {fileID: 211232764}
+  references:
+    version: 2
+    RefIds:
+    - rid: 5280547895947558923
+      type: {class: Pistol, ns: , asm: Assembly-CSharp}
+      data:
+        sprite: {fileID: 21300000, guid: 2de7675e9450e73458d22d1bc5dede9c, type: 3}
+        firePoint: {fileID: 0}
+        isUnlocked: 1
+        hcKbDuration: 0
+        hcKbDist: 0
+        hcKbRotation: 0
+        projectile: {fileID: 0}
+        dmg: 0
+        fireRate: 0
+        atkCd: 0
+        ammo: 0
+        reloadTime: 0
+        velocity: 0
+        bloom: 0
+        knockback: 0
+        burstCount: 0
+        burstRate: 0
+    - rid: 5280547895947558924
+      type: {class: Shotgun, ns: , asm: Assembly-CSharp}
+      data:
+        sprite: {fileID: 21300000, guid: 2ebcbab647bb1a745a4a47434bc3d9be, type: 3}
+        firePoint: {fileID: 0}
+        isUnlocked: 1
+        hcKbDuration: 0
+        hcKbDist: 0
+        hcKbRotation: 0
+        projectile: {fileID: 0}
+        dmg: 0
+        fireRate: 0
+        atkCd: 0
+        ammo: 0
+        reloadTime: 0
+        velocity: 0
+        bloom: 0
+        knockback: 0
+        burstCount: 0
+        burstRate: 0
+        shotDispersion: 0
+        multiShotCount: 0
+    - rid: 5280547895947558925
+      type: {class: Shotgun, ns: , asm: Assembly-CSharp}
+      data:
+        sprite: {fileID: 21300000, guid: 2c3df862a428bae419c73a98eb931256, type: 3}
+        firePoint: {fileID: 0}
+        isUnlocked: 1
+        hcKbDuration: 0
+        hcKbDist: 0
+        hcKbRotation: 0
+        projectile: {fileID: 0}
+        dmg: 0
+        fireRate: 0
+        atkCd: 0
+        ammo: 0
+        reloadTime: 0
+        velocity: 0
+        bloom: 0
+        knockback: 0
+        burstCount: 0
+        burstRate: 0
+        shotDispersion: 0
+        multiShotCount: 0
+    - rid: 5280547895947558926
+      type: {class: Pistol, ns: , asm: Assembly-CSharp}
+      data:
+        sprite: {fileID: 21300000, guid: 3129b1792e91f1e40be0e38a672c4082, type: 3}
+        firePoint: {fileID: 0}
+        isUnlocked: 1
+        hcKbDuration: 0
+        hcKbDist: 0
+        hcKbRotation: 0
+        projectile: {fileID: 0}
+        dmg: 0
+        fireRate: 0
+        atkCd: 0
+        ammo: 0
+        reloadTime: 0
+        velocity: 0
+        bloom: 0
+        knockback: 0
+        burstCount: 0
+        burstRate: 0
+--- !u!4 &13395968
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 13395966}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 784580389}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &56610710
 GameObject:
   m_ObjectHideFlags: 0
@@ -575,7 +714,6 @@ GameObject:
   m_Component:
   - component: {fileID: 211232762}
   - component: {fileID: 211232764}
-  - component: {fileID: 211232763}
   m_Layer: 0
   m_Name: Weapons
   m_TagString: Untagged
@@ -595,115 +733,11 @@ Transform:
   m_LocalPosition: {x: 0.6590007, y: 0.07099984, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
-  m_Children: []
+  m_Children:
+  - {fileID: 744614750}
+  - {fileID: 1449227749}
   m_Father: {fileID: 1510059531}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &211232763
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 211232761}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 5fb790688b91d1c4795aa4d38c5aa109, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  weapons:
-    weapons:
-    - rid: 5280547895947558923
-    - rid: 5280547895947558924
-    - rid: 5280547895947558925
-    - rid: 5280547895947558926
-  currentWeaponIndex: 0
-  references:
-    version: 2
-    RefIds:
-    - rid: 5280547895947558923
-      type: {class: Pistol, ns: , asm: Assembly-CSharp}
-      data:
-        sprite: {fileID: 21300000, guid: 2de7675e9450e73458d22d1bc5dede9c, type: 3}
-        firePoint: {fileID: 0}
-        isUnlocked: 1
-        hcKbDuration: 0
-        hcKbDist: 0
-        hcKbRotation: 0
-        projectile: {fileID: 0}
-        dmg: 0
-        fireRate: 0
-        ammo: 0
-        reloadTime: 0
-        velocity: 0
-        bloom: 0
-        knockback: 0
-        shotDispersion: 0
-        multiShotCount: 0
-        burstCount: 0
-        burstRate: 0
-    - rid: 5280547895947558924
-      type: {class: Shotgun, ns: , asm: Assembly-CSharp}
-      data:
-        sprite: {fileID: 21300000, guid: 2ebcbab647bb1a745a4a47434bc3d9be, type: 3}
-        firePoint: {fileID: 0}
-        isUnlocked: 1
-        hcKbDuration: 0
-        hcKbDist: 0
-        hcKbRotation: 0
-        projectile: {fileID: 0}
-        dmg: 0
-        fireRate: 0
-        ammo: 0
-        reloadTime: 0
-        velocity: 0
-        bloom: 0
-        knockback: 0
-        shotDispersion: 0
-        multiShotCount: 0
-        burstCount: 0
-        burstRate: 0
-    - rid: 5280547895947558925
-      type: {class: Shotgun, ns: , asm: Assembly-CSharp}
-      data:
-        sprite: {fileID: 21300000, guid: 2c3df862a428bae419c73a98eb931256, type: 3}
-        firePoint: {fileID: 0}
-        isUnlocked: 1
-        hcKbDuration: 0
-        hcKbDist: 0
-        hcKbRotation: 0
-        projectile: {fileID: 0}
-        dmg: 0
-        fireRate: 0
-        ammo: 0
-        reloadTime: 0
-        velocity: 0
-        bloom: 0
-        knockback: 0
-        shotDispersion: 0
-        multiShotCount: 0
-        burstCount: 0
-        burstRate: 0
-    - rid: 5280547895947558926
-      type: {class: Pistol, ns: , asm: Assembly-CSharp}
-      data:
-        sprite: {fileID: 0}
-        firePoint: {fileID: 0}
-        isUnlocked: 1
-        hcKbDuration: 0
-        hcKbDist: 0
-        hcKbRotation: 0
-        projectile: {fileID: 0}
-        dmg: 0
-        fireRate: 0
-        ammo: 0
-        reloadTime: 0
-        velocity: 0
-        bloom: 0
-        knockback: 0
-        shotDispersion: 0
-        multiShotCount: 0
-        burstCount: 0
-        burstRate: 0
 --- !u!212 &211232764
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -1466,6 +1500,37 @@ Transform:
   m_Children: []
   m_Father: {fileID: 1510059531}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &744614749
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 744614750}
+  m_Layer: 0
+  m_Name: Pistol
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &744614750
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 744614749}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 211232762}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &784580385
 GameObject:
   m_ObjectHideFlags: 0
@@ -1527,6 +1592,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 133681260}
+  - {fileID: 13395968}
   - {fileID: 1590317098}
   - {fileID: 862739077}
   m_Father: {fileID: 0}
@@ -1543,7 +1609,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a465b340d12c5cf45bc3d91b01da4632, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  weaponController: {fileID: 211232763}
+  weaponController: {fileID: 13395967}
   sr: {fileID: 862739076}
   anim: {fileID: 862739078}
   horizontalInput: 0
@@ -1583,7 +1649,7 @@ MonoBehaviour:
   dashColorAmount: 0.5
   jumped: 0
   facingCursorTimer: 0
-  facingCursorDuration: 1
+  facingCursorDuration: 10
   shoulder: {fileID: 1590317098}
   aimAngle: 0
   handController: {fileID: 1340536856}
@@ -2530,6 +2596,37 @@ Transform:
   m_Children:
   - {fileID: 107832314}
   m_Father: {fileID: 1552611805}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &1449227748
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1449227749}
+  m_Layer: 0
+  m_Name: Shotgun
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1449227749
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1449227748}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 211232762}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1450690447
 GameObject:

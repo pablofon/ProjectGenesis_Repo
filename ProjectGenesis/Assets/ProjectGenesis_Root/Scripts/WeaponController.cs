@@ -1,4 +1,3 @@
-using BF_SubclassList_Examples;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine.InputSystem;
@@ -24,16 +23,15 @@ public class Weapon
     [SerializeField] public float dmg;
     [Range(1, 60)]
     [Tooltip("Attacks per second")]
-    [SerializeField] public float fireRate;
+    [SerializeField] public int fireRate;
+    [SerializeField] public int atkCd;
     [SerializeField] public float ammo;
     [SerializeField] public float reloadTime;
     [SerializeField] public float velocity;
     [SerializeField] public float bloom;
     [SerializeField] public float knockback;
 
-    [Header("MultiShot")]
-    [SerializeField] public float shotDispersion;
-    [SerializeField] public float multiShotCount;
+
 
     [Header("BurstShot")]
     [SerializeField] public int burstCount;
@@ -42,6 +40,8 @@ public class Weapon
 
     // Make Shoot a virtual method instead of abstract
     public virtual void Shoot(InputAction.CallbackContext context) { Debug.Log("Sad :("); }
+
+    public void AtkTimer() { if (atkCd > 0) atkCd--; }
 }
 
 [System.Serializable]
@@ -52,6 +52,7 @@ public class Pistol : Weapon
         if (context.started)
         {
             Debug.Log("Pistoll :DDDDDDDDD");
+            atkCd = fireRate;
         }
     }
 }
@@ -59,9 +60,16 @@ public class Pistol : Weapon
 [System.Serializable]
 public class Shotgun : Weapon
 {
+    [Header("MultiShot")]
+    [SerializeField] public float shotDispersion;
+    [SerializeField] public float multiShotCount;
+
     public override void Shoot(InputAction.CallbackContext context)
     {
-        Debug.Log("Shotgun :DDDD");
+        if (context.started)
+        {
+            Debug.Log("Shotgun :DDDD");
+        }
     }
 }
 
@@ -77,13 +85,16 @@ public class WeaponController : MonoBehaviour
     [SubclassList(typeof(Weapon)), SerializeField] private Weapon_Container weapons;
     [SerializeField] private int currentWeaponIndex = 0;
 
-    private SpriteRenderer spriteRenderer;
+    [SerializeField] private SpriteRenderer spriteRenderer;
 
     private void Awake()
     {
-        spriteRenderer = GetComponent<SpriteRenderer>();
-
         spriteRenderer.sprite = weapons.weapons[currentWeaponIndex].sprite;
+    }
+
+    private void FixedUpdate()
+    {
+        foreach (Weapon weapon in weapons.weapons) { weapon.AtkTimer(); }
     }
 
     public void Atk(InputAction.CallbackContext context)
