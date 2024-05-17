@@ -37,8 +37,6 @@ public class Weapon
     [SerializeField] public int burstCount;
     [SerializeField] public float burstRate;
 
-
-    // Make Shoot a virtual method instead of abstract
     public virtual void Shoot(InputAction.CallbackContext context) { Debug.Log("Sad :("); }
 
     public void AtkTimer() { if (atkCd > 0) atkCd--; }
