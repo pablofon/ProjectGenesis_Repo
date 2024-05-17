@@ -1,0 +1,1390 @@
+fileFormatVersion: 2
+guid: c1180456ffa433a4e8871b4d63f50434
+TextureImporter:
+  internalIDToNameTable: []
+  externalObjects: {}
+  serializedVersion: 12
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 306
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 3
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: Todo el tileset (1)_0
+      rect:
+        serializedVersion: 2
+        x: 1836
+        y: 4896
+        width: 612
+        height: 612
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ec6c1a06abb34884099ac06a318edf96
+      internalID: 1481366351
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Todo el tileset (1)_1
+      rect:
+        serializedVersion: 2
+        x: 2448
+        y: 4896
+        width: 612
+        height: 612
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4199d928cb2dc1c4bb63c54f30709d06
+      internalID: -136417788
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Todo el tileset (1)_2
+      rect:
+        serializedVersion: 2
+        x: 3060
+        y: 4896
+        width: 612
+        height: 612
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: aaaaa97df4cdc5943a34b126e5bf609d
+      internalID: -2120813700
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Todo el tileset (1)_3
+      rect:
+        serializedVersion: 2
+        x: 3672
+        y: 4896
+        width: 612
+        height: 612
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d8d15d966b5593c4d824a552c1e6c0a8
+      internalID: -1743196390
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Todo el tileset (1)_4
+      rect:
+        serializedVersion: 2
+        x: 612
+        y: 4284
+        width: 612
+        height: 612
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ea33a408e41903140b1a93a0fbb68bcd
+      internalID: 1090047703
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Todo el tileset (1)_5
+      rect:
+        serializedVersion: 2
+        x: 1224
+        y: 4284
+        width: 612
+        height: 612
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ed0a6c70ab935624786250bdf8aa7cf8
+      internalID: 546394048
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Todo el tileset (1)_6
+      rect:
+        serializedVersion: 2
+        x: 1836
+        y: 4284
+        width: 612
+        height: 612
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 706c3ba8b9435c14b887c70884450cbf
+      internalID: -1989795449
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Todo el tileset (1)_7
+      rect:
+        serializedVersion: 2
+        x: 2448
+        y: 4284
+        width: 612
+        height: 612
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d57c95cca0ebe7946a4bbc010d6df2eb
+      internalID: 1320550573
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Todo el tileset (1)_8
+      rect:
+        serializedVersion: 2
+        x: 3060
+        y: 4284
+        width: 612
+        height: 612
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 580ab72dd82253e43bd29f0f64a84df0
+      internalID: -156980763
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Todo el tileset (1)_9
+      rect:
+        serializedVersion: 2
+        x: 3672
+        y: 4284
+        width: 612
+        height: 612
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 257b91443313a7a439b87e93d8b45877
+      internalID: -1193783085
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Todo el tileset (1)_10
+      rect:
+        serializedVersion: 2
+        x: 4284
+        y: 4284
+        width: 612
+        height: 612
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cce1c3b477c61c141a891e2ccd89fdee
+      internalID: -668201622
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Todo el tileset (1)_11
+      rect:
+        serializedVersion: 2
+        x: 1224
+        y: 3672
+        width: 612
+        height: 612
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3abfcbeada1414e40a46006b55462a87
+      internalID: 274420367
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Todo el tileset (1)_12
+      rect:
+        serializedVersion: 2
+        x: 1836
+        y: 3672
+        width: 612
+        height: 612
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1edcb0e70c273ea47a00d3176d7e0130
+      internalID: 1001790784
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Todo el tileset (1)_13
+      rect:
+        serializedVersion: 2
+        x: 2448
+        y: 3672
+        width: 612
+        height: 612
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4d0424b211c4740478180b5aa750fe22
+      internalID: 3701668
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Todo el tileset (1)_14
+      rect:
+        serializedVersion: 2
+        x: 3060
+        y: 3672
+        width: 612
+        height: 612
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1f61b83cf4f9ae64aa2863243e4a5a33
+      internalID: -1460560765
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Todo el tileset (1)_15
+      rect:
+        serializedVersion: 2
+        x: 3672
+        y: 3672
+        width: 612
+        height: 612
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 07c29f2ca8408764bad685e05ed05679
+      internalID: -100187936
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Todo el tileset (1)_16
+      rect:
+        serializedVersion: 2
+        x: 4284
+        y: 3672
+        width: 612
+        height: 612
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5031e89f4f817184b8b74d3e0d2bf681
+      internalID: -1728320094
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Todo el tileset (1)_17
+      rect:
+        serializedVersion: 2
+        x: 612
+        y: 3060
+        width: 612
+        height: 612
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6d31b9ccb59940646be865f83137a6e2
+      internalID: 918910232
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Todo el tileset (1)_18
+      rect:
+        serializedVersion: 2
+        x: 1224
+        y: 3060
+        width: 612
+        height: 612
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 57edb1654c95f3d46869e31a13695b7c
+      internalID: 1803018106
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Todo el tileset (1)_19
+      rect:
+        serializedVersion: 2
+        x: 1836
+        y: 3060
+        width: 612
+        height: 612
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3b88a88ba6467334da1bafa6fb5fdb6a
+      internalID: 1536570331
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Todo el tileset (1)_20
+      rect:
+        serializedVersion: 2
+        x: 2448
+        y: 3060
+        width: 612
+        height: 612
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b64490560fd6d88499d1628a51153f70
+      internalID: 1221958167
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Todo el tileset (1)_21
+      rect:
+        serializedVersion: 2
+        x: 3060
+        y: 3060
+        width: 612
+        height: 612
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a2b26f49e8bf9eb4b83dfc8de77715cd
+      internalID: -70197195
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Todo el tileset (1)_22
+      rect:
+        serializedVersion: 2
+        x: 3672
+        y: 3060
+        width: 612
+        height: 612
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a5fc28530d13d144aa4faabdf3889e44
+      internalID: 981464335
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Todo el tileset (1)_23
+      rect:
+        serializedVersion: 2
+        x: 4284
+        y: 3060
+        width: 612
+        height: 612
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e5f83b3ba6da07a41ac1f9ac481f029c
+      internalID: 1087287933
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Todo el tileset (1)_24
+      rect:
+        serializedVersion: 2
+        x: 1224
+        y: 2448
+        width: 612
+        height: 612
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: af4f26051c9575d419943e0105541a43
+      internalID: -1131096738
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Todo el tileset (1)_25
+      rect:
+        serializedVersion: 2
+        x: 1836
+        y: 2448
+        width: 612
+        height: 612
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b2f48ded0fa7ab14e8be58494526976c
+      internalID: -1411285523
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Todo el tileset (1)_26
+      rect:
+        serializedVersion: 2
+        x: 2448
+        y: 2448
+        width: 612
+        height: 612
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: dd88f98684e003546906180fea6c3677
+      internalID: 653935873
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Todo el tileset (1)_27
+      rect:
+        serializedVersion: 2
+        x: 3060
+        y: 2448
+        width: 612
+        height: 612
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cc55bcf7f32423648bf26e533219e806
+      internalID: -782440048
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Todo el tileset (1)_28
+      rect:
+        serializedVersion: 2
+        x: 3672
+        y: 2448
+        width: 612
+        height: 612
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6bf8a52fed8ae3b439e75ca78ce8897d
+      internalID: 1550978079
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Todo el tileset (1)_29
+      rect:
+        serializedVersion: 2
+        x: 4284
+        y: 2448
+        width: 612
+        height: 612
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 20c5ae994dae2564e944026c9eee8974
+      internalID: 1036875041
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Todo el tileset (1)_30
+      rect:
+        serializedVersion: 2
+        x: 612
+        y: 1836
+        width: 612
+        height: 612
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e5a15d52325b712428d1164705526a0b
+      internalID: 394857879
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Todo el tileset (1)_31
+      rect:
+        serializedVersion: 2
+        x: 1224
+        y: 1836
+        width: 612
+        height: 612
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b64a702c4b0cad748b64aeb0cac8d8b9
+      internalID: -920343977
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Todo el tileset (1)_32
+      rect:
+        serializedVersion: 2
+        x: 1836
+        y: 1836
+        width: 612
+        height: 612
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 91b4324077e6e5e468e228725f792bc2
+      internalID: 633210345
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Todo el tileset (1)_33
+      rect:
+        serializedVersion: 2
+        x: 2448
+        y: 1836
+        width: 612
+        height: 612
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: aad92ce575a5e214a89b9ce0f4c93908
+      internalID: -2062483728
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Todo el tileset (1)_34
+      rect:
+        serializedVersion: 2
+        x: 3060
+        y: 1836
+        width: 612
+        height: 612
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7d60051baa87cec4481e11a674ba7b00
+      internalID: 1091159538
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Todo el tileset (1)_35
+      rect:
+        serializedVersion: 2
+        x: 3672
+        y: 1836
+        width: 612
+        height: 612
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 239bd7f7e1900da44a8169f15a663902
+      internalID: 1855527685
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Todo el tileset (1)_36
+      rect:
+        serializedVersion: 2
+        x: 4284
+        y: 1836
+        width: 612
+        height: 612
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a44b4b89e5bb14a4c99d7a021cfde3f0
+      internalID: -1303123087
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Todo el tileset (1)_37
+      rect:
+        serializedVersion: 2
+        x: 612
+        y: 1224
+        width: 612
+        height: 612
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e7ca8802cdef6a941be8af432c145f90
+      internalID: -433539931
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Todo el tileset (1)_38
+      rect:
+        serializedVersion: 2
+        x: 1224
+        y: 1224
+        width: 612
+        height: 612
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5b2b2a17882b0a74aba61055cadca9db
+      internalID: 1439694463
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Todo el tileset (1)_39
+      rect:
+        serializedVersion: 2
+        x: 1836
+        y: 1224
+        width: 612
+        height: 612
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 709de06e03f61a24c950b16eb12fa984
+      internalID: 344973260
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Todo el tileset (1)_40
+      rect:
+        serializedVersion: 2
+        x: 2448
+        y: 1224
+        width: 612
+        height: 612
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 66458a6f6dab1394f8791529f1a08d67
+      internalID: 1349078196
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Todo el tileset (1)_41
+      rect:
+        serializedVersion: 2
+        x: 3060
+        y: 1224
+        width: 612
+        height: 612
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ab367b911de0cc640815997dbf917d98
+      internalID: -1770801184
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Todo el tileset (1)_42
+      rect:
+        serializedVersion: 2
+        x: 3672
+        y: 1224
+        width: 612
+        height: 612
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 90bd64fecd887e04b9692969fdd115fd
+      internalID: 1032014697
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Todo el tileset (1)_43
+      rect:
+        serializedVersion: 2
+        x: 4896
+        y: 1224
+        width: 612
+        height: 612
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fb5ccc0d606972441b98109fe7926bf3
+      internalID: 1851902974
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Todo el tileset (1)_44
+      rect:
+        serializedVersion: 2
+        x: 612
+        y: 612
+        width: 612
+        height: 612
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7b2fb8cbde7a7904cb811b7eedbf9693
+      internalID: -1828265740
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Todo el tileset (1)_45
+      rect:
+        serializedVersion: 2
+        x: 1224
+        y: 612
+        width: 612
+        height: 612
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7f0bd864c55e567408d79b53fef992d8
+      internalID: 1584662784
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Todo el tileset (1)_46
+      rect:
+        serializedVersion: 2
+        x: 1836
+        y: 612
+        width: 612
+        height: 612
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7381f5377d1774f4888d597ce3b2c4a3
+      internalID: 223090474
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Todo el tileset (1)_47
+      rect:
+        serializedVersion: 2
+        x: 2448
+        y: 612
+        width: 612
+        height: 612
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b561586eadaddce4aa799b14f8e7fd3b
+      internalID: 1542068512
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Todo el tileset (1)_48
+      rect:
+        serializedVersion: 2
+        x: 3060
+        y: 612
+        width: 612
+        height: 612
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c6987049e00bd374d823967b8bfc17c0
+      internalID: 2000354211
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Todo el tileset (1)_49
+      rect:
+        serializedVersion: 2
+        x: 3672
+        y: 612
+        width: 612
+        height: 612
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9d2efc9fd29fc9c4d98b5fd5c65a4244
+      internalID: 122110717
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Todo el tileset (1)_50
+      rect:
+        serializedVersion: 2
+        x: 4284
+        y: 612
+        width: 612
+        height: 612
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7f50375deca3dbe4986a5253c1ff5eb5
+      internalID: 717124212
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Todo el tileset (1)_51
+      rect:
+        serializedVersion: 2
+        x: 4896
+        y: 612
+        width: 612
+        height: 612
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4b1e26bd46a4c074b9c86c9f5d27d803
+      internalID: -326642102
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Todo el tileset (1)_52
+      rect:
+        serializedVersion: 2
+        x: 5508
+        y: 612
+        width: 612
+        height: 612
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fa8e438ee3a159e4da49c817957c8776
+      internalID: -1731483171
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Todo el tileset (1)_53
+      rect:
+        serializedVersion: 2
+        x: 1224
+        y: 0
+        width: 612
+        height: 612
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7b10d99f7f1f4604fa20a07a96b0a3df
+      internalID: -788867154
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Todo el tileset (1)_54
+      rect:
+        serializedVersion: 2
+        x: 2448
+        y: 0
+        width: 612
+        height: 612
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 471beb4e7f34cbc43a7304f5ae1281ed
+      internalID: -174584274
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Todo el tileset (1)_55
+      rect:
+        serializedVersion: 2
+        x: 3060
+        y: 0
+        width: 612
+        height: 612
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b643ca2b0ac279649ac9713904617fa1
+      internalID: -249656734
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Todo el tileset (1)_56
+      rect:
+        serializedVersion: 2
+        x: 3672
+        y: 0
+        width: 612
+        height: 612
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 22f1855b77983cd499e3c88aa2a7ff2f
+      internalID: -1235407718
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Todo el tileset (1)_57
+      rect:
+        serializedVersion: 2
+        x: 4896
+        y: 0
+        width: 612
+        height: 612
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1769fb3cf790f9e44b2c2892b7544c19
+      internalID: 1708452973
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: 5e97eb03825dee720800000000000000
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    nameFileIdTable:
+      Todo el tileset (1)_0: 1481366351
+      Todo el tileset (1)_1: -136417788
+      Todo el tileset (1)_10: -668201622
+      Todo el tileset (1)_11: 274420367
+      Todo el tileset (1)_12: 1001790784
+      Todo el tileset (1)_13: 3701668
+      Todo el tileset (1)_14: -1460560765
+      Todo el tileset (1)_15: -100187936
+      Todo el tileset (1)_16: -1728320094
+      Todo el tileset (1)_17: 918910232
+      Todo el tileset (1)_18: 1803018106
+      Todo el tileset (1)_19: 1536570331
+      Todo el tileset (1)_2: -2120813700
+      Todo el tileset (1)_20: 1221958167
+      Todo el tileset (1)_21: -70197195
+      Todo el tileset (1)_22: 981464335
+      Todo el tileset (1)_23: 1087287933
+      Todo el tileset (1)_24: -1131096738
+      Todo el tileset (1)_25: -1411285523
+      Todo el tileset (1)_26: 653935873
+      Todo el tileset (1)_27: -782440048
+      Todo el tileset (1)_28: 1550978079
+      Todo el tileset (1)_29: 1036875041
+      Todo el tileset (1)_3: -1743196390
+      Todo el tileset (1)_30: 394857879
+      Todo el tileset (1)_31: -920343977
+      Todo el tileset (1)_32: 633210345
+      Todo el tileset (1)_33: -2062483728
+      Todo el tileset (1)_34: 1091159538
+      Todo el tileset (1)_35: 1855527685
+      Todo el tileset (1)_36: -1303123087
+      Todo el tileset (1)_37: -433539931
+      Todo el tileset (1)_38: 1439694463
+      Todo el tileset (1)_39: 344973260
+      Todo el tileset (1)_4: 1090047703
+      Todo el tileset (1)_40: 1349078196
+      Todo el tileset (1)_41: -1770801184
+      Todo el tileset (1)_42: 1032014697
+      Todo el tileset (1)_43: 1851902974
+      Todo el tileset (1)_44: -1828265740
+      Todo el tileset (1)_45: 1584662784
+      Todo el tileset (1)_46: 223090474
+      Todo el tileset (1)_47: 1542068512
+      Todo el tileset (1)_48: 2000354211
+      Todo el tileset (1)_49: 122110717
+      Todo el tileset (1)_5: 546394048
+      Todo el tileset (1)_50: 717124212
+      Todo el tileset (1)_51: -326642102
+      Todo el tileset (1)_52: -1731483171
+      Todo el tileset (1)_53: -788867154
+      Todo el tileset (1)_54: -174584274
+      Todo el tileset (1)_55: -249656734
+      Todo el tileset (1)_56: -1235407718
+      Todo el tileset (1)_57: 1708452973
+      Todo el tileset (1)_6: -1989795449
+      Todo el tileset (1)_7: 1320550573
+      Todo el tileset (1)_8: -156980763
+      Todo el tileset (1)_9: -1193783085
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
