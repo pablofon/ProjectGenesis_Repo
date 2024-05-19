@@ -468,6 +468,6 @@ public class PlayerController : MonoBehaviour
     public void Attack(InputAction.CallbackContext context)
     {
         facingCursorTimer = facingCursorDuration;
-        weaponController.Atk(context);
+        weaponController.Atk(context, aimDir);
     }
 }
