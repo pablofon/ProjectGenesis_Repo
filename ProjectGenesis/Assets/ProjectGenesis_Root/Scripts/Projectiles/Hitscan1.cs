@@ -13,17 +13,20 @@ public class Hitscan1 : MonoBehaviour
 
     public IEnumerator Hit(Vector2 direction, float range, LayerMask collisionLayers, int pierce, float dmg, float knockback)
     {
-        Vector3 endPos = Vector3.zero;
+        float distance = range;
+        Vector3 endPos = transform.position + (Vector3)direction * range;
         RaycastHit2D[] hits = Physics2D.RaycastAll(transform.position, direction, range, collisionLayers + groundLayer);
         Debug.DrawRay(transform.position, direction, Color.blue, 2f);
         for (int i = 0; hits.Length > i && pierce > i && hits[i].collider.contactCaptureLayers != groundLayer; i++)
         {
-            hits[i].collider.GetComponent<Health>().ChangeHealth(dmg);
+            Health healthScript = hits[i].collider.GetComponent<Health>();
+            if (healthScript != null) healthScript.Damage(-dmg);
             endPos = hits[i].point;
+            distance = hits[i].distance;
         }
 
-        //transform.position += (transform.position - endPos).normalized * range / 2;
-        transform.localScale = new Vector2(Vector3.Distance(endPos, transform.position), 1);
+        transform.position += (endPos - transform.position).normalized * distance / 2;
+        transform.localScale = new Vector2(distance, 1);
         Debug.DrawLine(transform.position, endPos, Color.cyan);
         Debug.Log(transform.position + "trPos" + endPos + "endPos");
         float elapsedTime = 0;

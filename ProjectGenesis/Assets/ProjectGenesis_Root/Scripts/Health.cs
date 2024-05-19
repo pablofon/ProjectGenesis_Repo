@@ -7,8 +7,9 @@ public class Health : MonoBehaviour
 {
     private float health;
 
-    public void ChangeHealth(float dmg)
-    {
-        health += dmg;
-    }
+
+
+    public void Damage(float dmg) { health -= dmg; }
+
+    public void Heal(float healing) { health += healing; }
 }

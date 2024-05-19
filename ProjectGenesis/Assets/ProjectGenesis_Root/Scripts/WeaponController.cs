@@ -54,7 +54,7 @@ public class Pistol : Weapon
         {
             Debug.Log("Pistoll :DDDDDDDDD");
             atkCd = fireRate;
-            GameObject newBullet = Object.Instantiate(projectile, firePoint.position, Quaternion.Euler(0, 0, Vector2.Angle(aimDir, Vector2.right)));
+            GameObject newBullet = Object.Instantiate(projectile, firePoint.position, Quaternion.Euler(0, 0, Mathf.Atan2(aimDir.y, aimDir.x) * Mathf.Rad2Deg));
             Hitscan1 script = newBullet.GetComponent<Hitscan1>();
 
             if (script != null) script.StartCoroutine(script.Hit(aimDir, range, collisionLayers,pierce, dmg, knockback));
