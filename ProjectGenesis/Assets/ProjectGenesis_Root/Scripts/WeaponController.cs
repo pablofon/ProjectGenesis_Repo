@@ -19,7 +19,7 @@ public class Weapon
     [SerializeField] public float hcKbRotation;
 
     [Header("Weapon Stats")]
-    [SerializeField] GameObject projectile;
+    [SerializeField] public GameObject projectile;
     [SerializeField] public float dmg;
     [Range(1, 60)]
     [Tooltip("Attacks per second")]
@@ -27,17 +27,19 @@ public class Weapon
     [SerializeField] public int atkCd;
     [SerializeField] public float ammo;
     [SerializeField] public float reloadTime;
+    [SerializeField] public float range;
+    [SerializeField] public int pierce;
     [SerializeField] public float velocity;
     [SerializeField] public float bloom;
     [SerializeField] public float knockback;
 
-
+    [SerializeField] public LayerMask collisionLayers;
 
     [Header("BurstShot")]
     [SerializeField] public int burstCount;
     [SerializeField] public float burstRate;
 
-    public virtual void Shoot(InputAction.CallbackContext context) { Debug.Log("Sad :("); }
+    public virtual void Shoot(InputAction.CallbackContext context, Vector2 aimDir) { Debug.Log("Sad :("); }
 
     public void AtkTimer() { if (atkCd > 0) atkCd--; }
 }
@@ -45,12 +47,17 @@ public class Weapon
 [System.Serializable]
 public class Pistol : Weapon
 {
-    public override void Shoot(InputAction.CallbackContext context)
+    
+    public override void Shoot(InputAction.CallbackContext context, Vector2 aimDir)
     {
         if (context.started)
         {
             Debug.Log("Pistoll :DDDDDDDDD");
             atkCd = fireRate;
+            GameObject newBullet = Object.Instantiate(projectile, firePoint.position, Quaternion.Euler(0, 0, Mathf.Atan2(aimDir.y, aimDir.x) * Mathf.Rad2Deg));
+            Hitscan1 script = newBullet.GetComponent<Hitscan1>();
+
+            if (script != null) script.StartCoroutine(script.Hit(aimDir, range, collisionLayers,pierce, dmg, knockback));
         }
     }
 }
@@ -62,7 +69,7 @@ public class Shotgun : Weapon
     [SerializeField] public float shotDispersion;
     [SerializeField] public float multiShotCount;
 
-    public override void Shoot(InputAction.CallbackContext context)
+    public override void Shoot(InputAction.CallbackContext context, Vector2 aimDir)
     {
         if (context.started)
         {
@@ -95,14 +102,14 @@ public class WeaponController : MonoBehaviour
         foreach (Weapon weapon in weapons.weapons) { weapon.AtkTimer(); }
     }
 
-    public void Atk(InputAction.CallbackContext context)
+    public void Atk(InputAction.CallbackContext context, Vector2 aimDir)
     {
-        weapons.weapons[currentWeaponIndex].Shoot(context);
+        weapons.weapons[currentWeaponIndex].Shoot(context, aimDir);
     }
 
     public void SwitchToWeapon()
     {
-
+        
     }
 
     public void ScrollThroughWeapons(int scroll)
