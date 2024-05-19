@@ -178,9 +178,14 @@ MonoBehaviour:
         atkCd: 0
         ammo: 0
         reloadTime: 0
+        range: 0
+        pierce: 0
         velocity: 0
         bloom: 0
         knockback: 0
+        collisionLayers:
+          serializedVersion: 2
+          m_Bits: 0
         burstCount: 0
         burstRate: 0
     - rid: 5280547895947558924
@@ -198,9 +203,14 @@ MonoBehaviour:
         atkCd: 0
         ammo: 0
         reloadTime: 0
+        range: 0
+        pierce: 0
         velocity: 0
         bloom: 0
         knockback: 0
+        collisionLayers:
+          serializedVersion: 2
+          m_Bits: 0
         burstCount: 0
         burstRate: 0
         shotDispersion: 0
@@ -220,9 +230,14 @@ MonoBehaviour:
         atkCd: 0
         ammo: 0
         reloadTime: 0
+        range: 0
+        pierce: 0
         velocity: 0
         bloom: 0
         knockback: 0
+        collisionLayers:
+          serializedVersion: 2
+          m_Bits: 0
         burstCount: 0
         burstRate: 0
         shotDispersion: 0
@@ -242,9 +257,14 @@ MonoBehaviour:
         atkCd: 0
         ammo: 0
         reloadTime: 0
+        range: 0
+        pierce: 0
         velocity: 0
         bloom: 0
         knockback: 0
+        collisionLayers:
+          serializedVersion: 2
+          m_Bits: 0
         burstCount: 0
         burstRate: 0
 --- !u!4 &13395968
