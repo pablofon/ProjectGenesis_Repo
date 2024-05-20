@@ -75,7 +75,7 @@ SpriteRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_Sprite: {fileID: 7482667652216324306, guid: 311925a002f4447b3a28927169b83ea6, type: 3}
-  m_Color: {r: 1, g: 0, b: 0, a: 0.46666667}
+  m_Color: {r: 1, g: 0, b: 0, a: 0}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
@@ -132,10 +132,10 @@ PolygonCollider2D:
     - - {x: 0.7103119, y: 0.8611779}
       - {x: -0.6793055, y: 0.87435156}
       - {x: -0.68229544, y: -0.48592818}
-      - {x: -0.5085933, y: -0.5084834}
-      - {x: -0.53100646, y: 0.6782436}
-      - {x: 0.522413, y: 0.6735531}
-      - {x: 0.52241325, y: -0.5084835}
+      - {x: -0.34049445, y: -0.5084834}
+      - {x: -0.32368448, y: 0.5750499}
+      - {x: 0.27586803, y: 0.5656688}
+      - {x: 0.35431436, y: -0.51786476}
       - {x: 0.7185286, y: -0.46626782}
   m_UseDelaunayMesh: 0
 --- !u!1 &9107113225861116866
@@ -257,7 +257,7 @@ BoxCollider2D:
   m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0.12626886, y: 5.3640413}
+  m_Offset: {x: -0.38923544, y: 3.9157195}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
@@ -268,7 +268,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 10.327416, y: 13.063599}
+  m_Size: {x: 4.5832253, y: 10.166955}
   m_EdgeRadius: 0
 --- !u!114 &3209082787849556893
 MonoBehaviour:

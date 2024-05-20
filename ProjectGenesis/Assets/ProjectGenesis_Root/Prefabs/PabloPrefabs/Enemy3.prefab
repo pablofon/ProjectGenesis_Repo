@@ -208,7 +208,7 @@ MonoBehaviour:
   playerPosition: {fileID: 0}
   chaseDistance: 5
   playerDetected: 0
-  jumpForce: 0.3
+  jumpForce: 0.5
   attackJumpForce: 0.1
   isGrounded: 0
   groundCheck: {fileID: 7097875628857404843}
