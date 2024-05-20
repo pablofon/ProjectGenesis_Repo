@@ -178,9 +178,14 @@ MonoBehaviour:
         atkCd: 0
         ammo: 0
         reloadTime: 0
+        range: 0
+        pierce: 0
         velocity: 0
         bloom: 0
         knockback: 0
+        collisionLayers:
+          serializedVersion: 2
+          m_Bits: 0
         burstCount: 0
         burstRate: 0
     - rid: 5280547895947558924
@@ -198,9 +203,14 @@ MonoBehaviour:
         atkCd: 0
         ammo: 0
         reloadTime: 0
+        range: 0
+        pierce: 0
         velocity: 0
         bloom: 0
         knockback: 0
+        collisionLayers:
+          serializedVersion: 2
+          m_Bits: 0
         burstCount: 0
         burstRate: 0
         shotDispersion: 0
@@ -220,9 +230,14 @@ MonoBehaviour:
         atkCd: 0
         ammo: 0
         reloadTime: 0
+        range: 0
+        pierce: 0
         velocity: 0
         bloom: 0
         knockback: 0
+        collisionLayers:
+          serializedVersion: 2
+          m_Bits: 0
         burstCount: 0
         burstRate: 0
         shotDispersion: 0
@@ -242,9 +257,14 @@ MonoBehaviour:
         atkCd: 0
         ammo: 0
         reloadTime: 0
+        range: 0
+        pierce: 0
         velocity: 0
         bloom: 0
         knockback: 0
+        collisionLayers:
+          serializedVersion: 2
+          m_Bits: 0
         burstCount: 0
         burstRate: 0
 --- !u!4 &13395968
@@ -19484,6 +19504,63 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: fe9793584bb233b45a78d62c5cd837e0, type: 3}
+--- !u!1001 &1662416315
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 6094112116721891000, guid: 2b282ff13d56c9544afc500493555144, type: 3}
+      propertyPath: m_Name
+      value: Enemy1 (2)
+      objectReference: {fileID: 0}
+    - target: {fileID: 7424054936060117025, guid: 2b282ff13d56c9544afc500493555144, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 77.972
+      objectReference: {fileID: 0}
+    - target: {fileID: 7424054936060117025, guid: 2b282ff13d56c9544afc500493555144, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 13.095134
+      objectReference: {fileID: 0}
+    - target: {fileID: 7424054936060117025, guid: 2b282ff13d56c9544afc500493555144, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7424054936060117025, guid: 2b282ff13d56c9544afc500493555144, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7424054936060117025, guid: 2b282ff13d56c9544afc500493555144, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7424054936060117025, guid: 2b282ff13d56c9544afc500493555144, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7424054936060117025, guid: 2b282ff13d56c9544afc500493555144, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7424054936060117025, guid: 2b282ff13d56c9544afc500493555144, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7424054936060117025, guid: 2b282ff13d56c9544afc500493555144, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7424054936060117025, guid: 2b282ff13d56c9544afc500493555144, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 2b282ff13d56c9544afc500493555144, type: 3}
 --- !u!4 &1691908656 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 4523875320327174368, guid: 3daa6ac279785eb43a6b7e855ea7cb30, type: 3}
@@ -20046,3 +20123,4 @@ SceneRoots:
   - {fileID: 335456388}
   - {fileID: 892846723}
   - {fileID: 1648421734}
+  - {fileID: 1662416315}
