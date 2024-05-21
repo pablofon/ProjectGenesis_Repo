@@ -985,10 +985,10 @@ RectTransform:
   m_Children: []
   m_Father: {fileID: 412433173}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0.365, y: 0.51684016}
-  m_AnchorMax: {x: 0.6346846, y: 0.63638663}
-  m_AnchoredPosition: {x: 0, y: -1}
-  m_SizeDelta: {x: -2, y: 0}
+  m_AnchorMin: {x: 0.33331755, y: 0.5285498}
+  m_AnchorMax: {x: 0.6716351, y: 0.71336776}
+  m_AnchoredPosition: {x: -2, y: -20}
+  m_SizeDelta: {x: -54, y: -28}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1513817725
 MonoBehaviour:
@@ -1010,7 +1010,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: You Win!!
+  m_text: YOU AVENGE HUMNANITY !!
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -1073,7 +1073,7 @@ MonoBehaviour:
   m_VertexBufferAutoSizeReduction: 0
   m_useMaxVisibleDescender: 1
   m_pageToDisplay: 1
-  m_margin: {x: 0, y: 0, z: 0, w: 0}
+  m_margin: {x: -29.376495, y: -37.210266, z: -28.397308, w: 0}
   m_isUsingLegacyAnimationComponent: 0
   m_isVolumetricText: 0
   m_hasFontAssetChanged: 0
