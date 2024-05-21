@@ -20,6 +20,8 @@ public class GameManager : MonoBehaviour
     [Header("Game Status")]
     public bool gameCompleted = false;
     public bool gameOver = false;
+    public bool levelFinished = false;
+    public int level = 1;
 
     private void Awake()
     {
