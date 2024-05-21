@@ -21,6 +21,8 @@ public class GameManager : MonoBehaviour
     public bool gameCompleted = false;
     public bool gameOver = false;
 
+    [Header("Player")]
+    [SerializeField] public PlayerController playerController;
     private void Awake()
     {
         if (instance == null)
