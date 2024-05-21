@@ -4,7 +4,6 @@ using UnityEngine.InputSystem;
 using UnityEngine;
 using BF_SubclassList;
 
-
 [System.Serializable]
 public class Weapon
 {
@@ -39,7 +38,7 @@ public class Weapon
     [SerializeField] public int burstCount;
     [SerializeField] public float burstRate;
 
-    public virtual void Shoot(InputAction.CallbackContext context, Vector2 aimDir) { Debug.Log("Sad :("); }
+    public virtual void Shoot(InputAction.CallbackContext context, Vector2 aimDir) { }
 
     public void AtkTimer() { if (atkCd > 0) atkCd--; }
 }
@@ -47,17 +46,18 @@ public class Weapon
 [System.Serializable]
 public class Pistol : Weapon
 {
-    
+
     public override void Shoot(InputAction.CallbackContext context, Vector2 aimDir)
     {
         if (context.started)
         {
-            Debug.Log("Pistoll :DDDDDDDDD");
             atkCd = fireRate;
             GameObject newBullet = Object.Instantiate(projectile, firePoint.position, Quaternion.Euler(0, 0, Mathf.Atan2(aimDir.y, aimDir.x) * Mathf.Rad2Deg));
             Hitscan1 script = newBullet.GetComponent<Hitscan1>();
 
-            if (script != null) script.StartCoroutine(script.Hit(aimDir, range, collisionLayers,pierce, dmg, knockback));
+            if (script != null) script.StartCoroutine(script.Hit(aimDir, range, collisionLayers, pierce, dmg, knockback));
+
+            GameManager.Instance.playerController.StartCoroutine(GameManager.Instance.playerController.HcDistKb());
         }
     }
 }
@@ -84,7 +84,6 @@ public class Weapon_Container
     [SerializeReference] public List<Weapon> weapons;
 }
 
-
 public class WeaponController : MonoBehaviour
 {
     [SubclassList(typeof(Weapon)), SerializeField] private Weapon_Container weapons;
@@ -92,9 +91,14 @@ public class WeaponController : MonoBehaviour
 
     [SerializeField] private SpriteRenderer spriteRenderer;
 
+    [SerializeField] private PlayerController playerController;
     private void Awake()
     {
         spriteRenderer.sprite = weapons.weapons[currentWeaponIndex].sprite;
+
+        playerController.hcKbDuration = weapons.weapons[currentWeaponIndex].hcKbDuration;
+        playerController.hcKbDist = weapons.weapons[currentWeaponIndex].hcKbDist;
+        playerController.hcKbRotation = weapons.weapons[currentWeaponIndex].hcKbRotation;
     }
 
     private void FixedUpdate()
@@ -124,5 +128,8 @@ public class WeaponController : MonoBehaviour
 
         currentWeaponIndex = tempWeaponIndex;
         spriteRenderer.sprite = weapons.weapons[currentWeaponIndex].sprite;
+        playerController.hcKbDuration = weapons.weapons[currentWeaponIndex].hcKbDuration;
+        playerController.hcKbDist = weapons.weapons[currentWeaponIndex].hcKbDist;
+        playerController.hcKbRotation = weapons.weapons[currentWeaponIndex].hcKbRotation;
     }
 }

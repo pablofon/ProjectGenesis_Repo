@@ -28,7 +28,6 @@ public class Hitscan1 : MonoBehaviour
         transform.position += (endPos - transform.position).normalized * distance / 2;
         transform.localScale = new Vector2(distance, 1);
         Debug.DrawLine(transform.position, endPos, Color.cyan);
-        Debug.Log(transform.position + "trPos" + endPos + "endPos");
         float elapsedTime = 0;
         while (elapsedTime < trailDuration)
         {

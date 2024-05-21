@@ -135,17 +135,19 @@ public class PlayerController : MonoBehaviour
             {
                 canWallJump = false;
                 rb.rotation = collisionAngle;
+                anim.SetBool("wallSlide", false);
             }
             else
             {
                 canWallJump = true;
                 rb.rotation = 0;
+                anim.SetBool("wallSlide", true);
             }
         }
         else
         {
             rb.rotation = 0;
-
+            anim.SetBool("wallSlide", false);
             canWallJump = false;
         }
         
@@ -159,6 +161,9 @@ public class PlayerController : MonoBehaviour
                         new Vector2(groundCheck.position.x + (groundedAreaLength / 2),
                                     groundCheck.position.y + 0.01f),
                                     groundLayer);
+
+        if (!canGroundJump) anim.SetBool("midAir", true);
+        else anim.SetBool("midAir", false);
     }
 
     private void Movement()
@@ -183,6 +188,13 @@ public class PlayerController : MonoBehaviour
                 rb.velocity += direction * velocityToApply;
             }
         }
+
+        if (Mathf.Abs(localVel.x) > 2f)
+        { 
+            anim.SetBool("run", true);
+            anim.SetFloat("runSpeed", localVel.x * transform.localScale.x / maxMoveSpeed);
+        } 
+        else anim.SetBool("run", false);
     }
 
     private void HorizontalDrag()
@@ -437,7 +449,12 @@ public class PlayerController : MonoBehaviour
 
     private void FacingDirection()
     {
-        if (facingCursorTimer > 0)
+        if (canWallJump)
+        {
+            if (wallJumpSide == -1 && !isFacingRight) Flip();
+            if (wallJumpSide == 1 && isFacingRight) Flip();
+        }
+        else if (facingCursorTimer > 0)
         {
             if (mousePos.x > transform.position.x && !isFacingRight) Flip();
             if (mousePos.x < transform.position.x && isFacingRight) Flip();
