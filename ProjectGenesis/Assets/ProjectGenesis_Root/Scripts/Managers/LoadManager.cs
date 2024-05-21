@@ -24,5 +24,10 @@ public class LoadManager : MonoBehaviour
             SceneLoader(GameManager.Instance.level);
             GameManager.Instance.levelFinished = false;
         }
+        if (GameManager.Instance.playerFalled == true)
+        {
+            SceneLoader(5);
+            GameManager.Instance.levelFinished = false;
+        }
     }
 }
