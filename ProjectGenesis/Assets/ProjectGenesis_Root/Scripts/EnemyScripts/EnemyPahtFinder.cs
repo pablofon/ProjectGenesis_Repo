@@ -132,6 +132,7 @@ public class EnemyPahtFinder : MonoBehaviour
     public void EnemyDeath()
     {
         anim.SetTrigger("Death");
+        gameObject.SetActive(false);
     }
 
     void Flip()

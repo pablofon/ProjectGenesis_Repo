@@ -200,7 +200,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   speed: 3
   playerPosition: {fileID: 0}
-  chaseDistance: 5
+  chaseDistance: 10
   playerDetected: 0
   jumpForce: 0.1
   attackJumpForce: 0.1
@@ -222,7 +222,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ea59fdbd529222e418d459a116566a04, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  health: 2
+  health: 70
   damage:
     m_PersistentCalls:
       m_Calls: []

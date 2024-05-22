@@ -15,6 +15,8 @@ public class PlayerController : MonoBehaviour
     PlayerInput playerInput;
     Collider2D col;
 
+    [SerializeField] int life = 10;
+
     [Header("Player Direction")]
     [SerializeField] bool isFacingRight = true;
     [SerializeField] Vector2 moveAxis;
@@ -84,6 +86,11 @@ public class PlayerController : MonoBehaviour
         ArmTransform();
 
         if (canGroundJump) { dashesAvailable = maxDashes; wallJumpsLeft = wallJumpsMax; }
+
+        if (life <= 0)
+        {
+            GameManager.Instance.playerFalled = true;
+        }
     }
 
     private void FixedUpdate()
@@ -96,6 +103,14 @@ public class PlayerController : MonoBehaviour
         FallMultiplier();
 
         if (facingCursorTimer > 0) facingCursorTimer -= Time.deltaTime;
+    }
+
+    private void OnTriggerEnter2D(Collider2D collision)
+    {
+        if (collision.CompareTag("attack"))
+        {
+            life -= 1;
+        }
     }
 
     void Gravity()

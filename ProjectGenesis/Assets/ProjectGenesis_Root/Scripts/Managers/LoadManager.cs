@@ -28,6 +28,8 @@ public class LoadManager : MonoBehaviour
         {
             SceneLoader(5);
             GameManager.Instance.levelFinished = false;
+            GameManager.Instance.playerFalled = false;
+            GameManager.Instance.level = 0;
         }
     }
 }

@@ -71,7 +71,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   target: {fileID: 0}
-  detectDistance: 6
+  detectDistance: 10
   inRange: 1.5
 --- !u!70 &3341434316764711678
 CapsuleCollider2D:
@@ -120,7 +120,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ea59fdbd529222e418d459a116566a04, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  health: 3
+  health: 100
   damage:
     m_PersistentCalls:
       m_Calls: []
