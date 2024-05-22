@@ -52,8 +52,9 @@ public class Projectile1 : MonoBehaviour
     {
         if (started)
         {
-            if (collision.gameObject.layer == collisionLayers && mult != 0)
+            if (collisionLayers == (collisionLayers | (1 << collision.gameObject.layer)) && mult != 0)
             {
+                Debug.Log("entered col layer");
                 Health healthScript = collision.gameObject.GetComponent<Health>();
                 healthScript.Damage(dmg);
 
