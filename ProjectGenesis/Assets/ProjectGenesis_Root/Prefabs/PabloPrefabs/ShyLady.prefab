@@ -259,6 +259,10 @@ PrefabInstance:
       propertyPath: m_IsActive
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 4473447664139281316, guid: 6f41db4c80281024e8daeea185e9725e, type: 3}
+      propertyPath: m_TagString
+      value: attack
+      objectReference: {fileID: 0}
     - target: {fileID: 4500933437510614409, guid: 6f41db4c80281024e8daeea185e9725e, type: 3}
       propertyPath: m_Layer
       value: 7
@@ -327,7 +331,8 @@ PrefabInstance:
       propertyPath: m_Layer
       value: 7
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 2626634738910605163, guid: 6f41db4c80281024e8daeea185e9725e, type: 3}
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
     m_AddedComponents:

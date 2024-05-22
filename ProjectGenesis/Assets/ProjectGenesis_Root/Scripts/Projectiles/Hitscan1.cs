@@ -20,7 +20,7 @@ public class Hitscan1 : MonoBehaviour
         for (int i = 0; hits.Length > i && pierce > i && hits[i].collider.contactCaptureLayers != groundLayer; i++)
         {
             Health healthScript = hits[i].collider.GetComponent<Health>();
-            if (healthScript != null) healthScript.Damage(-dmg);
+            if (healthScript != null) healthScript.Damage(dmg);
             endPos = hits[i].point;
             distance = hits[i].distance;
         }
