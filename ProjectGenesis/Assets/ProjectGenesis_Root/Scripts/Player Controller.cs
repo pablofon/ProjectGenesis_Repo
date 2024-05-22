@@ -380,6 +380,8 @@ public class PlayerController : MonoBehaviour
         aimDir = (mousePos - new Vector2(shoulder.position.x, shoulder.position.y)).normalized;
     }
 
+    //PROBLEM: ARM IS AIMING WAY TOO LOW BUT BULLETS GO IN THE RIGHT DIRECTION, MAKES IT LOOK LIKE THE BARREL OF THE WEAPON IS CROOKED OR SMTH IDFK
+
     [Header("Arm Transform")]
     [SerializeField] Transform shoulder;
     [SerializeField] float aimAngle;

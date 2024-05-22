@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine.InputSystem;
 using UnityEngine;
 using BF_SubclassList;
+using Unity.VisualScripting.Antlr3.Runtime.Misc;
 
 [System.Serializable]
 public class Weapon
@@ -33,6 +34,7 @@ public class Weapon
     [SerializeField] public float range;
     [SerializeField] public int pierce;
     [SerializeField] public float velocity;
+    [SerializeField] public float lethalVelCutoff;
     [SerializeField] public float bloom;
     [SerializeField] public float knockback;
 
@@ -71,9 +73,10 @@ public class Pistol : Weapon
         if (weaponController.shootOnce && atkCd <= 0)
         {
             weaponController.shootOnce = false;
+            atkCd = fireRate;
 
             playerController.PlayerHandRecoil(hcKbDuration, hcKbDist, hcKbRotation);
-            atkCd = fireRate;
+            
             GameObject newBullet = Object.Instantiate(projectile, firePoint.position, Quaternion.Euler(0, 0, Mathf.Atan2(aimDir.y, aimDir.x) * Mathf.Rad2Deg));
             Hitscan1 script = newBullet.GetComponent<Hitscan1>();
 
@@ -93,9 +96,27 @@ public class Shotgun : Weapon
 
     public override void Shoot(Vector2 aimDir)
     {
-        if (weaponController.shootOnce)
+        if (weaponController.shootOnce && atkCd <= 0)
         {
             weaponController.shootOnce = false;
+            atkCd = fireRate;
+
+            float dispersionIncrement = shotDispersion / (multiShotCount - 1);
+            for (int shot = 0; shot < multiShotCount; shot++)
+            {
+                float angleOffset = -shotDispersion / 2 + dispersionIncrement * shot;
+                GameObject newBullet = Object.Instantiate(projectile, firePoint.position, Quaternion.Euler(0, 0, (Mathf.Atan2(aimDir.y, aimDir.x) * Mathf.Rad2Deg) + angleOffset));
+
+                Projectile1 script = newBullet.GetComponent<Projectile1>();
+                script.velocity = velocity;
+                script.dmg = dmg;
+                script.knockback = knockback;
+                script.collisionLayers = collisionLayers;
+                script.lethalVelCutoff = lethalVelCutoff;
+                script.started = true;
+
+                newBullet.GetComponent<Rigidbody2D>().velocity += (Vector2)newBullet.transform.right * velocity;
+            }
         }
     }
 }
