@@ -12,10 +12,10 @@ public class EnemyTest : MonoBehaviour
         sr.material = new Material(sr.material);
     }
 
-    public void Flash(Color color, float duration, float amount)
+    public void Flash()
     {
         StopAllCoroutines();
-        StartCoroutine(FlashColor(color, duration, amount));
+        StartCoroutine(FlashColor(Color.red, 2f, .5f));
     }
 
     private IEnumerator FlashColor(Color color, float duration, float amount)
@@ -35,5 +35,10 @@ public class EnemyTest : MonoBehaviour
         }
         sr.material.SetFloat("_Multiplier", 0);
         Debug.Log("coloreset");
+    }
+
+    public void Death()
+    {
+        Destroy(gameObject);
     }
 }

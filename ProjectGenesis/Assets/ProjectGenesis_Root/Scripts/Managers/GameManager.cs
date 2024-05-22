@@ -1,5 +1,3 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
 public class GameManager : MonoBehaviour
@@ -25,7 +23,7 @@ public class GameManager : MonoBehaviour
     public bool playerFalled = false;
 
     [Header("Player")]
-    [SerializeField] public PlayerController playerController;
+    [SerializeField] private PlayerController playerController;
     private void Awake()
     {
         if (instance == null)

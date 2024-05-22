@@ -1,7 +1,4 @@
-using Cinemachine.Utility;
 using System.Collections;
-using System.Collections.Generic;
-using UnityEditor.ShaderGraph.Internal;
 using UnityEngine;
 
 public class Hitscan1 : MonoBehaviour
@@ -21,6 +18,10 @@ public class Hitscan1 : MonoBehaviour
         {
             Health healthScript = hits[i].collider.GetComponent<Health>();
             if (healthScript != null) healthScript.Damage(dmg);
+
+            Rigidbody2D rb =hits[i].collider.GetComponent<Rigidbody2D>();
+            rb.velocity += direction * knockback;
+
             endPos = hits[i].point;
             distance = hits[i].distance;
         }
