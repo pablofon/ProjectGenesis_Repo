@@ -22,8 +22,6 @@ public class GameManager : MonoBehaviour
     public int level = 1;
     public bool playerFalled = false;
 
-    [Header("Player")]
-    [SerializeField] private PlayerController playerController;
     private void Awake()
     {
         if (instance == null)
