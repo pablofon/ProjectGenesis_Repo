@@ -210,6 +210,7 @@ MonoBehaviour:
   playerDetected: 0
   jumpForce: 0.5
   attackJumpForce: 0.1
+  life: 5
   isGrounded: 0
   groundCheck: {fileID: 7097875628857404843}
   groundCheckRadius: 0.5

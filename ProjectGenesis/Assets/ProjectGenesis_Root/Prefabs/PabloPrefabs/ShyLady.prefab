@@ -70,6 +70,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   target: {fileID: 0}
+  life: 3
   detectDistance: 6
   inRange: 1.5
 --- !u!70 &3341434316764711678

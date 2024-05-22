@@ -15,6 +15,7 @@ public class EnemyPahtFinder : MonoBehaviour
     bool startAttack;
     [SerializeField] float inRange;
     [SerializeField] float detectDistance;
+    //[SerializeField] float life;
 
     [Header("FOV")]
     [SerializeField] float fovAngle = 90f;
@@ -101,7 +102,20 @@ public class EnemyPahtFinder : MonoBehaviour
         }
 
         FlipUpdater();
+
+        /*if (life <= 0)
+        {
+            EnemyDeath();
+        }*/
     }
+
+    /*private void OnTriggerEnter2D(Collider2D collision)
+    {
+        if (collision.gameObject.CompareTag("PlayerHit"))
+        {
+            life -= 1;
+        }
+    }*/
 
     void Follow()
     {

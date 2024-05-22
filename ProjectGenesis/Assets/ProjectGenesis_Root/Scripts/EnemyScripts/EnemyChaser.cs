@@ -13,6 +13,7 @@ public class EnemyChaser : MonoBehaviour
     [SerializeField] bool playerDetected;
     [SerializeField] float jumpForce;
     [SerializeField] float attackJumpForce;
+    //[SerializeField] float life;
     Rigidbody2D enemyRb;
     //float horInput;
     Animator anim;
@@ -81,6 +82,11 @@ public class EnemyChaser : MonoBehaviour
             StopCoroutine(Attack());
             Chase();
         }*/
+
+        /*if (life <= 0)
+        {
+            EnemyDeath();
+        }*/
     }
 
     /*private void OnTriggerEnter2D(Collider2D collision)
@@ -91,7 +97,13 @@ public class EnemyChaser : MonoBehaviour
         }
     }*/
 
-
+    /*private void OnCollisionEnter2D(Collision2D collision)
+    {
+        if (collision.gameObject.CompareTag("PlayerHit"))
+        {
+            life -= 1;
+        }
+    }*/
 
     void Detect()
     {
