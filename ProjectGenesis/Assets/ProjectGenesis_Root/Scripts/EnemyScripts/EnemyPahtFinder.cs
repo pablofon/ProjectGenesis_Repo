@@ -4,7 +4,6 @@ using System.Security.Cryptography;
 using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.AI;
-using UnityEngine.InputSystem.Android;
 
 public class EnemyPahtFinder : MonoBehaviour
 {

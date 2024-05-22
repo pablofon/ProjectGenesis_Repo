@@ -1,5 +1,6 @@
 using System.Collections.Generic;
 using System;
+#if UNITY_EDITOR
 using UnityEditor;
 using UnityEditorInternal;
 using UnityEngine;
@@ -129,3 +130,4 @@ namespace BF_SubclassList
         }
     }
 }
+#endif
