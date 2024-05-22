@@ -96,6 +96,7 @@ GameObject:
   - component: {fileID: 675943217841078480}
   - component: {fileID: 8409502629240513586}
   - component: {fileID: 5164601615448767357}
+  - component: {fileID: 6369824778359623513}
   m_Layer: 7
   m_Name: Enemy3
   m_TagString: Untagged
@@ -210,13 +211,43 @@ MonoBehaviour:
   playerDetected: 0
   jumpForce: 0.5
   attackJumpForce: 0.1
-  life: 5
   isGrounded: 0
   groundCheck: {fileID: 7097875628857404843}
   groundCheckRadius: 0.5
   groundLayer:
     serializedVersion: 2
     m_Bits: 8
+--- !u!114 &6369824778359623513
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4693953244142736619}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ea59fdbd529222e418d459a116566a04, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  health: 5
+  damage:
+    m_PersistentCalls:
+      m_Calls: []
+  death:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 5164601615448767357}
+        m_TargetAssemblyTypeName: EnemyChaser, Assembly-CSharp
+        m_MethodName: EnemyDeath
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!1 &5798262742120328747
 GameObject:
   m_ObjectHideFlags: 0

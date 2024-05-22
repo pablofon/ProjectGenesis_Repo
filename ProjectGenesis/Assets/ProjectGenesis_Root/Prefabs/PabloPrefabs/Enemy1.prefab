@@ -142,6 +142,7 @@ GameObject:
   - component: {fileID: -6416758944671966946}
   - component: {fileID: 129836209049807777}
   - component: {fileID: 427501070042020471}
+  - component: {fileID: 8610850800955186454}
   m_Layer: 7
   m_Name: Enemy1
   m_TagString: Untagged
@@ -262,6 +263,37 @@ MonoBehaviour:
   groundLayer:
     serializedVersion: 2
     m_Bits: 8
+--- !u!114 &8610850800955186454
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6094112116721891000}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ea59fdbd529222e418d459a116566a04, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  health: 2
+  damage:
+    m_PersistentCalls:
+      m_Calls: []
+  death:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 427501070042020471}
+        m_TargetAssemblyTypeName: EnemyChaser, Assembly-CSharp
+        m_MethodName: EnemyDeath
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!1 &7128079625352831720
 GameObject:
   m_ObjectHideFlags: 0

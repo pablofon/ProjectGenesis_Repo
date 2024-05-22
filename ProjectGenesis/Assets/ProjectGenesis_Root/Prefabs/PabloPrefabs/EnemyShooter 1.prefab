@@ -43,6 +43,7 @@ GameObject:
   - component: {fileID: 227925527511046133}
   - component: {fileID: 5825732368004438635}
   - component: {fileID: 4097245772293414783}
+  - component: {fileID: 3077699833180402124}
   m_Layer: 7
   m_Name: EnemyShooter 1
   m_TagString: Untagged
@@ -104,7 +105,6 @@ MonoBehaviour:
   target: {fileID: 0}
   inRange: 5
   detectDistance: 6
-  life: 1
   fovAngle: 360
   fovPoint: {fileID: 3433421361583641195}
   range: 8
@@ -144,6 +144,37 @@ CircleCollider2D:
   m_Offset: {x: 0.037496448, y: 0.43970108}
   serializedVersion: 2
   m_Radius: 0.7486106
+--- !u!114 &3077699833180402124
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7260833857270589307}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ea59fdbd529222e418d459a116566a04, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  health: 1
+  damage:
+    m_PersistentCalls:
+      m_Calls: []
+  death:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 5825732368004438635}
+        m_TargetAssemblyTypeName: EnemyPahtFinder, Assembly-CSharp
+        m_MethodName: EnemyDeath
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!1001 &1550100624386746250
 PrefabInstance:
   m_ObjectHideFlags: 0
