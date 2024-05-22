@@ -21,4 +21,12 @@ public class BulletFly : MonoBehaviour
     {
         transform.Translate(dir * bulletSpeed * Time.deltaTime);
     }
+
+    private void OnCollisionEnter2D(Collision2D collision)
+    {
+        if (collision.gameObject.CompareTag("Player"))
+        {
+            gameObject.SetActive(false);
+        }
+    }
 }

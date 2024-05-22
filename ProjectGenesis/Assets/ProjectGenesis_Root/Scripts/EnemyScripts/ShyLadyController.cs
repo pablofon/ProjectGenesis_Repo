@@ -7,6 +7,7 @@ using static UnityEngine.Rendering.DebugUI.Table;
 public class ShyLadyController : MonoBehaviour
 {
     [SerializeField] Transform target;
+    //[SerializeField] float life;
 
     NavMeshAgent agent;
     Animator anim;
@@ -63,7 +64,19 @@ public class ShyLadyController : MonoBehaviour
 
         FlipUpdater();
 
+        /*if (life <= 0)
+        {
+            EnemyDeath();
+        }*/
     }
+
+    /*private void OnTriggerEnter2D(Collider2D collision)
+    {
+        if (collision.gameObject.CompareTag("PlayerHit"))
+        {
+            life -= 1;
+        }
+    }*/
 
     void Follow()
     {
@@ -80,6 +93,7 @@ public class ShyLadyController : MonoBehaviour
     public void EnemyDeath()
     {
         anim.SetTrigger("Death");
+        gameObject.SetActive(false);
     }
 
     void Flip()

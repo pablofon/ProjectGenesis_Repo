@@ -12,6 +12,7 @@ GameObject:
   - component: {fileID: 4880310134768086618}
   - component: {fileID: -6683511155439863875}
   - component: {fileID: 3341434316764711678}
+  - component: {fileID: 4004667775403980516}
   m_Layer: 7
   m_Name: ShyLady
   m_TagString: Untagged
@@ -70,7 +71,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   target: {fileID: 0}
-  detectDistance: 6
+  detectDistance: 10
   inRange: 1.5
 --- !u!70 &3341434316764711678
 CapsuleCollider2D:
@@ -107,6 +108,37 @@ CapsuleCollider2D:
   m_Offset: {x: -0.09484851, y: -0.11308122}
   m_Size: {x: 2.4148667, y: 4.097428}
   m_Direction: 0
+--- !u!114 &4004667775403980516
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1905636941067695286}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ea59fdbd529222e418d459a116566a04, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  health: 100
+  damage:
+    m_PersistentCalls:
+      m_Calls: []
+  death:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: -6683511155439863875}
+        m_TargetAssemblyTypeName: ShyLadyController, Assembly-CSharp
+        m_MethodName: EnemyDeath
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!1001 &1864478560184843839
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -227,6 +259,10 @@ PrefabInstance:
       propertyPath: m_IsActive
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 4473447664139281316, guid: 6f41db4c80281024e8daeea185e9725e, type: 3}
+      propertyPath: m_TagString
+      value: attack
+      objectReference: {fileID: 0}
     - target: {fileID: 4500933437510614409, guid: 6f41db4c80281024e8daeea185e9725e, type: 3}
       propertyPath: m_Layer
       value: 7
@@ -295,7 +331,8 @@ PrefabInstance:
       propertyPath: m_Layer
       value: 7
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 2626634738910605163, guid: 6f41db4c80281024e8daeea185e9725e, type: 3}
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
     m_AddedComponents:

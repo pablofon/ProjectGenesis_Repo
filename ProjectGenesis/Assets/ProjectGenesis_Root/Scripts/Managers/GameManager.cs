@@ -20,6 +20,7 @@ public class GameManager : MonoBehaviour
     public bool gameOver = false;
     public bool levelFinished = false;
     public int level = 1;
+    public bool playerFalled = false;
 
     [Header("Player")]
     [SerializeField] private PlayerController playerController;
