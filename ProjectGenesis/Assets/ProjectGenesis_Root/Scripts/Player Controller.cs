@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using UnityEditor.ShaderGraph.Serialization;
 using UnityEngine;
 using UnityEngine.Animations.Rigging;
 using UnityEngine.InputSystem;
@@ -20,7 +21,7 @@ public class PlayerController : MonoBehaviour
     [SerializeField] Vector2 moveAxis;
     [SerializeField] Vector2 mousePos;
 
-    [SerializeField] Vector2 aimDir;
+    [SerializeField] public Vector2 aimDir;
 
     [Header("Movement")]
     [SerializeField] private float movementAcceleration;
@@ -95,7 +96,7 @@ public class PlayerController : MonoBehaviour
         VerticalDrag();
         FallMultiplier();
 
-        if (facingCursorTimer > 0) facingCursorTimer -= Time.deltaTime;
+        if (facingCursorTimer > 0 && weaponController.shooting == false) facingCursorTimer -= Time.deltaTime;
     }
 
     void Gravity()
@@ -384,13 +385,10 @@ public class PlayerController : MonoBehaviour
     [SerializeField] float aimAngle;
     [SerializeField] Transform handController;
     [SerializeField] private float hcDist;
-    public float hcKbDuration;
-    public float hcKbDist;
     [SerializeField] float hcKbDistOutput = 1f;
-    public float hcKbRotation;
     [SerializeField] float hcKbRotationtOutput;
     [SerializeField] RigBuilder rigBuilder;
-    [SerializeField] RigLayer armLayer;
+    [SerializeField] public RigLayer armLayer;
     [SerializeField] GameObject weaponsContainer;
 
     //Orient the arm
@@ -424,7 +422,16 @@ public class PlayerController : MonoBehaviour
 
 
     //Hand recoil
-    public IEnumerator HcDistKb()
+
+    private Coroutine recoilCoroutine;
+    public void PlayerHandRecoil(float hcKbDuration, float hcKbDist, float hcKbRotation)
+    {
+        if (recoilCoroutine != null) StopCoroutine(recoilCoroutine);
+
+        recoilCoroutine = StartCoroutine(HcDistKb(hcKbDuration, hcKbDist, hcKbRotation));
+    }
+
+    private IEnumerator HcDistKb(float hcKbDuration, float hcKbDist, float hcKbRotation)
     {
         float elapsedTime = 0;
         try
@@ -484,7 +491,14 @@ public class PlayerController : MonoBehaviour
 
     public void Attack(InputAction.CallbackContext context)
     {
-        facingCursorTimer = facingCursorDuration;
-        weaponController.Atk(context, aimDir);
+        if (context.started) { facingCursorTimer = facingCursorDuration; weaponController.Input(true); }
+        if (context.canceled) weaponController.Input(false);
+    }
+    //could put this inside weapon controller maybe idk
+
+    public void SpecialAttack(InputAction.CallbackContext context)
+    {
+        if (context.started) { facingCursorTimer = facingCursorDuration; weaponController.SpecialInput(true); }
+        if (context.canceled) weaponController.SpecialInput(false);
     }
 }

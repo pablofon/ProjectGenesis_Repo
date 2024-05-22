@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using UnityEditor.Networking.PlayerConnection;
 using UnityEngine;
 
 public class GameManager : MonoBehaviour
@@ -22,7 +23,7 @@ public class GameManager : MonoBehaviour
     public bool gameOver = false;
 
     [Header("Player")]
-    [SerializeField] public PlayerController playerController;
+    [SerializeField] private PlayerController playerController;
     private void Awake()
     {
         if (instance == null)
