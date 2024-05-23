@@ -101,6 +101,8 @@ public class Shotgun : Weapon
             weaponController.shootOnce = false;
             atkCd = fireRate;
 
+            playerController.PlayerHandRecoil(hcKbDuration, hcKbDist, hcKbRotation);
+
             float dispersionIncrement = shotDispersion / (multiShotCount - 1);
             for (int shot = 0; shot < multiShotCount; shot++)
             {

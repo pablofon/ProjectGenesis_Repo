@@ -152,7 +152,7 @@ public class PlayerController : MonoBehaviour
                 rb.rotation = collisionAngle;
                 anim.SetBool("wallSlide", false);
             }
-            else
+            else if (!canGroundJump)
             {
                 canWallJump = true;
                 rb.rotation = 0;

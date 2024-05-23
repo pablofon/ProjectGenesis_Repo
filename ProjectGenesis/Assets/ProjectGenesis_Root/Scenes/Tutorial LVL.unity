@@ -420,8 +420,43 @@ PrefabInstance:
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 7260833857270589307, guid: fe9793584bb233b45a78d62c5cd837e0, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 171850240}
   m_SourcePrefab: {fileID: 100100000, guid: fe9793584bb233b45a78d62c5cd837e0, type: 3}
+--- !u!1 &171850239 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 7260833857270589307, guid: fe9793584bb233b45a78d62c5cd837e0, type: 3}
+  m_PrefabInstance: {fileID: 171850238}
+  m_PrefabAsset: {fileID: 0}
+--- !u!50 &171850240
+Rigidbody2D:
+  serializedVersion: 4
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 171850239}
+  m_BodyType: 1
+  m_Simulated: 1
+  m_UseFullKinematicContacts: 0
+  m_UseAutoMass: 0
+  m_Mass: 1
+  m_LinearDrag: 0
+  m_AngularDrag: 0.05
+  m_GravityScale: 1
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_Interpolate: 0
+  m_SleepingMode: 1
+  m_CollisionDetection: 0
+  m_Constraints: 0
 --- !u!1 &309611749
 GameObject:
   m_ObjectHideFlags: 0
@@ -533,7 +568,7 @@ GameObject:
   m_Component:
   - component: {fileID: 441675588}
   - component: {fileID: 441675589}
-  m_Layer: 3
+  m_Layer: 0
   m_Name: TUTORIAL
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -3872,7 +3907,7 @@ GameObject:
   - component: {fileID: 1440521434}
   - component: {fileID: 1440521436}
   - component: {fileID: 1440521435}
-  m_Layer: 3
+  m_Layer: 0
   m_Name: BackGround
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -3991,7 +4026,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1463997797}
   - component: {fileID: 1463997796}
-  m_Layer: 3
+  m_Layer: 0
   m_Name: Grid
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -4101,7 +4136,7 @@ GameObject:
   - component: {fileID: 1746674052}
   - component: {fileID: 1746674054}
   - component: {fileID: 1746674053}
-  m_Layer: 3
+  m_Layer: 0
   m_Name: Front ground
   m_TagString: Untagged
   m_Icon: {fileID: 0}

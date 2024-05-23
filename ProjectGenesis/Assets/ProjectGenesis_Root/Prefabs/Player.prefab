@@ -142,7 +142,7 @@ MonoBehaviour:
         ammo: 0
         reloadTime: 0
         range: 100
-        pierce: 1
+        pierce: 3
         velocity: 0
         lethalVelCutoff: 0
         bloom: 0

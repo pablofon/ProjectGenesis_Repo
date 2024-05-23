@@ -19,7 +19,7 @@ public class Health : MonoBehaviour
         if (health - dmg > 0)
         {
             health -= dmg;
-            damage.Invoke();
+            damage?.Invoke();
         }
         else death.Invoke();
     }
